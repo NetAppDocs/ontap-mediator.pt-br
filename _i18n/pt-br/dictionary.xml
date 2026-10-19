@@ -1,0 +1,981 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<blocks>
+  <block id="d41d8cd98f00b204e9800998ecf8427e" category="doc"></block>
+  <block id="cbfd7219fd814c56c9349bea1cd0273f" category="list-text">A partir do ONTAP 9.19.1 e do ONTAP Mediator 1.12, você tem a opção de instalar o ONTAP Mediator com suporte a iSCSI e HTTPS, ou com suporte apenas a HTTPS. Se você optar por instalar o ONTAP Mediator com suporte apenas a HTTPS, o pacote SCST não será instalado.</block>
+  <block id="0575e131726193c75dc0eb99beb88ea3" category="list-text">Se você atualizar do ONTAP Mediator 1.11 ou anterior com o SCST instalado e escolher a opção somente HTTPS durante a atualização, o pacote SCST será desinstalado e a nova versão do ONTAP Mediator não conterá o pacote SCST.</block>
+  <block id="c2cbdc82e4189820757400b0b29fe4e3" category="inline-link-macro">Utilize ONTAP Mediator para monitorar várias configurações de IP MetroCluster</block>
+  <block id="442806089728577c5b60cf2b841585f0" category="list-text">Se você planeja usar ONTAP Mediator para monitorar várias configurações de MetroCluster IP, o suporte depende do seu tipo de Mediator, versão do ONTAP e sistema operacional. Consulte <block ref="23c736ffefe2c88d617ae89ae44b32de" category="inline-link-macro-rx"></block> para obter mais informações.</block>
+  <block id="b9fc3e6281faea5f565f838d0ad8ac27" category="list-text">A instalação do ONTAP Mediator com suporte apenas para HTTPS é compatível com os seguintes casos de uso:</block>
+  <block id="22ebf50baa22eca107164392e48fabe5" category="list-text">Você planeja usar apenas o ONTAP Mediator para monitorar seus clusters de sincronização ativa do SnapMirror.</block>
+  <block id="600eacd6fe25558a0c82252384d81f42" category="list-text">Você planeja configurar ONTAP Mediator com HTTPS para monitorar uma ou mais configurações de IP MetroCluster.</block>
+  <block id="5c0107c7074b648b29cf8ffe18d6c548" category="list-text">ONTAP Mediator deve ser instalado com suporte para iSCSI e HTTPS no seguinte cenário:</block>
+  <block id="bfe28f43d7920f3b051733daec7239a9" category="list-text">Você planeja configurar ONTAP Mediator com iSCSI para monitorar uma ou mais configurações de IP do MetroCluster.</block>
+  <block id="81a351229b28c8dda23ec54f5e12b053" category="summary">Altere o nome de usuário e a senha do ONTAP Mediator.</block>
+  <block id="ffd4e84b0c713b5d306a8604b70684ad" category="doc">Alterar o nome de usuário e a senha do ONTAP Mediator</block>
+  <block id="9b74280bb338bd9b9e107eaebe5ffa9e" category="paragraph">Altere o nome de usuário ou a senha do ONTAP Mediator no host Linux onde o ONTAP Mediator está instalado.</block>
+  <block id="c83d74305ef42bd4af6545e82f5fe9de" category="section-title">Alterar o nome de usuário</block>
+  <block id="8680e9191aca7e5a1ea025ee0ab3b1ac" category="paragraph">Você pode alterar o nome de usuário seguindo o procedimento abaixo.</block>
+  <block id="bbe48fb854ea022537208eeeff822f91" category="paragraph-title">Sobre esta tarefa</block>
+  <block id="d9ad92650bab84bc917500672a9e9b4a" category="paragraph">Execute esta tarefa no host Linux onde você instalou o ONTAP Mediator.</block>
+  <block id="e3bdaded12d38863b3e782d2277f8891" category="paragraph">Caso você não consiga executar esse comando, talvez seja necessário executá-lo usando o caminho completo, conforme mostrado no exemplo a seguir:</block>
+  <block id="6b650cfd5a5122af7703db2cfff2b455" category="paragraph"><block ref="92d0578e497049745d0c01a458589875" prefix="" category="inline-code"></block></block>
+  <block id="f3a29486bed19a90f2da6d007818b427" category="paragraph-title">Passos</block>
+  <block id="493069b37797535af86a5daa9bd2e352" category="paragraph">Altere o nome de usuário escolhendo uma das seguintes opções:</block>
+  <block id="db1bf0163f01878ecdb6508c5a1963a8" category="list-text">*Opção (a)*: Execute o comando<block ref="bcb7a5e5c3c1afa1dc68fdb6a8454578" prefix=" " category="inline-code"></block> e responda às solicitações conforme mostrado no exemplo a seguir:</block>
+  <block id="02f05e79b3d0e82a5234e1a84fa7513b" category="list-text">*Opção (b)*: Execute o seguinte comando:</block>
+  <block id="b41c8853c66915bd8a05346255719968" category="paragraph"><block ref="58f165e9498e1484664fdb063b7e6a5d" prefix="" category="inline-code"></block></block>
+  <block id="879a24c528558b692532fbee190699f3" category="section-title">Alterar a senha</block>
+  <block id="dad372818931af8f6b039297072eecf9" category="paragraph">Você pode alterar a senha usando o procedimento a seguir.</block>
+  <block id="183b2aa3a5eb88aeb88e71147b8bcf77" category="paragraph"><block ref="ba521b806beb44396f87bbc58c6fcd4d" prefix="" category="inline-code"></block></block>
+  <block id="0fea72913528353e02baddfe85a03e5e" category="paragraph">Altere a senha escolhendo uma das seguintes opções:</block>
+  <block id="76766dc9febdc808b65c4d6c09dcd445" category="list-text">*Opção (a)*: execute o<block ref="a312499e3a816ecc68bdb7b49bea6e87" prefix=" " category="inline-code"></block> comando e responda às solicitações conforme mostrado no exemplo a seguir:</block>
+  <block id="9aa5de2139a053a72ab617fb5e3c11fe" category="paragraph"><block ref="98f6e1466fd4a2b0eab60035322554df" prefix="" category="inline-code"></block></block>
+  <block id="de736e5e212b3386a25bc3c67f2f84d4" category="paragraph">O exemplo mostra que a senha foi alterada de "mediator1" para "mediator2".</block>
+  <block id="2730bf83f7e580f95a8a41fbc88580d3" category="summary">Configurar os atributos do ONTAP Mediator, incluindo configurações relacionadas a certificados e substituições de configuração no lado do host.</block>
+  <block id="551115cc1e16b044befb6a3243ac9e1a" category="doc">Configurar os atributos do ONTAP Mediator</block>
+  <block id="e157cb939ce87b5c3ae877bd0d947e52" category="paragraph">Você pode configurar atributos do lado do host do ONTAP Mediator, incluindo configurações relacionadas a certificados e substituições de configuração.</block>
+  <block id="e9a1e6efbcb08097f04a06af109c2bee" category="section-title">Configurações configuráveis do ONTAP Mediator</block>
+  <block id="ec3e1b1fc1be2a3dee9811cb41dc4365" category="paragraph">O ONTAP Mediator suporta diversas configurações. Os valores padrão para essas configurações são fornecidos em um<block ref="e3f1d2df1657c34833364a52d4b29d60" prefix=" " category="inline-code"></block> arquivo somente leitura. O arquivo está localizado em:</block>
+  <block id="cdfebc1d2257e18b26403478e4a7ef13" category="paragraph"><block ref="27a6b24601b63526ffca2fd1c5f9a5c4" prefix="" category="inline-code"></block></block>
+  <block id="d41105b4b1c23e8032ba635977fa7cbe" category="paragraph">Todos os valores colocados no<block ref="e69236eb2aa5b1455dc0f88753a8a1a2" prefix=" " category="inline-code"></block> substituirão os valores padrão e serão mantidos em todas as atualizações do ONTAP Mediator.</block>
+  <block id="ee1ed33eed3c77405d3c2e44814e71dc" category="paragraph">Depois de modificar o arquivo <block ref="e69236eb2aa5b1455dc0f88753a8a1a2" prefix=" " category="inline-code"></block>, reinicie o ONTAP Mediator:</block>
+  <block id="b20afa451962a4a89f44f6efe4b1f663" category="paragraph">Os atributos do ONTAP Mediator descritos nesta seção podem ser modificados, se necessário.</block>
+  <block id="9abd5e5d8c92b77e89fe99d6a22f9fb4" category="admonition">Outros valores padrão no<block ref="5b85df10091f3a4731397680ace5150b" prefix=" " category="inline-code"></block> não devem ser alterados, pois os valores modificados não são mantidos durante as atualizações do ONTAP Mediator.</block>
+  <block id="647e170e473051ea5251319743869311" category="paragraph">Você modifica os atributos do ONTAP Mediator copiando as variáveis necessárias para o<block ref="e69236eb2aa5b1455dc0f88753a8a1a2" prefix=" " category="inline-code"></block> arquivo para substituir as configurações padrão.</block>
+  <block id="629b314391c0b713d93f2b13fe348e3a" category="section-title">Instalar certificados SSL de terceiros</block>
+  <block id="597fd96e2f0c623d144b4e32f6fbd7b2" category="paragraph">Você pode substituir os certificados autoassinados padrão por certificados SSL de terceiro, modificando os arquivos de configuração do ONTAP Mediator.</block>
+  <block id="ef6b5d23136b7b42218ed88b623442fa" category="paragraph">Para substituir os certificados autoassinados padrão por certificados SSL de terceiros, você deve modificar determinados atributos nos seguintes arquivos:</block>
+  <block id="2bb880432559be9984bc0c72699ae3e3" category="list-text"><block ref="91f698a7212f808ea1123f2fea7d684b" prefix="" category="inline-code"></block></block>
+  <block id="1565ae452cd6adb2eb24f8753ed243ad" category="list-text"><block ref="ea8a01a633dad65525408f18e3468ce8" prefix="" category="inline-code"></block></block>
+  <block id="344ff8a01d6a0d72ad69850ba2c0e366" category="paragraph">As variáveis nesses arquivos são usadas para controlar os arquivos de certificado usados pelo ONTAP Mediator.</block>
+  <block id="edb7de5345c0e13b445ca56a1ac41e47" category="open-title">O ONTAP Mediator 1.9 e versões posteriores</block>
+  <block id="79ffbf47d40a281743c65e59441d38ed" category="paragraph">As variáveis padrão listadas na tabela a seguir estão incluídas no <block ref="91f698a7212f808ea1123f2fea7d684b" prefix=" " category="inline-code"></block>arquivo.</block>
+  <block id="47c14840d8e15331fa420b9b2f757cd9" category="cell">Variável</block>
+  <block id="ac70412e939d72a9234cdebb1af5867b" category="cell">Caminho</block>
+  <block id="bf8325bce10f222020fd7b8d4602d4d3" category="cell"><block ref="57ec7fe7e85d1196b9f133d14ea5b50d" prefix="" category="inline-code"></block></block>
+  <block id="897f4bfa411b4245ae31bc8e3d1d88b8" category="cell"><block ref="943f304d27c96449b074acfef39d133e" prefix="" category="inline-code"></block></block>
+  <block id="22e1cde3232327f36bc921263d0a8c9d" category="cell"><block ref="0df75c07b8443071d006ab81cad1a19d" prefix="" category="inline-code"></block></block>
+  <block id="2758e25f0b8bb3de5a3c30b8ce4525a6" category="cell"><block ref="c65e9f7c554af033c2b73c5a83f1e7fa" prefix="" category="inline-code"></block></block>
+  <block id="262749066af01f516214278e050ef02c" category="cell"><block ref="b8cd01813c5850a747e7a03c9dcb43ed" prefix="" category="inline-code"></block></block>
+  <block id="79cdeee005ca5064a450aa9ef1ae18df" category="cell"><block ref="8ee42ff393569e4c87640afe7ad72eb9" prefix="" category="inline-code"></block></block>
+  <block id="49dbcc7bd23f4e4f0144c51341c44036" category="cell"><block ref="a93e5ca6615891464275e325959beec1" prefix="" category="inline-code"></block></block>
+  <block id="6f6695649f9b6014c70f92c313fd8013" category="cell"><block ref="65d1d0dc2a1684b55d4b2d5d90847b82" prefix="" category="inline-code"></block></block>
+  <block id="a780fb5a6e2df4b430ec43aadd19d88f" category="cell"><block ref="432981cc26072c8b71f348991372737a" prefix="" category="inline-code"></block></block>
+  <block id="1edc7128a431d68241f38ade1ac2fefb" category="cell"><block ref="de46684e29a8704962ca37c4b05c343b" prefix="" category="inline-code"></block></block>
+  <block id="7ed69a1af9eb2ba26fdfd574a10acbab" category="cell"><block ref="3eb6e362d6ee628d7e79b5f4c7d79b93" prefix="" category="inline-code"></block></block>
+  <block id="88b2037a4b0dc9513d3aace604e4c310" category="cell"><block ref="d6723e7cd6735df68d1ce4c704c29a04" prefix="" category="inline-code"></block></block>
+  <block id="8f416b7fc29226a6ec9a0edb5bc3a378" category="cell"><block ref="4deedfabe1bb050cf3ccf7940dd2299c" prefix="" category="inline-code"></block></block>
+  <block id="1b3ed17a5da4568b1e74752551893220" category="cell"><block ref="1a86fe500b18ed2639445da5d84f32b3" prefix="" category="inline-code"></block></block>
+  <block id="8c78455e7853a5805ba377f212a3d2cd" category="list-text"><block ref="3eb6e362d6ee628d7e79b5f4c7d79b93" prefix="" category="inline-code"></block> é usado para definir a expiração dos certificados de cliente. O valor máximo é de três anos (1095 dias).</block>
+  <block id="123ff385092339630627508baaba29b5" category="list-text"><block ref="4deedfabe1bb050cf3ccf7940dd2299c" prefix="" category="inline-code"></block> é a frase-senha do certificado de cliente assinado.</block>
+  <block id="6b3a15758e109c232a26b3fda20a66f8" category="paragraph">As variáveis padrão listadas na tabela a seguir estão incluídas no<block ref="ea8a01a633dad65525408f18e3468ce8" prefix=" " category="inline-code"></block> arquivo.</block>
+  <block id="1a8d14801d9b2bf482cb845b57500ad9" category="cell"><block ref="80eec318a13ef13c13e489b6b09462cd" prefix="" category="inline-code"></block></block>
+  <block id="e01c4ad98ac71439b1798b8a6f289dcd" category="cell"><block ref="8521272c5e36e1911c5d65be9dd77b78" prefix="" category="inline-code"></block></block>
+  <block id="924f0dc2963f2e4930b13d461565e506" category="open-title">O ONTAP Mediator 1.8 e versões anteriores</block>
+  <block id="97c30e4ac53088a286f42d19ee9d9073" category="cell"><block ref="9f6e24bb776ac0c6a5b1dd6b9562153e" prefix="" category="inline-code"></block></block>
+  <block id="503ad3e0a576a09c22b6feba7d66cf56" category="cell"><block ref="b1bbabc3962f067d7560bf21dde6f309" prefix="" category="inline-code"></block></block>
+  <block id="cb134f392c4d0aa6710f4456a02bc961" category="cell"><block ref="3992f7b26c8265ef3170e116f4cecf97" prefix="" category="inline-code"></block></block>
+  <block id="a8682e40084aff131c1879da3c28f925" category="inline-link-macro">Substitua certificados autoassinados por certificados de terceiros confiáveis</block>
+  <block id="b432cbc63f8f23dd766bb934f8061c0e" category="paragraph">Se você modificar esses atributos, reinicie o ONTAP Mediator para aplicar as alterações. Para obter instruções detalhadas sobre como substituir certificados padrão por certificados de terceiro, consulte <block ref="19d6c597abdd80f79976f4da429b7478" category="inline-link-macro-rx"></block>.</block>
+  <block id="a8715bc71bf10ffa141c96014e6e1b5a" category="section-title">Configurar a proteção contra ataques de senha</block>
+  <block id="f3b19cb494ae5805e5d432a2c68e2762" category="paragraph">As configurações a seguir fornecem proteção contra ataques de força bruta de adivinhação de senhas.</block>
+  <block id="62fba1aa669809e97f238fe69df1a130" category="paragraph">Para ativar o recurso, defina um valor para o<block ref="4b3ac529a0322730fbd4caa88ac35504" prefix=" " category="inline-code"></block> e o<block ref="6652a2fd00b5788d986853f4ca1177da" prefix=" " category="inline-code"></block>.</block>
+  <block id="fd05d7f6bfc90e815087880e8e915b43" category="open-title">Exemplos:</block>
+  <block id="e68a1c38a1c3725bc0a540b95c3e6573" category="list-text">Forneça uma janela de 5 minutos para tentativas e, em seguida, reinicie a contagem de falhas para zero:</block>
+  <block id="fb58a56b46c01a608befa2320220edce" category="paragraph"><block ref="40638591ab864bfd323b9a6bae832cec" prefix="" category="inline-code"></block></block>
+  <block id="0f22d3ab47fbb2e64b5f8308303a3f91" category="list-text">Bloqueie a conta se ocorrerem cinco falhas dentro do período da janela:</block>
+  <block id="48d73da8f79a72cf25d5b784709f63d0" category="paragraph"><block ref="82aa509ee4d1aefe835dee48b9e85a9d" prefix="" category="inline-code"></block></block>
+  <block id="d3f45699c3cca0360355653eadd9e8b2" category="list-text">Reduza o impacto de ataques de força bruta de adivinhação de senhas definindo um atraso antes de rejeitar cada tentativa, o que retarda os ataques.</block>
+  <block id="1313dde9f6f7cbcf96c9b7d2d2c55b00" category="paragraph"><block ref="8331e69d84dce846e983d6fb853c0efe" prefix="" category="inline-code"></block></block>
+  <block id="8eee9530f18fd4502c14333a8fa634c2" category="section-title">Configurar as regras de complexidade de senha</block>
+  <block id="8538f5516c3390d120f112ba785c0d5e" category="paragraph">Os campos a seguir controlam as regras de complexidade da senha da conta de usuário da API do ONTAP Mediator.</block>
+  <block id="05a0f4a9cdd230da8ed1dd3c9ccf21c6" category="paragraph">Configure as configurações de espaço em disco e de log do ONTAP Mediator, incluindo o limite de espaço livre e o espaço de log reservado.</block>
+  <block id="e6673f4ba313ad7b30ea0265b8648fb7" category="section-title">Configurar o limite de espaço livre</block>
+  <block id="7e5b0f4794c111d0d1ed355bfe658ef7" category="paragraph">Existem configurações que controlam o espaço livre necessário no<block ref="830cb05a6559165dbc1304e2037166d6" prefix=" " category="inline-code"></block> disco.</block>
+  <block id="7c7ba4e1165c7da971891c8211786847" category="paragraph">Se o espaço for inferior ao limite definido, o serviço emite um evento de aviso.</block>
+  <block id="1b976038e0ada2a588befcd87f7f2b5f" category="section-title">Configurar o espaço de log reservado</block>
+  <block id="57a1637486addcd7d582355818b2e5f9" category="paragraph">O<block ref="4f65be6f3118139f91d1a99a0e2970a7" prefix=" " category="inline-code"></block> recurso é controlado por configurações específicas. Por padrão, a instalação do ONTAP Mediator cria um espaço de disco separado para os logs. O instalador cria um novo arquivo de tamanho fixo com um total de 700MB de espaço de disco para ser usado explicitamente para o registro em log do ONTAP Mediator.</block>
+  <block id="483a161e3c550a0200596eaf01e55c98" category="paragraph">Para desativar esse recurso e usar o espaço de disco padrão, execute as seguintes etapas:</block>
+  <block id="c2ce45175ca8950f883e67704883e279" category="list-text">Altere o valor de RESERVE_LOG_SPACE de 1 para 0 no seguinte arquivo:</block>
+  <block id="6d62667a25ff374fde5ee10b46a460a8" category="paragraph"><block ref="560d71441d77d911d67d928e865ecf68" prefix="" category="inline-code"></block></block>
+  <block id="337d79852891a37d41285c9101c3fff4" category="list-text">Execute o seguinte comando:</block>
+  <block id="a6ed2a36dc066a9b96c5467179bda3e7" category="list-text">Reinicie o ONTAP Mediator:</block>
+  <block id="a34161761c8f5f134f2b6fe0550fb4b1" category="paragraph">Para reativar o recurso, altere o valor de 0 para 1 e reinicie o Mediator.</block>
+  <block id="3657da51f66de8aea117e931c518357d" category="admonition">Alternar entre espaços de disco não remove os registros existentes. Todos os registros anteriores recebem backup e depois são movidos para o espaço de disco atual após a alternância e a reinicialização do Mediator.</block>
+  <block id="cc783e4faca71ddaebf128bb0a6f3a71" category="summary">Mantenha o sistema operacional do host do ONTAP Mediator regularmente para obter o desempenho ideal.</block>
+  <block id="59c90bc71e61fe6255d6a090dfe0f055" category="doc">Manter o sistema operacional do host para o ONTAP Mediator</block>
+  <block id="3a6bd4cbd727b091e7d6329da745bf6f" category="paragraph">Garanta que o sistema operacional host do ONTAP Mediator receba manutenção regular para obter o desempenho ideal.</block>
+  <block id="9d7c242d76c4dae57d49c3855b53c743" category="section-title">Reinicialize o host</block>
+  <block id="3aa35da732912373b020bb8dd0e16c65" category="paragraph">Reinicialize o host somente quando os clusters estiverem saudáveis. Os clusters não podem responder a falhas enquanto o ONTAP Mediator estiver offline. Defina um horário para manutenção antes de reinicializar.</block>
+  <block id="c2d40c9ee1899f7a284a35ed8adbfd0f" category="paragraph">O ONTAP Mediator retoma automaticamente a operação durante uma reinicialização e volta a estabelecer os relacionamentos configurados anteriormente com os clusters do ONTAP.</block>
+  <block id="5756c6081356e49ce79efa81861a034c" category="section-title">Atualizações do pacote do host</block>
+  <block id="d0f7da7fbac9ea5d94713fef96fc7a53" category="paragraph">Atualize qualquer biblioteca ou pacote yum, exceto o kernel. Reinicialize o host, se necessário, para que as alterações entrem em vigor. Agende uma janela de serviço antes de reinicializar o host.</block>
+  <block id="b1e6166ef4d368ef1387afdcc88f4209" category="paragraph">Se você instalar o <block ref="964ff658eeb150fa1ca6d823c1c0c1a7" prefix=" " category="inline-code"></block>pacote, use o <block ref="1af4b6d809a2f3d882d975f4b893400f" prefix=" " category="inline-code"></block>comando para detectar se alguma alteração no pacote requer reinicializar.</block>
+  <block id="2b5b303cbf870be224133429b788c867" category="paragraph">Reinicialize o sistema após atualizar as dependências do ONTAP Mediator, pois as alterações não entram em vigor imediatamente.</block>
+  <block id="140bb4303ab896a9bcf9adc269119ad5" category="section-title">Atualize o kernel do sistema operacional do host</block>
+  <block id="54e056e21182615e81de8ba30b967eea" category="paragraph">O SCST deve ser compilado para o kernel que você está usando. Para atualizar o sistema operacional, você precisa agendar um período de manutenção.</block>
+  <block id="135b308ed83c53f1516b7c754566d1c4" category="paragraph-title">Antes de começar</block>
+  <block id="cda6042617dc27a0f8e468ab324f9f81" category="paragraph">Os seguintes requisitos se aplicam quando o pacote SCST é instalado com ONTAP Mediator.</block>
+  <block id="a5de7cc43792f40cfbb1b622b1f0f043" category="list-text">Você pode atualizar todos os pacotes de biblioteca, exceto o kernel, mas talvez seja necessário reinicializar para aplicar as alterações no ONTAP Mediator. Agende uma interrupção do serviço caso precise reinicializar.</block>
+  <block id="6a567d6ab1c0238448ba2ccad80fc386" category="inline-link-macro">Matriz de versões do ONTAP Mediator</block>
+  <block id="a3a2ec40d2b4e76162e6af6e724f932e" category="list-text">Você deve manter o kernel do sistema operacional atualizado. Atualize o núcleo do kernel para uma versão compatível listada em <block ref="389c1fb641d3aaf401923546abbc22e9" category="inline-link-macro-rx"></block>. Você precisa reinicializar o sistema, portanto planeje uma janela de manutenção para a interrupção.</block>
+  <block id="bfc2082df312f1a20bbf56b3e8cccd56" category="list-text">Desinstale o módulo do kernel SCST antes de reinicializar e reinstale-o em seguida.</block>
+  <block id="d9efd5d2185a2134d2f488a0f6aad1f2" category="list-text">Prepare uma versão compatível do SCST para reinstalar antes de iniciar a atualização do kernel do sistema operacional.</block>
+  <block id="6d02a1136ef56b4443c2cbbd411daa36" category="admonition">Se você instalou ONTAP Mediator 1.12 ou posterior com suporte apenas para HTTPS, o pacote SCST não está instalado e o kernel do sistema operacional host pode ser atualizado sem afetar ONTAP Mediator. Consulte a documentação do seu sistema operacional host para obter instruções de atualização.</block>
+  <block id="a2431719c27ad3c402a4477b9ea4adda" category="paragraph">Siga estes passos para atualizar o kernel do sistema operacional do host.</block>
+  <block id="d278aad9be542d15b42d2b30e3ac0701" category="inline-link-macro">Matriz de suporte do SO</block>
+  <block id="b6063dac41de2d52ed474e4d9fabe0bd" category="admonition">Antes de atualizar o kernel, verifique se o sistema operacional e a versão do ONTAP Mediator são compatíveis. Para obter informações sobre as versões compatíveis, consulte o <block ref="058749601eb54e478aa450c293860a26" category="inline-link-macro-rx"></block>.</block>
+  <block id="79d1d486e26a453a1c5f215947272048" category="list-text">Pare o ONTAP Mediator.</block>
+  <block id="9fb88e0364e94d0aa278c673a3a8cab2" category="list-text">Desinstale o pacote SCST, veja <block ref="e56523834199041052b3698f535ddc03" category="inline-xref-macro-rx"></block>. (O SCST não oferece um mecanismo de atualização.)</block>
+  <block id="78b70bd60c1bade2bbb1fb773ce8757e" category="list-text">Atualize o sistema operacional e reinicialize.</block>
+  <block id="553a12407d542c9c7043358d944be5f4" category="list-text">Reinstale o pacote SCST.</block>
+  <block id="1e72d86d10efb6ebdd1b36e23e0cc427" category="list-text">Reative o ONTAP Mediator.</block>
+  <block id="06a506684cb2c3bfd5061f1fe42cd4e1" category="section-title">Realizar manutenção do host</block>
+  <block id="5c112c71d95d5039637bd2f6418a13f4" category="paragraph">A atualização do kernel da VM pode causar problemas de compatibilidade com os módulos SCST. Desinstale e reinstale o SCST manualmente.</block>
+  <block id="a978fb84a573d0649748dbda2fe3917d" category="admonition">Se você instalou ONTAP Mediator 1.12 ou posterior com suporte apenas para HTTPS, o pacote SCST não está instalado e você pode ignorar esta tarefa.</block>
+  <block id="c9c46624787ac272453436f8dc37bccb" category="section-title">Passo 1: desinstale o SCST</block>
+  <block id="78174c183f41ff3908f8d5d7d5471eca" category="paragraph">Para desinstalar o SCST, use o pacote tar correspondente à sua versão do ONTAP Mediator.</block>
+  <block id="ae1c2adc256b05ae24ceb4904f3a194e" category="list-text">Baixe o pacote SCST apropriado (conforme mostrado na tabela a seguir) e extraia-o.</block>
+  <block id="644527e9d9c1a8bb90a8f8a39545cffa" category="cell">Para esta versão ...</block>
+  <block id="b276107c9d73049059267e1d24384dfc" category="cell">Use este pacote tar...</block>
+  <block id="807c8ea4ce44aafe8182c967e6cb3009" category="paragraph">ONTAP Mediator 1.12.1</block>
+  <block id="74ce5c6b8baa0bd670dbd1088b4b1d8b" category="paragraph">scst-3.10.tar.gz</block>
+  <block id="7babcd6c4640d6743d1d48f5ebf033ba" category="paragraph">ONTAP Mediator 1.12</block>
+  <block id="292c47135b1e053b7a4f5bc4dc7aebe6" category="paragraph">ONTAP Mediator 1.11</block>
+  <block id="b95953786a64a5657ba5f60dfefb49f9" category="paragraph">scst-3.9.tar.gz</block>
+  <block id="608fc56e87abfaa82d44d7681baa229c" category="paragraph">ONTAP Mediator 1.10</block>
+  <block id="b24bb37649c6604fb9286ec5a196e2a2" category="paragraph">ONTAP Mediator 1.9.1</block>
+  <block id="622247fa57d791be9f00522e1c9ce4f7" category="paragraph">scst-3.8.0.tar.bz2</block>
+  <block id="65e29e624ae972c250adba95d719e611" category="paragraph">ONTAP Mediator 1.9</block>
+  <block id="a88346cb59bbb38033cc3f7631b6e8ad" category="paragraph">ONTAP Mediator 1.8</block>
+  <block id="8cbd490b0f2e835ef4e1645dc4707d94" category="paragraph">ONTAP Mediator 1.7</block>
+  <block id="4f285c03dc70e26d8b8e7412c5bdc560" category="paragraph">scst-3.7.0.tar.bz2</block>
+  <block id="0c21ff608448410826399ad92d205830" category="paragraph">ONTAP Mediator 1.6</block>
+  <block id="c5d7de55c34e668641e1a528a37b6436" category="paragraph">ONTAP Mediator 1.5</block>
+  <block id="09b297a1a4bcca67652dedc57df1e202" category="paragraph">scst-3.6.0.tar.bz2</block>
+  <block id="21b1af0acdaa98f7c573b54a229cef88" category="paragraph">ONTAP Mediator 1.4</block>
+  <block id="2efaff17f9f038bd5fee7667c4108632" category="paragraph">ONTAP Mediator 1.3</block>
+  <block id="2ee3187dff8a572a21ab1372b84d56de" category="paragraph">scst-3.5.0.tar.bz2</block>
+  <block id="c165c61d0648f135a001e9e856403475" category="paragraph">ONTAP Mediator 1.1</block>
+  <block id="b8ae26a58e496434fcb2936bd1835ca2" category="paragraph">scst-3.4.0.tar.bz2</block>
+  <block id="0e458c5773568b59ce235d487e83fed4" category="paragraph">ONTAP Mediator 1.0</block>
+  <block id="da02a9a3a48ef89c860cd295ea9d498e" category="paragraph">scst-3.3.0.tar.bz2</block>
+  <block id="6bc6f3bb34973f06e2944152e06b3e57" category="inline-link-macro">Downloads do SCST no sourceforge</block>
+  <block id="83d381c65682ea10a3c5cb2ea4039419" category="list-text">Acesse o pacote de código aberto a partir do <block ref="01e2d9408f7c9eaee7ff8a3ac55816e7" category="inline-link-macro-rx"></block>.</block>
+  <block id="e38a0a20f45973c886cd2a9fb8801de3" category="list-text">Selecione *Baixar versões lançadas*.</block>
+  <block id="64ec64425c8d283a8cb03364513f8b18" category="list-text">Extraia o pacote para sua VM.</block>
+  <block id="295383c5bd4aaac8973af7107aed6abe" category="list-text">Execute os seguintes comandos de desinstalação no<block ref="e61b996e82eb1138ee09c1f3d9d7fe5c" prefix=" " category="inline-code"></block> diretório:</block>
+  <block id="8593afb42fff6936fbbfeccc0ab49aab" category="list-text"><block ref="06a9e7c972b3c74893e99636e502b737" prefix="" category="inline-code"></block></block>
+  <block id="a8410b860b63d17f89061e1e28036877" category="list-text"><block ref="1334f64f34ef689863389bf1052589e3" prefix="" category="inline-code"></block></block>
+  <block id="f870e7c10088703a9737f928794c4407" category="list-text"><block ref="f542261f75ac52008cd7c93b22095159" prefix="" category="inline-code"></block></block>
+  <block id="510e52bce66f7c7182ea060d2ce27766" category="list-text"><block ref="c1d27a6f6981a5a429653f5fed110eab" prefix="" category="inline-code"></block></block>
+  <block id="7e1b9a49ba57aa1bde00fe09f716ef2d" category="list-text"><block ref="fa35632194ce8b583801f20ab41b1e99" prefix="" category="inline-code"></block></block>
+  <block id="07520f190e3e2a2eafd27e363c80ebac" category="list-text"><block ref="7cf7958feb71acb49afb343b4d4d79b2" prefix="" category="inline-code"></block></block>
+  <block id="59d3d0e6555886f1ade3687218842cd3" category="section-title">Etapa 2: Instalar o SCST</block>
+  <block id="a0daba2143953e8c062cfa7c0ed9710c" category="inline-xref">Tabela SCST</block>
+  <block id="e84f09c1950fdbb6fa633ab80e98c9d2" category="paragraph">Para instalar o SCST manualmente, você precisa do pacote tar do SCST que é usado para a versão instalada do ONTAP Mediator (consulte o <block ref="7df230741ad687ff62210ec23c02b714" category="inline-xref-macro-rx"></block>).</block>
+  <block id="3c1b791c2302f702e882dbddffcd8e0c" category="list-text">Execute esta etapa antes de instalar o ONTAP Mediator. Se a versão do SCST que você está usando for mais recente do que a versão incluída no instalador do ONTAP Mediator, o instalador ignorará esta etapa.</block>
+  <block id="df877f9ba2a64b9c65a9ebce87d47895" category="list-text">Em alguns cenários, a instalação padrão do SCST no sistema operacional atualizado pode falhar porque o sistema operacional atualizado requer uma correção.</block>
+  <block id="1cdf890a814b27389ca73efb6ef1b2a0" category="paragraph">A partir do ONTAP Mediator 1.12.1, se a instalação falhar, você pode usar a ferramenta de reparo SCST localizada em <block ref="711a32ad400471be43668bfcda3244b2" prefix=" " category="inline-code"></block> para reparar a instalação.</block>
+  <block id="cbaf49dde1c8c8a64598acebeddd8885" category="paragraph">Se o sistema operacional atualizado exigir uma correção, a ferramenta a contém para a versão do SCST fornecida no pacote do ONTAP Mediator. A ferramenta <block ref="60141085cb46333d90d906cb4f6b2bed" prefix=" " category="inline-code"></block> é uma ferramenta autônoma, separada do instalador principal e está incluída no arquivo do ONTAP Mediator <block ref="05d1190d81e37d06607cc19e21f63ea7" prefix=" " category="inline-code"></block>. Ela não afeta a instalação ou os caminhos de atualização do ONTAP Mediator.</block>
+  <block id="af237f12f033ed7a1541ed09941bd49a" category="list-text">Execute os seguintes comandos de instalação no<block ref="e61b996e82eb1138ee09c1f3d9d7fe5c" prefix=" " category="inline-code"></block> diretório:</block>
+  <block id="219be29168daa439833c6dec3204ab8a" category="list-text"><block ref="15b729bfacb674677c02d36e67cccd31" prefix="" category="inline-code"></block></block>
+  <block id="d62b340c8804af5b986f34042c421807" category="list-text"><block ref="7b0b9f99b1782da526b64f9c7d2cbfda" prefix="" category="inline-code"></block></block>
+  <block id="035c4c41a051e50df34e008a35f193c3" category="list-text"><block ref="de45ef00651d6d63e4b3d70e555aeb96" prefix="" category="inline-code"></block></block>
+  <block id="51bf1342c02a1aa7f473006f5c4e03dd" category="list-text"><block ref="eb27a945bae77a00e7110a9d66641ad3" prefix="" category="inline-code"></block></block>
+  <block id="9bb2fdee7568658389f23ffceb122d2b" category="list-text"><block ref="4257f02e0cc0cdc1a062518badc38798" prefix="" category="inline-code"></block></block>
+  <block id="03f148fb355081942edbed6cacd558ef" category="paragraph">Se você estiver realizando uma instalação pela primeira vez e quiser pré-instalar o ONTAP Mediator, execute o seguinte comando antes de prosseguir para a próxima etapa:</block>
+  <block id="87055910cc61d08f9e025801764f05db" category="paragraph"><block ref="ef04324829dcd0814b9758eddb1cdef3" prefix="" category="inline-code"></block></block>
+  <block id="bd7d101a7e592e89568ef4a3a9e6854c" category="list-text"><block ref="337c365bf15e4037b2d44f1d33bf8b42" prefix="" category="inline-code"></block></block>
+  <block id="24071e7a1bd2a0c2b695eb49e38c2cf3" category="list-text"><block ref="cc05e5a8166865ea5604111743b13c0f" prefix="" category="inline-code"></block></block>
+  <block id="f1654e0e0503cd7c2bb9fe4aa5a1e585" category="admonition">Se você pré-instalar o SCST antes do ONTAP Mediator durante a primeira instalação, ignore esta etapa. O instalador aplica os patches relevantes do SCST.</block>
+  <block id="87bf5adc2c3567a5a481065537a8a6c5" category="list-text">Opcionalmente, se o Secure Boot estiver ativado, antes de reinicializar, execute as seguintes etapas:</block>
+  <block id="3c057675c20e59ed95b565b162d77abe" category="list-text">Determine o nome de cada arquivo para os<block ref="cc96446bbab924b6866fde0c8bc3afda" prefix=" " category="inline-code"></block>,<block ref="e61b996e82eb1138ee09c1f3d9d7fe5c" prefix=" " category="inline-code"></block> e<block ref="941fd93c7fd820c94b632750866d5069" prefix=" " category="inline-code"></block> módulos:</block>
+  <block id="f3f1f01c7600a99d9ae5ff3385707568" category="list-text">Determine a versão do kernel:</block>
+  <block id="186531353ecb000c1f2fe442a51e6875" category="list-text">Assine cada arquivo de módulo com o kernel:</block>
+  <block id="34ae6a6ef163543442224fb0ceb8d288" category="list-text">Instale a chave UEFI com o firmware.</block>
+  <block id="a1447b47ea4085f23bc9d607d9c14ca4" category="paragraph">As instruções para instalar a chave UEFI encontram-se em:</block>
+  <block id="099fd32c4706f1e8a51d4db6a91e066b" category="paragraph"><block ref="ba63683ba255fd905f17b826e9f54ffc" prefix="" category="inline-code"></block></block>
+  <block id="f41b1dc94c3aba47479be014a28c177f" category="paragraph">A chave UEFI gerada está localizada em:</block>
+  <block id="b7c392ffdd9cf474a112f06afa55aae0" category="paragraph"><block ref="9810e5358ed1383c40727cce3f3461f6" prefix="" category="inline-code"></block></block>
+  <block id="dd5f279d7429dfef139125512e345a36" category="list-text">Reinicialize o sistema:</block>
+  <block id="a0aba6ae1d604e993dbdc4de925448a0" category="paragraph"><block ref="2b755b30293f2f9f79ec1c86ab0943f2" prefix="" category="inline-code"></block></block>
+  <block id="cded85f36d484db29e116f6a9a8e01ed" category="section-title">Alterações do host no nome do host ou no endereço IP</block>
+  <block id="44ffcd7d55d0d07a3d3b0f89b0ee9761" category="list-text">Faça isso somente se os certificados autoassinados não forem mais válidos porque o nome do host ou o endereço IP mudaram após a instalação do ONTAP Mediator.</block>
+  <block id="54bcd9cb0a4155f6f26f22c8451d8f3b" category="list-text">Após o certificado autoassinado temporário ser substituído por um certificado confiável de terceiro, você _não_ deve usar esta tarefa para regenerar um certificado. Se você não tiver um certificado autoassinado, não poderá usar este procedimento.</block>
+  <block id="48c7c41b72e1d678923ce3571aa65b2d" category="paragraph-title">Etapa</block>
+  <block id="b00b7c9c02e0327f24065677de5525f2" category="paragraph">Crie um certificado autoassinado temporário para o host atual:</block>
+  <block id="05ed664a4c02ae9ac2b15dfab017e810" category="paragraph"><block ref="2511bb06268eb4b527117280c3871164" prefix="" category="inline-code"></block></block>
+  <block id="ecb59f9593697a45aed1640c4de73429" category="summary">Regenere um certificado temporário autoassinado quando o nome do host ou o endereço IP mudar.</block>
+  <block id="2d8cdd73cc8da78b74df80aa1652ba34" category="doc">Regenere um certificado autoassinado temporário para o host do ONTAP Mediator</block>
+  <block id="ea10d4fdf639b3decb3b2c9bca5136ba" category="paragraph">Regenere um certificado temporário autoassinado para o host atual quando uma alteração no nome do host ou no endereço IP invalidar o certificado existente.</block>
+  <block id="5bca328affb656481bc77c4e8c48f53a" category="admonition">Este procedimento só é compatível com sistemas que executam o ONTAP Mediator 1.7 ou posterior.</block>
+  <block id="e46aded5b2472eb9faebc8cb2cf98373" category="list-text">Você só pode executar esta tarefa se os certificados autoassinados gerados tiverem se tornado obsoletos devido a alterações no nome do host ou no endereço IP do host após a instalação do ONTAP Mediator.</block>
+  <block id="bbfce4a0935459743e38b520fec810c3" category="list-text">Após o certificado autoassinado temporário ser substituído por um certificado confiável de terceiro, você _não_ deve usar esta tarefa para regenerar um certificado. A ausência de um certificado autoassinado fará com que este procedimento falhe.</block>
+  <block id="7eac04f7b7766b6a33a6a26d981f6c59" category="paragraph">Para gerar um novo certificado autoassinado temporário para o host atual, execute a seguinte etapa:</block>
+  <block id="0a8fdf83e28a8dc39e912c474334b44e" category="summary">Substitua os certificados autoassinados do ONTAP Mediator por certificados confiáveis.</block>
+  <block id="6b87026f6cb12ce4bf41f8ed3268e6c8" category="doc">Substitua os certificados autoassinados do ONTAP Mediator por certificados confiáveis de terceiros</block>
+  <block id="983451d7831507a3bbf97015d5d34eb5" category="paragraph">Se o seu ambiente suportar, substitua os certificados autoassinados por certificados confiáveis emitidos por uma autoridade certificadora.</block>
+  <block id="45c66c3c0ef652ff0c9b5c1f5d00aa71" category="inline-link-macro">NetApp ID do bug no Bugs Online CONTAP-243278</block>
+  <block id="9362ebfda0513d76c1ef6259b6c66ad2" category="list-text">Os certificados de terceiros são suportados apenas a partir do ONTAP 9.16.1 e em algumas versões de patch anteriores do ONTAP. Consulte <block ref="c3f5363ff997720d7b052ed0f3c93792" category="inline-link-macro-rx"></block>.</block>
+  <block id="859dae41a742318e640253da8c4ed08d" category="list-text">Os certificados de terceiros são suportados apenas em sistemas que executam o ONTAP Mediator 1.7 ou posterior.</block>
+  <block id="fdb6703b425f6ed6b89d5f9e5f0e440d" category="list-text">Você pode realizar essa tarefa se os certificados autoassinados gerados precisarem ser substituídos por certificados obtidos de uma autoridade de certificação (AC) subordinada confiável. Para isso, você deve ter acesso a uma autoridade de infraestrutura de chave pública (PKI) confiável.</block>
+  <block id="a26ccd79220ab4360a7a81457547dc13" category="list-text">A imagem a seguir mostra as finalidades de cada certificado do ONTAP Mediator.</block>
+  <block id="94e806de183ce500a0629f347038b0fe" category="inline-image-macro">Finalidades do certificado do ONTAP Mediator</block>
+  <block id="73d48dee74134ef6c6aecc8f5c9cbb91" category="paragraph"><block ref="73d48dee74134ef6c6aecc8f5c9cbb91" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="d66b2a29817b16bdbbb8d71c79897999" category="list-text">A imagem a seguir mostra a configuração da instalação do servidor web e do ONTAP Mediator.</block>
+  <block id="19d6c22739385d66614ac5b0e48dc967" category="inline-image-macro">Configuração da instalação do servidor web e do ONTAP Mediator</block>
+  <block id="f7551ad44e63bc48cc0dac80c95a7f55" category="paragraph"><block ref="f7551ad44e63bc48cc0dac80c95a7f55" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="dba666eb7025fd9dfe4c84f5a8e0e54e" category="section-title">Passo 1: obtenha um certificado de um terceiro que emita um certificado de CA</block>
+  <block id="f0d6329976f366cd4f00549b59ca848f" category="paragraph">Você pode obter um certificado de uma autoridade PKI seguindo o procedimento abaixo.</block>
+  <block id="e9d98eada7bb032e2bccc5d63028b931" category="paragraph">O exemplo a seguir demonstra a substituição das entidades de certificado autoassinado pelas entidades de certificado de terceiro localizadas em<block ref="881d8f2cbcd6ad648cada905bdcf8f06" prefix=" " category="inline-code"></block>.</block>
+  <block id="c9956fa1c0a791ae05a571b2df4050dd" category="paragraph">O exemplo ilustra os critérios necessários para os certificados exigidos para o ONTAP Mediator. Você pode obter os certificados de uma autoridade de Infraestrutura de Chaves Públicas (PKI) de uma forma que pode ser diferente deste procedimento. Ajuste o procedimento de acordo com as necessidades do seu negócio.</block>
+  <block id="3b805c009116852ea35624254e9b001f" category="list-text">Crie uma chave privada<block ref="af1e9ae0e498fd55e57eee6b13df7e90" prefix=" " category="inline-code"></block> e um arquivo de configuração<block ref="b63fc2fe55e71700434cd5dded845bbe" prefix=" " category="inline-code"></block> que serão utilizados pela autoridade PKI para gerar um certificado.</block>
+  <block id="078654b98ff43f835605ec78f6adb0be" category="list-text">Gere a chave privada<block ref="af1e9ae0e498fd55e57eee6b13df7e90" prefix=" " category="inline-code"></block>:</block>
+  <block id="0a52730597fb4ffa01fc117d9e71e3a9" category="paragraph-title">Exemplo</block>
+  <block id="6fab83b9d1c9427f391dafe409e73cb9" category="paragraph"><block ref="60beaf4a3e4e76ba2e0b5199e966b4a5" prefix="" category="inline-code"></block></block>
+  <block id="f6d17dedd790171d3abb0c639b3d74af" category="list-text">O arquivo de configuração<block ref="b63fc2fe55e71700434cd5dded845bbe" prefix=" " category="inline-code"></block> (localizado em<block ref="603163ce5e8659fa810255687a12d61f" prefix=" " category="inline-code"></block>) define as propriedades que o certificado gerado deve ter.</block>
+  <block id="1877dfd2b98048327da6bbcc3eb9d209" category="list-text">Utilize a chave privada e o arquivo de configuração para criar uma solicitação de assinatura de certificado<block ref="04c87081fa56c700d4ba49025b161bc8" prefix=" " category="inline-code"></block>:</block>
+  <block id="81eeab9506186e2dca8faefa78d54067" category="paragraph-title">Exemplo:</block>
+  <block id="69d199a7c8145036757b6867017a48f9" category="paragraph"><block ref="45f5019e4e2a45f13b8879039781e0ea" prefix="" category="inline-code"></block></block>
+  <block id="bbb3450060c68da2b55513c4d4183554" category="list-text">Envie a solicitação de assinatura do certificado<block ref="04c87081fa56c700d4ba49025b161bc8" prefix=" " category="inline-code"></block> a uma autoridade de PKI para que ela o assine.</block>
+  <block id="49061425c8c421638894d4c46acccff9" category="paragraph">A autoridade de PKI verifica a solicitação e assina o<block ref="6888bcca92c1656b9638da22d1c88a83" prefix=" " category="inline-code"></block>, gerando o certificado<block ref="9e1f34d274d54e077ab71c2c0fe0badd" prefix=" " category="inline-code"></block>. Além disso, você precisa obter o<block ref="f93035d1d7d45fa37bc8cf1cd447ea1b" prefix=" " category="inline-code"></block> certificado que assinou o<block ref="9e1f34d274d54e077ab71c2c0fe0badd" prefix=" " category="inline-code"></block> certificado da autoridade de PKI.</block>
+  <block id="cab2ce77875f7b918e94536e619c0d8c" category="inline-link-macro">Configure o ONTAP Mediator e os clusters para a sincronização ativa do SnapMirror</block>
+  <block id="f193834bd92e229bc0f4dabb3e14b64b" category="inline-link-macro">Configure o ONTAP Mediator para uma configuração IP do MetroCluster</block>
+  <block id="f4df551a174de171c7ab796a88be6440" category="admonition">Para clusters do SnapMirror active sync e configurações IP do MetroCluster que usam o ONTAP Mediator configurado com HTTPS, você deve adicionar os certificados <block ref="9e1f34d274d54e077ab71c2c0fe0badd" prefix=" " category="inline-code"></block> e <block ref="f93035d1d7d45fa37bc8cf1cd447ea1b" prefix=" " category="inline-code"></block> a um cluster do ONTAP. Consulte <block ref="969d110dc2acd5c775ecdf40865c816b" category="inline-link-macro-rx"></block> e <block ref="17fdc58adf7488af5cac0a397597b31a" category="inline-link-macro-rx"></block>.</block>
+  <block id="0e8039485c980e9122c09d51876bf864" category="list-text">Crie uma chave privada<block ref="006bb7652a42584eed616d6cab6b5942" prefix=" " category="inline-code"></block> e um arquivo de configuração<block ref="b63fc2fe55e71700434cd5dded845bbe" prefix=" " category="inline-code"></block> que serão usados pela autoridade PKI para gerar um certificado.</block>
+  <block id="6e1407359fec929f717684929f6b4257" category="list-text">Gere a chave privada<block ref="006bb7652a42584eed616d6cab6b5942" prefix=" " category="inline-code"></block>:</block>
+  <block id="a8d490bade5ae1bf3adce74e8a81f7a3" category="paragraph"><block ref="6db526989015dac4a4325b5b6a3b7ba2" prefix="" category="inline-code"></block></block>
+  <block id="0a33f290561c82221dfda732ba7c8bb7" category="list-text">Use a chave privada e o arquivo de configuração para criar uma solicitação de assinatura de certificado<block ref="740015385df511c8015f75b5c6069152" prefix=" " category="inline-code"></block>:</block>
+  <block id="86117ec4fb14b54878d13941affd978b" category="list-text">Envie a solicitação de assinatura do certificado<block ref="740015385df511c8015f75b5c6069152" prefix=" " category="inline-code"></block> a uma autoridade de Infraestrutura de Chaves Públicas (PKI) para que ela o assine.</block>
+  <block id="6e5b4b37bdceed4d2bb7ef87ea444a99" category="paragraph">A autoridade de PKI verifica a solicitação e assina o<block ref="6888bcca92c1656b9638da22d1c88a83" prefix=" " category="inline-code"></block>, gerando o certificado<block ref="017ce4f89360621e0345c257b6136b21" prefix=" " category="inline-code"></block>. Além disso, você precisa obter o certificado<block ref="f93035d1d7d45fa37bc8cf1cd447ea1b" prefix=" " category="inline-code"></block> que assinou o certificado<block ref="017ce4f89360621e0345c257b6136b21" prefix=" " category="inline-code"></block> da autoridade de PKI.</block>
+  <block id="35406e31af2f4f3839350d4b14955d79" category="admonition">Para clusters do SnapMirror active sync, você deve adicionar os certificados <block ref="017ce4f89360621e0345c257b6136b21" prefix=" " category="inline-code"></block> e <block ref="f93035d1d7d45fa37bc8cf1cd447ea1b" prefix=" " category="inline-code"></block> a um cluster do ONTAP. Consulte <block ref="969d110dc2acd5c775ecdf40865c816b" category="inline-link-macro-rx"></block>.</block>
+  <block id="056a80f7d7d413f4f924266b3128c6ea" category="section-title">Etapa 2: gere um certificado de servidor assinando-o com uma autoridade certificadora (CA) de terceiro</block>
+  <block id="0c65a7f7bfe735e5466712884856bba1" category="paragraph">Um certificado de servidor deve ser assinado pela chave privada<block ref="af1e9ae0e498fd55e57eee6b13df7e90" prefix=" " category="inline-code"></block> e pelo certificado de terceiro<block ref="9e1f34d274d54e077ab71c2c0fe0badd" prefix=" " category="inline-code"></block>. Além disso, o arquivo de configuração<block ref="84cb52bb17b32e87a0316b550e728d41" prefix=" " category="inline-code"></block> contém certos atributos que especificam as propriedades necessárias para os certificados de servidor emitidos pelo OpenSSL.</block>
+  <block id="5762acaab0546d38c14fded50d8851b0" category="paragraph">Os comandos a seguir podem gerar um certificado de servidor.</block>
+  <block id="5b597d33ee913b4dd82df326a9a0df99" category="list-text">Para gerar uma solicitação de assinatura de certificado do servidor (CSR), execute o seguinte comando a partir da<block ref="d1310db41b53a4ee6e7ef6b2111028ed" prefix=" " category="inline-code"></block> pasta:</block>
+  <block id="beaa867526f567c96f6b3a81806a5014" category="paragraph"><block ref="80383e076d8d43cb8f3d687ea7d86718" prefix="" category="inline-code"></block></block>
+  <block id="d7bbf2a9256f7a93507c182af62bdba7" category="list-text">[[step_2_intermediate_info_v9]]Para gerar um certificado de servidor a partir do CSR, execute o seguinte comando na pasta<block ref="d1310db41b53a4ee6e7ef6b2111028ed" prefix=" " category="inline-code"></block>:</block>
+  <block id="901fe5a6df712b84b225bb7dd8d3c951" category="admonition">Esses arquivos foram obtidos de uma autoridade de PKI. Se você estiver usando um nome de certificado diferente, substitua<block ref="9e1f34d274d54e077ab71c2c0fe0badd" prefix=" " category="inline-code"></block>`&lt;certificate_name&gt;` e<block ref="af1e9ae0e498fd55e57eee6b13df7e90" prefix=" " category="inline-code"></block>`&lt;filename&gt;` pelos nomes de arquivo relevantes.</block>
+  <block id="9a7b7618cc37cc5e828264dec6ce253a" category="paragraph"><block ref="722c3b45efbfda611e47611e4899aaf2" prefix="" category="inline-code"></block></block>
+  <block id="cc1e839f1c6e83b66a14b6fef505f123" category="list-text">A<block ref="877efcd6cbcff5bef5736a55041d38cf" prefix=" " category="inline-code"></block> opção é usada para gerar os<block ref="41799a9f1cb27f52842c90e3f9f9efdf" prefix=" " category="inline-code"></block> arquivos.</block>
+  <block id="2becae461be61f9e490c5f374223162b" category="paragraph">Um certificado de servidor deve ser assinado pela chave privada<block ref="006bb7652a42584eed616d6cab6b5942" prefix=" " category="inline-code"></block> e pelo certificado de terceiro<block ref="017ce4f89360621e0345c257b6136b21" prefix=" " category="inline-code"></block>. Além disso, o arquivo de configuração<block ref="84cb52bb17b32e87a0316b550e728d41" prefix=" " category="inline-code"></block> contém certos atributos que especificam as propriedades necessárias para os certificados de servidor emitidos pelo OpenSSL.</block>
+  <block id="d2e434afaca634f2f0aeaad1469acad4" category="list-text">[[step_2_intermediate_info_v8]]Para gerar um certificado de servidor a partir do CSR, execute o seguinte comando na<block ref="d1310db41b53a4ee6e7ef6b2111028ed" prefix=" " category="inline-code"></block> pasta:</block>
+  <block id="590640d89a0fa21e04be87bd7b642332" category="admonition">Esses arquivos foram obtidos de uma autoridade PKI. Se você estiver usando um nome de certificado diferente, substitua <block ref="017ce4f89360621e0345c257b6136b21" prefix=" " category="inline-code"></block>`&lt;certificate_name&gt;` e <block ref="006bb7652a42584eed616d6cab6b5942" prefix=" " category="inline-code"></block>`&lt;filename&gt;` pelos nomes de arquivo relevantes.</block>
+  <block id="9f7f816da9d37c41376b5880935464ad" category="paragraph"><block ref="22a542367f1f4e0cd4ac3c474904c66d" prefix="" category="inline-code"></block></block>
+  <block id="66c4ef86c3be5a6ace692d41b16bb6a0" category="list-text">A<block ref="877efcd6cbcff5bef5736a55041d38cf" prefix=" " category="inline-code"></block> opção é usada para gerar os<block ref="6d9cf61db5ec1375b2846eaf8102c57d" prefix=" " category="inline-code"></block> arquivos.</block>
+  <block id="41b00f5e0e569d9d5e875f54e250641b" category="section-title">Etapa 3: substitua o novo certificado da CA de terceiros e o certificado do servidor na configuração do ONTAP Mediator</block>
+  <block id="7dc4da8261ee50ff7c7bd7944a06d779" category="open-title">O ONTAP Mediator 1.10 e versões posteriores</block>
+  <block id="6e64583261c5e7e30a02df50cd97906f" category="paragraph">A configuração do certificado é fornecida ao ONTAP Mediator no arquivo de configuração localizado em<block ref="91f698a7212f808ea1123f2fea7d684b" prefix=" " category="inline-code"></block>. O arquivo inclui os seguintes atributos:</block>
+  <block id="14b1bc5827810cb6388615660e9ef5e3" category="list-text"><block ref="57ec7fe7e85d1196b9f133d14ea5b50d" prefix="" category="inline-code"></block> e<block ref="0df75c07b8443071d006ab81cad1a19d" prefix=" " category="inline-code"></block> são variáveis de certificado do servidor.</block>
+  <block id="3a4b60bb708e08a08669aba534057841" category="list-text"><block ref="b8cd01813c5850a747e7a03c9dcb43ed" prefix="" category="inline-code"></block>,<block ref="a93e5ca6615891464275e325959beec1" prefix=" " category="inline-code"></block> e <block ref="432981cc26072c8b71f348991372737a" prefix=" " category="inline-code"></block> são variáveis de certificado CA.</block>
+  <block id="a9b4025ad224a247e726fcf76662b617" category="list-text">Substitua todos<block ref="92ce94a27a4f217c948197cd04250986" prefix=" " category="inline-code"></block> os arquivos pelos certificados de terceiros.</block>
+  <block id="31c0baa23b1af15a0d3a43d1b3ead845" category="list-text">Crie uma cadeia a partir dos<block ref="9e1f34d274d54e077ab71c2c0fe0badd" prefix=" " category="inline-code"></block> e<block ref="4d389575bb215bbefa0d6232cd02d8f9" prefix=" " category="inline-code"></block> certificados:</block>
+  <block id="8e5154ac6950f78c89d2755da310ae26" category="paragraph"><block ref="458477685a61800dcd4658fcf77d60a9" prefix="" category="inline-code"></block></block>
+  <block id="a2c8eb7ec6335fdb2105ec3728a7548f" category="list-text">Atualize o<block ref="49345d1bd9b5d2feb6e514601b3dc8b7" prefix=" " category="inline-code"></block> arquivo.</block>
+  <block id="9a01db6fec1b512e701b180f131d6ca2" category="paragraph">Atualize os valores de<block ref="3bd8168dce3c8a50e907ce3aa9da865f" prefix=" " category="inline-code"></block>,<block ref="361c4929fae81af747b192247e803d9c" prefix=" " category="inline-code"></block>, e<block ref="9c1fc3b79d60bf04b6085fe46e62f1c9" prefix=" " category="inline-code"></block>:</block>
+  <block id="441da631466806866b84bbf585cebda6" category="paragraph"><block ref="3bd8168dce3c8a50e907ce3aa9da865f" prefix="" category="inline-code"></block>:<block ref="c65e9f7c554af033c2b73c5a83f1e7fa" prefix=" " category="inline-code"></block></block>
+  <block id="6f0a9ec41ae85f2ba2ea993c30486d8b" category="paragraph"><block ref="361c4929fae81af747b192247e803d9c" prefix="" category="inline-code"></block>:<block ref="65443649d2ad7f4ae3b991372ec6c8ce" prefix=" " category="inline-code"></block></block>
+  <block id="c94af72455438bfef22ce52ada3e551d" category="paragraph"><block ref="9c1fc3b79d60bf04b6085fe46e62f1c9" prefix="" category="inline-code"></block>:<block ref="facb85e3c9aed5e66abad45ae730b174" prefix=" " category="inline-code"></block></block>
+  <block id="90aff04b4f329338dab4a9e237950b47" category="list-text">O<block ref="3bd8168dce3c8a50e907ce3aa9da865f" prefix=" " category="inline-code"></block> valor é o caminho da chave no<block ref="4d389575bb215bbefa0d6232cd02d8f9" prefix=" " category="inline-code"></block> arquivo, que é<block ref="c648fd44a08bf7204571b21b362d1b5b" prefix=" " category="inline-code"></block>.</block>
+  <block id="5cdd26074d389338639d49a748da994f" category="list-text">O<block ref="361c4929fae81af747b192247e803d9c" prefix=" " category="inline-code"></block> valor é o caminho do<block ref="da456ebfdb87aa0422fa8f40c550835d" prefix=" " category="inline-code"></block> arquivo.</block>
+  <block id="c448b3f163e6395c472bd71c11adfe4c" category="list-text">O<block ref="9c1fc3b79d60bf04b6085fe46e62f1c9" prefix=" " category="inline-code"></block> valor é o caminho do<block ref="f93035d1d7d45fa37bc8cf1cd447ea1b" prefix=" " category="inline-code"></block> arquivo.</block>
+  <block id="47632d3e542c2eaba8d5e3b109819af3" category="list-text">Verifique se os seguintes atributos dos certificados recém-gerados estão configurados corretamente:</block>
+  <block id="3bb1410f4281265568630f3742c3bc84" category="list-text">Proprietário do grupo Linux:<block ref="3708396f823b6893b07f7e5bed8892eb" prefix=" " category="inline-code"></block></block>
+  <block id="4e9878f5163e140c8537d7d2ecd6d5c9" category="list-text">Permissões do Linux:<block ref="d490d7b4576290fa60eb31b5fc917ad1" prefix=" " category="inline-code"></block></block>
+  <block id="f3af4c47233f0bd4b7c00261caab487d" category="paragraph"><block ref="d7c845acea8f4035787257ee9cfe470d" prefix="" category="inline-code"></block></block>
+  <block id="415e1820b840c0d0ede8420176bf56e2" category="open-title">O ONTAP Mediator 1.9.1 e 1.9</block>
+  <block id="f2fdb1f293c88941864aeb4c956fd32b" category="list-text">Atualize o<block ref="ea8a01a633dad65525408f18e3468ce8" prefix=" " category="inline-code"></block> arquivo.</block>
+  <block id="bf14ed2bbe3378e58d49b7d21a6d1b11" category="paragraph">Atualize os valores de<block ref="80eec318a13ef13c13e489b6b09462cd" prefix=" " category="inline-code"></block>,<block ref="8521272c5e36e1911c5d65be9dd77b78" prefix=" " category="inline-code"></block> e<block ref="295f5667864643d817199e63c98ccbf6" prefix=" " category="inline-code"></block>:</block>
+  <block id="0649df909cdcd271bd4dbd108143f1b6" category="paragraph"><block ref="82ae415b080263fa26ac06124cc199b4" prefix="" category="inline-code"></block></block>
+  <block id="f51e176723c73018d1705c8a775dfe84" category="paragraph"><block ref="b39a99aaa7b7f40ba5ab3e91f3f508b1" prefix="" category="inline-code"></block></block>
+  <block id="d6e9bbdfd1fdd0672a9b22dc91abf647" category="paragraph"><block ref="b7ca3bb28daa2c50bbe6e73853da99bb" prefix="" category="inline-code"></block></block>
+  <block id="6714ad5ee542e0e273b4648f39a1d3eb" category="list-text">O<block ref="80eec318a13ef13c13e489b6b09462cd" prefix=" " category="inline-code"></block> valor é o caminho do<block ref="da456ebfdb87aa0422fa8f40c550835d" prefix=" " category="inline-code"></block> arquivo.</block>
+  <block id="1c7019ec7226d6b42b24c4d1b8e9b498" category="list-text">O<block ref="9ae8234d8b9b531c084eefec58e3f9b6" prefix=" " category="inline-code"></block> é o caminho da chave no<block ref="4d389575bb215bbefa0d6232cd02d8f9" prefix=" " category="inline-code"></block> arquivo, que é<block ref="c648fd44a08bf7204571b21b362d1b5b" prefix=" " category="inline-code"></block>.</block>
+  <block id="8b8cdeb1126557a15dfce94099cd2130" category="list-text">O<block ref="295f5667864643d817199e63c98ccbf6" prefix=" " category="inline-code"></block> valor é o caminho do<block ref="f93035d1d7d45fa37bc8cf1cd447ea1b" prefix=" " category="inline-code"></block> arquivo.</block>
+  <block id="8737e0e09e0ad91f9b0f08436f5d9c70" category="list-text">Substitua todos<block ref="c9625f1e43d5d6ec06c65483eba6fad4" prefix=" " category="inline-code"></block> os arquivos pelos certificados de terceiros.</block>
+  <block id="3cecfb9e6f37e19d5c11148e604542c1" category="list-text">Crie uma cadeia de certificados a partir dos<block ref="017ce4f89360621e0345c257b6136b21" prefix=" " category="inline-code"></block> e<block ref="4d389575bb215bbefa0d6232cd02d8f9" prefix=" " category="inline-code"></block> certificados:</block>
+  <block id="b3ce9007661ed042561cc7c955a1d8de" category="paragraph"><block ref="76a7213342d2bf793b8f1b279683ec0f" prefix="" category="inline-code"></block></block>
+  <block id="8ef01d3d1d2e952cc3e2ca6ba338f5a6" category="section-title">Passo 4: opcionalmente, use um caminho ou nome diferente para seus certificados de terceiros</block>
+  <block id="1e9de302ab14768a09b778a5fcd99b37" category="paragraph">Você pode usar certificados de terceiros com um nome diferente de<block ref="92ce94a27a4f217c948197cd04250986" prefix=" " category="inline-code"></block> ou armazenar os certificados de terceiros em um local diferente.</block>
+  <block id="745d7ec3b43958196d3a63e737310729" category="list-text">Configure o<block ref="27a6b24601b63526ffca2fd1c5f9a5c4" prefix=" " category="inline-code"></block> arquivo para substituir os valores padrão das variáveis no<block ref="5b85df10091f3a4731397680ace5150b" prefix=" " category="inline-code"></block> arquivo.</block>
+  <block id="dc45c049c75f00dce36ea121804fc675" category="paragraph">Se você obteve<block ref="9e1f34d274d54e077ab71c2c0fe0badd" prefix=" " category="inline-code"></block> de uma autoridade PKI e armazena sua chave privada<block ref="af1e9ae0e498fd55e57eee6b13df7e90" prefix=" " category="inline-code"></block> no local<block ref="d1310db41b53a4ee6e7ef6b2111028ed" prefix=" " category="inline-code"></block>, o arquivo<block ref="e69236eb2aa5b1455dc0f88753a8a1a2" prefix=" " category="inline-code"></block> deve ser semelhante ao exemplo a seguir:</block>
+  <block id="760042a6666db7aa603c1759de3c17f8" category="admonition">Se você usou<block ref="9e1f34d274d54e077ab71c2c0fe0badd" prefix=" " category="inline-code"></block> para assinar o<block ref="4d389575bb215bbefa0d6232cd02d8f9" prefix=" " category="inline-code"></block> certificado, o arquivo <block ref="41799a9f1cb27f52842c90e3f9f9efdf" prefix=" " category="inline-code"></block>é gerado. Veja <block ref="176f27458d3e2a3c3a9ec02498de4a9f" category="inline-xref-macro-rx"></block>para obter mais informações.</block>
+  <block id="7450bf402d187a456299363bc5c7bb24" category="list-text">Se você estiver usando uma estrutura de certificado em que o<block ref="f93035d1d7d45fa37bc8cf1cd447ea1b" prefix=" " category="inline-code"></block> certificado fornece um<block ref="9e1f34d274d54e077ab71c2c0fe0badd" prefix=" " category="inline-code"></block> certificado que assina o<block ref="4d389575bb215bbefa0d6232cd02d8f9" prefix=" " category="inline-code"></block> certificado, crie uma cadeia de certificados a partir dos<block ref="9e1f34d274d54e077ab71c2c0fe0badd" prefix=" " category="inline-code"></block> e<block ref="4d389575bb215bbefa0d6232cd02d8f9" prefix=" " category="inline-code"></block> certificados:</block>
+  <block id="a2a05dc741ed6dd746d7ee82a123267c" category="admonition">Você deveria ter obtido anteriormente no procedimento os certificados<block ref="9e1f34d274d54e077ab71c2c0fe0badd" prefix=" " category="inline-code"></block> e<block ref="4d389575bb215bbefa0d6232cd02d8f9" prefix=" " category="inline-code"></block> de uma autoridade PKI.</block>
+  <block id="f5c77d84b5e3aa2e280ecc145b9c442b" category="list-text">Reinicie o ONTAP Mediator quando os certificados forem atualizados no arquivo de configuração:</block>
+  <block id="c7faa766b1010320504eaee59d04d490" category="list-text">O<block ref="8521272c5e36e1911c5d65be9dd77b78" prefix=" " category="inline-code"></block> valor é o caminho da chave no<block ref="4d389575bb215bbefa0d6232cd02d8f9" prefix=" " category="inline-code"></block> arquivo, que é<block ref="c648fd44a08bf7204571b21b362d1b5b" prefix=" " category="inline-code"></block>.</block>
+  <block id="b17bc8319d8420404947a9e6ce0bfd3e" category="admonition">Para clusters do SnapMirror Business Continuity (SM-BC), você deve adicionar os<block ref="9e1f34d274d54e077ab71c2c0fe0badd" prefix=" " category="inline-code"></block> e<block ref="f93035d1d7d45fa37bc8cf1cd447ea1b" prefix=" " category="inline-code"></block> certificados a um cluster do ONTAP. Consulte <block ref="969d110dc2acd5c775ecdf40865c816b" category="inline-link-macro-rx"></block>.</block>
+  <block id="e581f49db842b173da229dfa389d04f3" category="paragraph">Você pode usar certificados de terceiro com um nome diferente de<block ref="c9625f1e43d5d6ec06c65483eba6fad4" prefix=" " category="inline-code"></block> ou armazenar os certificados de terceiro em um local diferente.</block>
+  <block id="b227ac4c177690f1337f51db2dca7369" category="paragraph">Se você obteve<block ref="017ce4f89360621e0345c257b6136b21" prefix=" " category="inline-code"></block> de uma autoridade de PKI e armazena a chave privada<block ref="006bb7652a42584eed616d6cab6b5942" prefix=" " category="inline-code"></block> no local<block ref="d1310db41b53a4ee6e7ef6b2111028ed" prefix=" " category="inline-code"></block>, o<block ref="e69236eb2aa5b1455dc0f88753a8a1a2" prefix=" " category="inline-code"></block> arquivo deve ter a seguinte aparência:</block>
+  <block id="757d497aac644c5208241004b9c07c58" category="admonition">Se você usou <block ref="017ce4f89360621e0345c257b6136b21" prefix=" " category="inline-code"></block>para assinar o <block ref="4d389575bb215bbefa0d6232cd02d8f9" prefix=" " category="inline-code"></block>certificado, o arquivo <block ref="6d9cf61db5ec1375b2846eaf8102c57d" prefix=" " category="inline-code"></block> é gerado. Consulte <block ref="4f20cf3f9f80bb54f26eaac3d64146c4" category="inline-xref-macro-rx"></block> para obter mais informações.</block>
+  <block id="7a51a601ead73ab7d3228537295b9cda" category="list-text">Se você estiver usando uma estrutura de certificado em que o<block ref="f93035d1d7d45fa37bc8cf1cd447ea1b" prefix=" " category="inline-code"></block> certificado fornece um<block ref="017ce4f89360621e0345c257b6136b21" prefix=" " category="inline-code"></block> certificado que assina o<block ref="4d389575bb215bbefa0d6232cd02d8f9" prefix=" " category="inline-code"></block> certificado, crie uma cadeia a partir dos certificados<block ref="017ce4f89360621e0345c257b6136b21" prefix=" " category="inline-code"></block> e<block ref="4d389575bb215bbefa0d6232cd02d8f9" prefix=" " category="inline-code"></block>:</block>
+  <block id="f9e6d688a8a27c940763126695c2660f" category="admonition">Você deveria ter obtido os<block ref="017ce4f89360621e0345c257b6136b21" prefix=" " category="inline-code"></block> e<block ref="4d389575bb215bbefa0d6232cd02d8f9" prefix=" " category="inline-code"></block> certificados de uma autoridade PKI anteriormente no procedimento.</block>
+  <block id="7cf80fa79f251c77bc9b3f9550a9a81a" category="admonition">Para clusters do SnapMirror Business Continuity (SM-BC), você deve adicionar os<block ref="017ce4f89360621e0345c257b6136b21" prefix=" " category="inline-code"></block> e<block ref="f93035d1d7d45fa37bc8cf1cd447ea1b" prefix=" " category="inline-code"></block> certificados a um cluster do ONTAP. Consulte <block ref="969d110dc2acd5c775ecdf40865c816b" category="inline-link-macro-rx"></block>.</block>
+  <block id="e58764e435e48d596747db269d4b5d30" category="summary">Inicie ou pare o ONTAP Mediator e o SCST no host.</block>
+  <block id="25bfbef5696da67a2bc81fe0c0d39812" category="doc">Iniciar e parar o ONTAP Mediator</block>
+  <block id="7add99166ebcb3cd72ed801ee22d4634" category="paragraph">Pare ou reinicie o ONTAP Mediator e o SCST quando precisar fazer manutenção no host ou reativar o serviço.</block>
+  <block id="655b7872afeae68779acb74444402d9a" category="section-title">Pare o ONTAP Mediator</block>
+  <block id="cea5aade9424395223b85baa1456cd09" category="paragraph">Para interromper o ONTAP Mediator, execute as seguintes etapas:</block>
+  <block id="fb85f149833e3eb7f2f1d7dcd1401d7d" category="list-text">Pare o ONTAP Mediator:</block>
+  <block id="a63d7574a9973d3267f20b9ba574cae5" category="list-text">Pare o SCST:</block>
+  <block id="446238b190643f093b6e98fab3a631aa" category="list-text">Desative o ONTAP Mediator e o SCST:</block>
+  <block id="aaa48dae5c5624655efe9a6801844167" category="section-title">Inicie o ONTAP Mediator</block>
+  <block id="f9737993deed4ea27689fb71deb7ee7e" category="paragraph">Para reativar o ONTAP Mediator, execute os seguintes passos:</block>
+  <block id="1675ea84897c4b9a3be06c13d1a8e91a" category="list-text">Ativar o ONTAP Mediator e o SCST:</block>
+  <block id="bdf969c9539ce73d6e0e75f474c7d363" category="list-text">Inicie o SCST:</block>
+  <block id="18a1dd44b1efa4af080b4f3301bfa284" category="list-text">Inicie o ONTAP Mediator:</block>
+  <block id="f60728c80ea87603b776186896554e5c" category="summary">Verifique as propriedades do certificado do ONTAP Mediator para diagnosticar problemas de certificado.</block>
+  <block id="f64581af1fd62e056f617c9d13d87f3b" category="doc">Solução de problemas relacionados a certificados do ONTAP Mediator</block>
+  <block id="8f9526a9dae9e8db4c927b1be1d7e15a" category="paragraph">Use estas verificações para confirmar as propriedades do certificado ao solucionar problemas relacionados a certificados.</block>
+  <block id="f716aaeccf7df02ecbff39c7de2812cb" category="section-title">Verificar a expiração do certificado</block>
+  <block id="5028989626f45c864f9868006b3cf13b" category="paragraph">Use o seguinte comando para identificar o intervalo de validade do certificado.</block>
+  <block id="e55c8833c3fc3b1d8308bf5a792aacf9" category="section-title">Verifique as extensões X509v3 na certificação da Autoridade de Certificação</block>
+  <block id="79f7acb74b8d1c327401d5ffb4dd1b7a" category="paragraph">Use o seguinte comando para verificar as extensões X509v3 no certificado da CA.</block>
+  <block id="98c3d634ed1554dbd7e4a767529b49c0" category="paragraph">As propriedades definidas em<block ref="2547e27347954d3e2694ca70610f773b" prefix=" " category="inline-code"></block> em<block ref="b63fc2fe55e71700434cd5dded845bbe" prefix=" " category="inline-code"></block> são exibidas como<block ref="72622591093aabcc83d5611f6d6a73ec" prefix=" " category="inline-code"></block> em<block ref="9e1f34d274d54e077ab71c2c0fe0badd" prefix=" " category="inline-code"></block>.</block>
+  <block id="63861c1958c4623cddd28492e3ab0bac" category="paragraph">As propriedades definidas em<block ref="2547e27347954d3e2694ca70610f773b" prefix=" " category="inline-code"></block> em<block ref="b63fc2fe55e71700434cd5dded845bbe" prefix=" " category="inline-code"></block> são exibidas como<block ref="72622591093aabcc83d5611f6d6a73ec" prefix=" " category="inline-code"></block> em<block ref="017ce4f89360621e0345c257b6136b21" prefix=" " category="inline-code"></block>.</block>
+  <block id="76737c36b0223403b5dd102da0abf348" category="section-title">Verificar extensões X509v3 no certificado do servidor e nomes alternativos do assunto</block>
+  <block id="403d2119dd0fe592eab5feb267706f2e" category="paragraph">As<block ref="496704f0208fe5c8f78493ddd36eaef6" prefix=" " category="inline-code"></block> propriedades definidas no<block ref="da56d4f4b52097b490f238ec04ac5103" prefix=" " category="inline-code"></block> arquivo de configuração são exibidas como<block ref="72622591093aabcc83d5611f6d6a73ec" prefix=" " category="inline-code"></block> no certificado.</block>
+  <block id="75833dbf241ae98ba86aa1753f294bb5" category="paragraph">No exemplo a seguir, você pode obter as variáveis nas<block ref="36e960efb69c958d7271270e171e01e0" prefix=" " category="inline-code"></block> seções executando os comandos<block ref="ea14150aa969c01b90ed08df79a8bb5f" prefix=" " category="inline-code"></block> e<block ref="980f3be04fb4e030898c599f757453e8" prefix=" " category="inline-code"></block> na máquina virtual Linux na qual o ONTAP Mediator está instalado.</block>
+  <block id="8f2b21a5dd1a16e566944c5899909350" category="paragraph">Consulte seu administrador de rede para obter os valores corretos das variáveis.</block>
+  <block id="d0dbbceb37ab1014abb93b8586e4b3b2" category="section-title">Verifique se a chave privada corresponde a um certificado</block>
+  <block id="0f8b763d21734ba835386412251d4f43" category="paragraph">Você pode verificar se uma determinada chave privada corresponde a um certificado.</block>
+  <block id="4e0b7c052b98e91db00bdcb760cdd037" category="paragraph">Use os seguintes comandos OpenSSL na chave e no certificado, respectivamente.</block>
+  <block id="5c6e263274a2514f6b54f071fbffc9e7" category="paragraph">Se o<block ref="e2e9c872aba8596f8c676cc27d22336f" prefix=" " category="inline-code"></block> atributo de ambos corresponder, isso indica que o par de chave privada e certificado é compatível e pode funcionar em conjunto.</block>
+  <block id="14030809a7e24dd5a0c9dcb4ee9006f7" category="section-title">Verifique se um certificado de servidor foi criado a partir de um certificado de CA específico</block>
+  <block id="a6adedca6bea42dfb0f60ae18407567e" category="paragraph">Você pode usar o seguinte comando para verificar se o certificado do servidor foi criado a partir de um certificado de CA específico.</block>
+  <block id="bc658cbeef646d198df1c8abaf4a15f7" category="inline-link-macro">openssl-verify</block>
+  <block id="dc83f0efa46dd3ce8abc6466a0559bce" category="paragraph">Se você estiver usando a validação do Protocolo de Status de Certificado Online (OCSP), use o comando <block ref="f6654ed683b4881ae426ff6569f1e182" category="inline-link-macro-rx"></block>.</block>
+  <block id="a6bd903d786933ec96826e892860a718" category="summary">Remova o ONTAP Mediator do host.</block>
+  <block id="d696a0ff4c5bf37a6d499263b1e72efb" category="doc">Desinstalar o ONTAP Mediator</block>
+  <block id="6eece176f0b4a87f6d84de35351a0e4f" category="paragraph">Se necessário, desinstale o ONTAP Mediator após desconectá-lo do ONTAP.</block>
+  <block id="d94f0c0806ea596e6ab5ca6fbb186b3e" category="paragraph">Você deve desconectar o ONTAP Mediator do ONTAP antes de removê-lo.</block>
+  <block id="04e18ededf9b4f7e991de51ad7fa228d" category="paragraph"><block ref="74ac5d826adfbc116b6ea064d73cb629" prefix="" category="inline-code"></block></block>
+  <block id="d18cfc983011c66b1d3c0c56f599f1ac" category="list-text">Desinstalar o ONTAP Mediator:</block>
+  <block id="f44f7511403227c6d86bd02c4753c706" category="summary">Como parte do processo de instalação, você atualiza o sistema operacional do host e, em seguida, o ONTAP Mediator.</block>
+  <block id="33ddec60e94a5b1e351c678518710bc0" category="doc">Atualize o sistema operacional do host e reinstale ou atualize ONTAP Mediator</block>
+  <block id="ffce34b1ff0e0f672d07e29eaf72f284" category="paragraph">Para atualizar o sistema operacional do host do ONTAP Mediator com SCST instalado para uma versão mais recente, você deve desinstalar ONTAP Mediator. Após a atualização do sistema operacional, você pode reinstalar sua versão atual do ONTAP Mediator ou atualizar para uma versão mais recente.</block>
+  <block id="fd45b30ab0fd9eb87d5946a288f08752" category="list-text">Esta tarefa aplica-se às versões do ONTAP Mediator com o SCST instalado. Se você instalou ONTAP Mediator 1.12 ou posterior com suporte apenas para HTTPS, o pacote SCST não está instalado e você pode atualizar o sistema operacional do host sem afetar o ONTAP Mediator. Consulte a documentação do fornecedor do sistema operacional do host para obter instruções de atualização do sistema operacional.</block>
+  <block id="b554eba3d15932edfa85177eddbccb4c" category="list-text">Se você precisar apenas atualizar o kernel do sistema operacional do host para uma versão compatível, sem atualizar para uma nova versão do sistema operacional, consulte <block ref="b075934ff9d66de58a7e9f651299f048" category="inline-link-macro-rx"></block> em vez disso.</block>
+  <block id="3260cd4172586a75af4bf1da43704ced" category="inline-link-macro">Desinstalar o ONTAP Mediator</block>
+  <block id="aaba753df53928af5937fcb0c3a7ac00" category="list-text">Antes de atualizar o sistema operacional do host para ONTAP Mediator com a ferramenta leapp-upgrade, <block ref="283ba49559acd27e546bb5bedd3d83b1" category="inline-link-macro-rx"></block>. A ferramenta verifica se há novas versões de RPM nos repositórios registrados.</block>
+  <block id="4d5a64ced52edea4ce2fcdc553fd7582" category="list-text">O instalador do ONTAP Mediator instala um arquivo .rpm, que a ferramenta leapp-upgrade inclui na busca. Como o instalador descompacta o arquivo em vez de baixá-lo de um repositório registrado, a ferramenta não consegue encontrar uma atualização. Você deve usar a ferramenta leapp-upgrade para desinstalar o pacote.</block>
+  <block id="b6336eece7eb2ead85373555f6cfcbdd" category="list-text">Faça backup dos arquivos de registro:</block>
+  <block id="504c98b2a90ed39d6e9ed976902f2138" category="list-text">Faça a atualização com a ferramenta leapp-upgrade:</block>
+  <block id="f0c7ca786eeae94af6cdf1924a08fee9" category="list-text">Reinstale o ONTAP Mediator:</block>
+  <block id="cb7ad262254a095be82dbb0206979b90" category="admonition">Execute os passos restantes imediatamente após reinstalar o ONTAP Mediator para evitar a perda de arquivos de log.</block>
+  <block id="68a6472fe8e21532a879138ee26953b1" category="list-text">Pare o ontap_mediator:</block>
+  <block id="454f6dbfe7dcd2d66ce2fd7fa27e3ba9" category="list-text">Substitua os arquivos de log:</block>
+  <block id="eb1a5fc97f872516cfa636e7cdb2de6b" category="list-text">Inicie o ontap_mediator:</block>
+  <block id="c5472868bc47e1d56f7ebcad78b8baf1" category="list-text">Reconecte todos os clusters ONTAP ao ONTAP Mediator atualizado:</block>
+  <block id="9606052688ba7ea8a292d061cb529730" category="open-title">O MetroCluster sobre IP</block>
+  <block id="c0b79db5f258f0c991a383cbdbf001dd" category="open-title">SnapMirror active sync</block>
+  <block id="076bbc36fa1cec5319e57430a8b42d91" category="paragraph">Para o SnapMirror active sync, você não precisa reinstalar os certificados TLS armazenados fora de /opt/netapp. Faça backup e restaure os certificados armazenados em /opt/netapp.</block>
+  <block id="30f60d67f457bb040dffde52197a54da" category="list-title">Informações relacionadas</block>
+  <block id="b7081185ef66ac9a73da5ce749f082e2" category="inline-link-macro">security certificate delete</block>
+  <block id="d467323207417a6d7e0dd99c506b86e9" category="list-text"><block ref="d467323207417a6d7e0dd99c506b86e9" category="inline-link-macro-rx"></block></block>
+  <block id="a9768a1721be1abfec9928f99bc40b43" category="inline-link-macro">instalação de certificado de segurança</block>
+  <block id="6f4f6f44c7c7ad4e08bbe43aebddcad4" category="list-text"><block ref="6f4f6f44c7c7ad4e08bbe43aebddcad4" category="inline-link-macro-rx"></block></block>
+  <block id="d5fe3efc0a92a43a98f54ac24ef1b5dd" category="inline-link-macro">security certificate show</block>
+  <block id="922792ffe4073c0eb369aa9d94a253d1" category="list-text"><block ref="922792ffe4073c0eb369aa9d94a253d1" category="inline-link-macro-rx"></block></block>
+  <block id="47a733e59a59708c3179837a196fad15" category="inline-link-macro">snapmirror mediator add</block>
+  <block id="f320e7fc12684f536ec4a2c6bd95eed6" category="list-text"><block ref="f320e7fc12684f536ec4a2c6bd95eed6" category="inline-link-macro-rx"></block></block>
+  <block id="913e3fb6005d79d1e7e5eb2046a6fa4c" category="inline-link-macro">snapmirror mediator remove</block>
+  <block id="55394a49231c00367e205c42b064e980" category="list-text"><block ref="55394a49231c00367e205c42b064e980" category="inline-link-macro-rx"></block></block>
+  <block id="b537069c8a5aec356a63851186f912fe" category="inline-link-macro">storage iscsi-initiator show</block>
+  <block id="4865af58e3487fe0b7ed016935c64256" category="list-text"><block ref="4865af58e3487fe0b7ed016935c64256" category="inline-link-macro-rx"></block></block>
+  <block id="08a4fa0bb1e9083bfe68c6e407bbc0bc" category="summary">Para atualizar o ONTAP Mediator sem atualizar o sistema operacional do host, baixe o pacote de instalação da nova versão e execute o instalador no seu host existente do ONTAP Mediator.</block>
+  <block id="3be8e80430c46fc92e8eb95cc6f4a77a" category="doc">Atualize o ONTAP Mediator</block>
+  <block id="d7ef71a44ebd836615f83aa9c1384993" category="paragraph">Para atualizar o ONTAP Mediator para uma versão mais recente sem atualizar o sistema operacional do host, baixe o pacote de instalação da nova versão e execute o instalador no host em que o ONTAP Mediator já está instalado.</block>
+  <block id="87f2ea870f9c143a692e27f36312166e" category="inline-link-macro">Atualize o sistema operacional do host e ONTAP Mediator</block>
+  <block id="43cd70ac79d4b9bc1ba20242c3be7e92" category="admonition">Se você precisar atualizar o sistema operacional do host para uma nova versão e reinstalar ou atualizar o ONTAP Mediator como parte desse processo, consulte <block ref="e001b02d7be5296dda81681793d3b6f2" category="inline-link-macro-rx"></block>.</block>
+  <block id="dfcddace895e6d15eaa29a365e239546" category="inline-link-macro">Prepare-se para instalar o ONTAP Mediator</block>
+  <block id="fa9221fe0f2911e14b8b07da9bc2cb8f" category="list-text">Verifique se o seu host atende aos pré-requisitos descritos em <block ref="1436d225b9f0a111f3187830b0738fb5" category="inline-link-macro-rx"></block>, incluindo os requisitos de host, firewall e sistema operacional.</block>
+  <block id="1a08677cb099f004665a94af3d83f5ee" category="inline-link-macro">Baixe o pacote de instalação do ONTAP Mediator</block>
+  <block id="5078209699cbff5e3894f83ba0a0b275" category="list-text">Faça o download do pacote de instalação da nova versão. Consulte <block ref="0450d1e6df4787a73f1aab9873409f04" category="inline-link-macro-rx"></block>.</block>
+  <block id="8e9334edba4acfa6425b88db3bf1cddd" category="inline-link-macro">Verifique a assinatura de código do pacote de instalação do ONTAP Mediator</block>
+  <block id="4768475f5d3ac13982d0fafcf94fd214" category="list-text">NetApp recomenda verificar a assinatura de código do novo pacote de instalação. Consulte <block ref="f72391a1de200afd87792e2472bd347d" category="inline-link-macro-rx"></block>.</block>
+  <block id="1875d11cccf7bf59f58e709a1372067d" category="paragraph">Analise as seguintes informações antes de atualizar o ONTAP Mediator.</block>
+  <block id="e91dfd200f4c86ead4c9e3dc82714b50" category="list-text">Você deve atualizar o ONTAP Mediator para a versão mais recente. As versões antigas ainda funcionam com todas as versões do ONTAP, mas as versões mais recentes incluem correções de segurança para componentes de terceiros.</block>
+  <block id="65abc13b981890914014752e0de128f3" category="inline-link-macro">Matriz de suporte do SCST</block>
+  <block id="54950270731c946c6ad58aec7c871abf" category="list-text">Ao atualizar para uma nova versão do ONTAP Mediator que inclui o pacote SCST, o instalador atualiza automaticamente para a versão recomendada do SCST, a menos que uma versão superior esteja disponível. Para instruções sobre como instalar manualmente uma versão superior do SCST, consulte <block ref="b075934ff9d66de58a7e9f651299f048" category="inline-link-macro-rx"></block>. Para versões compatíveis, consulte o <block ref="f1b6fd3bc38ee1ac29f0f346446f7ccf" category="inline-link-macro-rx"></block>.</block>
+  <block id="2299af78b9e92aa893c910b1e801c1d9" category="list-text">Se a atualização falhar, talvez seja necessário tentar uma versão mais recente do ONTAP Mediator.</block>
+  <block id="7065552dd837372222050dc693505675" category="list-text">A partir de 15 de junho de 2025, você não poderá instalar ou atualizar o ONTAP Mediator 1.9 e 1.8 porque os certificados de assinatura de código deles expiraram. Se a atualização falhar, use a versão de patch 1.9.1 do ONTAP Mediator.</block>
+  <block id="387dea544fb9740e1b468fa28075b8cf" category="list-text">Ao executar o instalador em uma instalação existente do ONTAP Mediator, ele detecta a versão atual e solicita que você confirme a atualização:</block>
+  <block id="0f4bc86ea28cf8ca4442347baae28ed4" category="paragraph"><block ref="863dd28b869dd7f84629121ec2bd390a" prefix="" category="inline-code"></block></block>
+  <block id="2b3a52b0be4aa7a7514d96f48f3fbc1f" category="paragraph"><block ref="d32a8283057676562814e0ccbcbac013" prefix="" category="inline-code"></block></block>
+  <block id="0d90bdca469fcd2ce8bc51d64365ba14" category="list-text">Como parte da atualização, o instalador captura um pacote de suporte da sua configuração anterior à atualização e migra o banco de dados antes de atualizar o software ONTAP Mediator.</block>
+  <block id="bc6ccd2a38c1da7dbabbd34e51736ca7" category="list-text">Para casos de uso de automação, você pode usar o comando <block ref="e06c57956a1db62e945519ac48ec3f4f" prefix=" " category="inline-code"></block> para ignorar as solicitações do instalador.</block>
+  <block id="03cef594048699e8bd8a0ea4afb2125a" category="list-text">Execute o instalador da nova versão e responda às solicitações conforme necessário:</block>
+  <block id="f1f7a8a0513234ffbeb83a09c905d204" category="paragraph">Para ignorar a verificação de assinatura durante a atualização, use o<block ref="0909581c61d409342de86e60b8beeaa3" prefix=" " category="inline-code"></block> comando</block>
+  <block id="1dbcde616241e6573e23e89f6e275947" category="paragraph">O instalador detecta a instalação existente e solicita que você faça a atualização. Em seguida, instala os pacotes necessários e migra sua configuração.</block>
+  <block id="9ac776b366c707188480de9a0924171b" category="example-title">Exemplo de atualização do ONTAP Mediator com suporte a HTTPS e iSCSI (saída do console)</block>
+  <block id="9c75661710d19b7b0d75931cb7183fce" category="example-title">Exemplo de atualização do ONTAP Mediator com suporte apenas para HTTPS (saída do console)</block>
+  <block id="b8d91021f64aedffb78e8515d8462201" category="summary">Verifique se o ONTAP Mediator está saudável e escutando nas portas esperadas.</block>
+  <block id="ef7c72b3bcb0e4482a7a8a51117775f7" category="doc">Verifique a integridade do ONTAP Mediator</block>
+  <block id="78846e32cbf8ddadc9a01c4f496d0e63" category="paragraph">Verifique se o ONTAP Mediator está funcionando normalmente.</block>
+  <block id="5ad8c9a67e1200e4dc0e940604442da0" category="section-title">Verifique o status do serviço</block>
+  <block id="07207539bc08a64df79f7473da1c8c44" category="list-text">Veja o status do ONTAP Mediator:</block>
+  <block id="ab4a60147a1ce71fb4340f4705f9a8ef" category="list-text">Veja o status do serviço SCST:</block>
+  <block id="4336dae7781b504dd8f932dd9b477157" category="section-title">Confirme as portas de escuta</block>
+  <block id="90b3e89b1b25d880f7740c45dd015a61" category="list-text">Confirme as portas utilizadas pelo ONTAP Mediator:</block>
+  <block id="67736a7839fb8baf78b36886a2645cae" category="summary">Faça o download do pacote de instalação do Mediator como parte do processo de instalação.</block>
+  <block id="e2cffea506cf854be44e5d457f072c61" category="paragraph">Baixe o pacote de instalação do ONTAP Mediator e instale-o.</block>
+  <block id="fd121ec967192205344881af8b91ff04" category="list-text">Faça o download do pacote de instalação do ONTAP Mediator na página de download do ONTAP Mediator.</block>
+  <block id="b02f3046b150b191e2d899be132a42bf" category="inline-link">Página de download do ONTAP Mediator</block>
+  <block id="1c25284cbe99f20a5f633ae8ef6d7f53" category="paragraph"><block ref="1c25284cbe99f20a5f633ae8ef6d7f53" category="inline-link-rx"></block></block>
+  <block id="97408bd589697ae825126bad88423e59" category="list-text">Coloque o pacote de instalação do Mediator no diretório de trabalho atual:</block>
+  <block id="737d7724211eef6e4e13309c6a617c7e" category="admonition">Para as versões 1.4 e anteriores do ONTAP Mediator, o instalador se chama<block ref="3bcf3b65a29824cd947da6753f413db8" prefix=" " category="inline-code"></block>.</block>
+  <block id="cab4082b20a9fc65c51b5e138cc4635a" category="paragraph">Se o seu sistema não tiver acesso à internet, certifique-se de que o instalador consiga acessar os pacotes necessários.</block>
+  <block id="4fd5ef884f9472a81e7dda94df098511" category="list-text">Se necessário, mova o pacote de instalação do Mediator para o diretório de instalação.</block>
+  <block id="fd9a4169695454df166acfefce214b42" category="list-text">Descompacte o pacote de instalação:</block>
+  <block id="3f297ef15cde0668e93b35f2752fd4fd" category="paragraph-title">Qual o próximo passo?</block>
+  <block id="1c97e594d39c50275f1dcc5794374ed5" category="inline-link-macro">Verifique a assinatura do código do ONTAP Mediator</block>
+  <block id="3aea0ced735f36e8385e7e160b98b29d" category="paragraph"><block ref="3aea0ced735f36e8385e7e160b98b29d" category="inline-link-macro-rx"></block></block>
+  <block id="d7d17752b4f3e432fdd5ca0d8ed3fde8" category="summary">Habilite o acesso aos repositórios para que o ONTAP Mediator possa acessar os pacotes necessários durante o processo de instalação.</block>
+  <block id="5b7aa77a602ea4e2403c9e774cd03863" category="doc">Forneça acesso ao repositório para a instalação do ONTAP Mediator</block>
+  <block id="e1155388e2155ab3659320059d59e89c" category="paragraph">Você deve habilitar o acesso aos repositórios para que o ONTAP Mediator possa acessar os pacotes necessários durante o processo de instalação.</block>
+  <block id="97718d343e9a9273140cba010da7af42" category="list-text">Determine quais repositórios precisam ser acessados, conforme mostrado na tabela a seguir:</block>
+  <block id="9f14218e5135dda7b7530841c740770a" category="cell">Se o seu sistema operacional for...</block>
+  <block id="c76eda301cb02c29a872a2edc87fac66" category="cell">Você deve conceder acesso a esses repositórios...</block>
+  <block id="5e626362780fb28d6a7f7c6adcd604c5" category="paragraph">Oracle Linux 10.x</block>
+  <block id="89411da6d576514b5c1d7d71eeb06263" category="list-text">ol-10-for-x86_64-baseos-rpms</block>
+  <block id="f6bd040ad793a14fdc1c3d3f2dc4a87a" category="list-text">ol-10-for-x86_64-appstream-rpms</block>
+  <block id="e4fc61fa9a616ca27d481649f48b573a" category="paragraph">Oracle Linux 9.x</block>
+  <block id="6d143f66fa04cfa6058347617afeb791" category="list-text">ol-9-for-x86_64-baseos-rpms</block>
+  <block id="9b19ec8e59bca40a4280260d9f57b34a" category="list-text">ol-9-for-x86_64-appstream-rpms</block>
+  <block id="4542a075cfbe696e680a2ad5c899bca3" category="paragraph">RHEL 10.x</block>
+  <block id="a67519effc34ff67f3e2439a5e3ff220" category="list-text">rhel-10-for-x86_64-baseos-rpms</block>
+  <block id="00602f0de8bdc71ea78136c55a6b81de" category="list-text">rhel-10-for-x86_64-appstream-rpms</block>
+  <block id="9f17458dfbe60319fd46bddd814d9474" category="paragraph">RHEL 9.x</block>
+  <block id="caf162fe8ddc7878a5a2a8ad77b61785" category="list-text">rhel-9-for-x86_64-baseos-rpms</block>
+  <block id="dc255cb9fdb2af34669e2d9d662519a2" category="list-text">rhel-9-for-x86_64-appstream-rpms</block>
+  <block id="9871c3e3eef10eb83f1020bf0f40a11c" category="paragraph">RHEL 8.x</block>
+  <block id="53edaf3b5c2db40d342cf9b501bc24c1" category="list-text">rhel-8-for-x86_64-baseos-rpms</block>
+  <block id="77e5c42f280ea35ee2926680eb9b47bd" category="list-text">rhel-8-for-x86_64-appstream-rpms</block>
+  <block id="886dab0e73d247379a1479ecce7a2e23" category="paragraph">RHEL 7.x</block>
+  <block id="3272bb50aa49abfece4d0ff5d7f2f1c9" category="list-text">rhel-7-server-optional-rpms</block>
+  <block id="66985170e641a7e20698bfec3c1d889f" category="paragraph">O CentOS 7.x</block>
+  <block id="29bbf40549849d260ac98466712efae4" category="list-text">C7.6.1810 - repositório base</block>
+  <block id="1f27018b2bb672b8cdc3ade88964fcd2" category="paragraph">Rocky Linux 10</block>
+  <block id="1b03221d3ade110dceff09478f544299" category="list-text">appstream</block>
+  <block id="6184b2e06a868cadf56b63eb8d1cbea8" category="list-text">baseos</block>
+  <block id="cf76271f717860ca93c6825568b0690d" category="paragraph">Rocky Linux 9</block>
+  <block id="074720cb7866529cf5ec3aad61198ac4" category="paragraph">Rocky Linux 8</block>
+  <block id="865a78beb67e115b4e9a10b3e81c8aab" category="list-text">Use um dos seguintes procedimentos para habilitar o acesso aos repositórios listados acima, para que o ONTAP Mediator possa acessar os pacotes necessários durante o processo de instalação.</block>
+  <block id="664b8a6266b90423babd29810b72c716" category="admonition">Se o ONTAP Mediator tiver dependências de módulos Python presentes nos repositórios "extras" e "optional", ele poderá precisar acessar os arquivos <block ref="c181687dbc647a529ee6e45873223f46" prefix=" " category="inline-code"></block> e <block ref="634852998313a5befedabe157dfb58fc" prefix=" " category="inline-code"></block>.</block>
+  <block id="6bcb63da68aa5b9cea93bc40d73fa960" category="example-title">Procedimento para sistema operacional Oracle Linux 10.x</block>
+  <block id="8db530726912d26a1cfdf24172b55426" category="paragraph">Utilize este procedimento se o seu sistema operacional for *Oracle Linux 10.x* para habilitar o acesso aos repositórios:</block>
+  <block id="ebb1c48020075aff153ff6902c0e37db" category="list-text">Inscreva-se no repositório necessário:</block>
+  <block id="b89b54d5af46b251354ba0599e815d76" category="paragraph">O exemplo a seguir mostra a execução deste comando:</block>
+  <block id="20274e52f6fdccab80b9a178af90c176" category="list-text">Execute o seguinte comando para listar os repositórios habilitados:</block>
+  <block id="3a1b4b15b3782aff48704dfaea19c4ca" category="paragraph">Os repositórios recém-assinados devem aparecer na lista.</block>
+  <block id="b9c2b32337090e3118b0890c6c68a226" category="example-title">Procedimento para sistema operacional Oracle Linux 9.x</block>
+  <block id="e662521f1345ffe9a125202f3f2449c3" category="paragraph">Utilize este procedimento se o seu sistema operacional for *Oracle Linux 9.x* para habilitar o acesso aos repositórios:</block>
+  <block id="2abedefa05704ea06ac8f75a9db36736" category="example-title">Procedimento para o sistema operacional RHEL 10.x</block>
+  <block id="3ff6c28e2672d10f63caadf95acf3d6c" category="paragraph">Use este procedimento se o seu sistema operacional for *RHEL 10.x* para habilitar o acesso aos repositórios:</block>
+  <block id="8618e857ab4b2026053ded75b2bd28c0" category="example-title">Procedimento para o sistema operacional RHEL 9.x</block>
+  <block id="43c6a34cb6f80bb403440594179b3665" category="paragraph">Use este procedimento se o seu sistema operacional for *RHEL 9.x* para habilitar o acesso aos repositórios:</block>
+  <block id="99e8c68b889cb147e7d7f3a766bcbc08" category="example-title">Procedimento para o sistema operacional RHEL 8.x</block>
+  <block id="02180ec4be18b377a44053f38b8e1d5e" category="paragraph">Use este procedimento se o seu sistema operacional for *RHEL 8.x* para habilitar o acesso aos repositórios:</block>
+  <block id="f9338b001083c1207b750f7ca56fb6ce" category="example-title">Procedimento para o sistema operacional RHEL 7.x</block>
+  <block id="b0030d1a4069dea6cacf3124ddb747e9" category="paragraph">Use este procedimento se o seu sistema operacional for *RHEL 7.x* para habilitar o acesso aos repositórios:</block>
+  <block id="33a9644e5d2b91efae997de819a9f828" category="paragraph">O exemplo a seguir mostra a execução deste comando. O repositório "rhel-7-server-optional-rpms" deve aparecer na lista.</block>
+  <block id="aa3f631fc5c50fd8386f95cdb6d4a080" category="example-title">Procedimento para o sistema operacional CentOS 7.x</block>
+  <block id="aece88aac342b5c1a91bde54de980d26" category="paragraph">Use este procedimento se o seu sistema operacional for *CentOS 7.x* para habilitar o acesso aos repositórios:</block>
+  <block id="d6d92b99d45ca9c6268cdadf83286802" category="admonition">Os exemplos a seguir mostram um repositório para o CentOS 7.6 e podem não funcionar em outras versões do CentOS. Use o repositório correspondente à sua versão do CentOS.</block>
+  <block id="6cfc4b30e18a129f054edaae54e53f37" category="list-text">Adicione o repositório C7.6.1810 - Base. O repositório de vault C7.6.1810 - Base contém o pacote "kernel-devel" necessário para o ONTAP Mediator.</block>
+  <block id="a9a0d20bc8c82736f7aca5ab3b01ecdf" category="list-text">Adicione as seguintes linhas a /etc/yum.repos.d/CentOS-Vault.repo.</block>
+  <block id="3642e1097e743420376709e69c45e113" category="paragraph">O exemplo a seguir mostra a execução deste comando. O repositório CentOS-7.6.1810 - Base deve aparecer na lista.</block>
+  <block id="85ad6506ca7b0f3af555ca0f8912134a" category="example-title">Procedimento para os sistemas operacionais Rocky Linux 10, 9 ou 8</block>
+  <block id="29662404da20e9b15e71b8c871e41d38" category="paragraph">Use este procedimento se o seu sistema operacional for *Rocky Linux 10*, *Rocky Linux 9* ou *Rocky Linux 8* para habilitar o acesso aos repositórios:</block>
+  <block id="67ffe93681371d2aa9c8f6ada07b835c" category="list-text">Inscreva-se nos repositórios necessários:</block>
+  <block id="2efdf98177e53caf53c5b72b0c2e4175" category="list-text">Realize uma<block ref="123402c04dcfb6625f688f771a5fc05d" prefix=" " category="inline-code"></block> operação:</block>
+  <block id="cdfab7326c2af031b81a1f5ecab8d97c" category="list-text">Verifique a lista de repositórios:</block>
+  <block id="c869120ace16eabfd77564c5b274c273" category="paragraph"><block ref="c869120ace16eabfd77564c5b274c273" category="inline-link-macro-rx"></block></block>
+  <block id="835e3e6fb5545ec688c50e9ad2bcda09" category="summary">Para instalar ONTAP Mediator, você deve obter o pacote de instalação e executar o instalador no host.</block>
+  <block id="f7def9f508355bb00fa3a45cb1f5748c" category="doc">Instale o pacote de instalação do ONTAP Mediator</block>
+  <block id="1d8727f9f9bf45d433960701874a8c5b" category="admonition">Para atualizar uma instalação existente do ONTAP Mediator, consulte <block ref="f124e81a53a38f34d7f1c73c06a3602e" category="inline-link-macro-rx"></block>.</block>
+  <block id="158044eb8955c8a70d4bf0dd857c9f7d" category="list-text">Durante a instalação ou atualização para ONTAP Mediator 1.12 ou posterior, o instalador solicita que você responda ao seguinte:</block>
+  <block id="15afbc8f4de683d4fb1fae0933997793" category="paragraph"><block ref="de4f843df3ec4390b8f55b8342ad7f59" prefix="" category="inline-code"></block></block>
+  <block id="b58aca8487a4163da6d931d898d9e14e" category="list-text">Responda <block ref="93cba07454f06a4a960172bbd6e2a435" prefix=" " category="inline-code"></block> se você planeja usar ONTAP Mediator configurado com iSCSI para monitorar uma ou mais MetroCluster IP configurações.</block>
+  <block id="10b2c55da479eba92cedc967836bc0c6" category="list-text">Responda <block ref="bafd7322c6e97d25b6299b5d6fe8920b" prefix=" " category="inline-code"></block>se você planeja usar ONTAP Mediator apenas para SnapMirror active sync ou se planeja configurar ONTAP Mediator com HTTPS para monitorar uma ou mais configurações de MetroCluster IP.</block>
+  <block id="f19487721cab9d8de852c771a3184694" category="paragraph">Alternativamente, você pode usar a <block ref="57d50f027c66afa1ed46336b1408221e" prefix=" " category="inline-code"></block> opção no <block ref="fcd2585ca4e769848950b5d7a9a7d316" prefix=" " category="inline-code"></block> comando para especificar somente HTTPS.</block>
+  <block id="a7ba40d46b4078b475039877064f94df" category="list-text">Execute o instalador e responda às solicitações conforme necessário:</block>
+  <block id="9bf9d999cf1c1072afb0a174778ef513" category="paragraph">Para ignorar a verificação de assinatura durante a instalação, use o<block ref="0909581c61d409342de86e60b8beeaa3" prefix=" " category="inline-code"></block> comando</block>
+  <block id="2dcbd5af105d1885a4c6cf9ec98331f3" category="paragraph">O instalador cria as contas necessárias e instala os pacotes necessários. Se o ONTAP Mediator já estiver instalado, o instalador solicitará que você o atualize; para obter instruções e exemplos específicos de atualização, consulte <block ref="f124e81a53a38f34d7f1c73c06a3602e" category="inline-link-macro-rx"></block>.</block>
+  <block id="4384a2e942a15e1e210fa5de9a5a8236" category="example-title">Exemplo de instalação do ONTAP Mediator com suporte a HTTPS e iSCSI (saída do console)</block>
+  <block id="344180bf5a5b07d855d14ad0da508af0" category="example-title">Exemplo de instalação do ONTAP Mediator com suporte apenas para HTTPS (saída do console)</block>
+  <block id="dc01eeb4ba6b49775c572c9b0d4a18b8" category="section-title">Registre a chave de segurança para o UEFI Secure Boot</block>
+  <block id="fca93add5a881fe7a35de6842850e75f" category="paragraph">A partir do ONTAP Mediator 1.4, o mecanismo de Inicialização Segura (Secure Boot) está habilitado em sistemas UEFI. Quando a Inicialização Segura está habilitada, você deve tomar medidas adicionais para registrar a chave de segurança após a instalação.</block>
+  <block id="32c42386416b8d4f3a3d620ca5564ac3" category="list-text">Siga as instruções no arquivo README para assinar o módulo do kernel SCST:</block>
+  <block id="91231d29d155624bc20b6bcecf7742d2" category="list-text">Localize as chaves necessárias:</block>
+  <block id="e6ca8604b3c2d3418d0ae833ba7c3824" category="admonition">Após a instalação, a saída do sistema fornece os arquivos README e a localização da chave.</block>
+  <block id="501e9166bba98e9bb68360bdf8ed5a9c" category="list-text">Adicione a chave pública à lista MOK:</block>
+  <block id="bce57b99a25982a803450c854fba34a1" category="paragraph">Você pode deixar a chave privada no local padrão ou movê-la para um local seguro. Você deve manter a chave pública em seu local atual para que o Boot Manager possa usá-la. Para obter mais informações, consulte o arquivo README.module-signing:</block>
+  <block id="69120c39afd1d34d835cb9d659398789" category="paragraph"><block ref="f3bd3892cb4bcfbc2c37a151c028b2ba" prefix="" category="inline-code"></block></block>
+  <block id="011324e3fabf39613f729fc82fa2d15b" category="inline-link-macro">Instale o ONTAP Mediator quando o UEFI Secure Boot estiver habilitado</block>
+  <block id="4331251f2cd849cd1b6657481bf9288f" category="list-text">Reinicialize o host e use o gerenciador de inicialização UEFI do seu dispositivo para aprovar a nova chave MOK. Você precisará da senha fornecida para o utilitário<block ref="c9d0aaf4769a4f8a2886caf46cbce188" prefix=" " category="inline-code"></block> em <block ref="65eb211afdeb726fe9aabe64d71f12d8" category="inline-link-macro-rx"></block>.</block>
+  <block id="4ebf137569d3cd1deab0ecbc6bee7565" category="section-title">Assinar módulos do kernel SCST</block>
+  <block id="e9b55344e0b79ae32afe968fb64b6ff5" category="paragraph">Após a instalação do ONTAP Mediator, se systemctl status<block ref="4bdf8da8f1049dc51cf3bc06584503f2" prefix=" " category="inline-code"></block> mostrar failed (inactive), siga estas etapas para assinar o módulo do kernel do SCST.</block>
+  <block id="b9421dd7def9d6cc1f5f034ba4c23583" category="list-text">Durante o processo de compilação, um par de chaves pública/privada é gerado no<block ref="42c92cd95a4d0bf1bdd8b9ef7721d870" prefix=" " category="inline-code"></block> diretório. Execute o seguinte comando para visualizar as chaves geradas:</block>
+  <block id="1e7e5da7512b956f7214cae2c0ba8424" category="list-text">Inicie o processo de importação da chave pública para o repositório de chaves UEFI executando o seguinte comando:</block>
+  <block id="61a410b55f4d475c255471c93c2fb347" category="paragraph">O<block ref="c9d0aaf4769a4f8a2886caf46cbce188" prefix=" " category="inline-code"></block> utilitário solicita que você insira a senha duas vezes.</block>
+  <block id="40ebc7291d47b5977dbe8a10b2e86705" category="list-text">O software mokutil solicita uma senha temporária para ser usada com essa chave durante o processo de importação.</block>
+  <block id="af9913ae428beaa564fb4840336e86d4" category="list-text">Verifique se o processo de importação foi iniciado com o seguinte comando e, em seguida, reinicialize o sistema. O gerenciador de inicialização inicia o gerenciador EFI MOK.</block>
+  <block id="f5d1b07f75bb02db5620a7175cae9710" category="list-text">Use os menus na tela para ativar a chave do módulo de kernel SCST. Após a inicialização, execute o seguinte comando. Assim que o serviço iniciar, os módulos de kernel SCST serão assinados.</block>
+  <block id="6fdc5a87393886ec61413b05fd302117" category="inline-link-macro">Verifique o status da instalação do ONTAP Mediator</block>
+  <block id="9b6c041fcae2c33d9a56eed60d532b5a" category="paragraph"><block ref="9b6c041fcae2c33d9a56eed60d532b5a" category="inline-link-macro-rx"></block></block>
+  <block id="c686b28bf5db41368fef02cebddc3646" category="summary">Para instalar o ONTAP Mediator, você deve garantir que todos os pré-requisitos sejam atendidos, obter o pacote de instalação e executar o instalador no host.</block>
+  <block id="7ab3c6ae086b6384f06963b5dd385c4f" category="paragraph">Para instalar o ONTAP Mediator, você precisa atender a todos os pré-requisitos, baixar o pacote de instalação e executar o instalador no host.</block>
+  <block id="4f523b7e971fd8cff29f3d68e70d50a4" category="list-text">Para atualizar o ONTAP Mediator para uma nova versão, consulte <block ref="f124e81a53a38f34d7f1c73c06a3602e" category="inline-link-macro-rx"></block>.</block>
+  <block id="884d3254536962b6e4026a77ae095676" category="list-text">Se você precisar atualizar o sistema operacional do host e reinstalar ou atualizar o ONTAP Mediator como parte desse processo, consulte <block ref="ba68b4751a3933e4758c984972f1c341" category="inline-link-macro-rx"></block>.</block>
+  <block id="086af4a1a8e18c416fda306afd129ecc" category="section-title">Requisitos de instalação</block>
+  <block id="8a4c16833b577a7d47be22e958070a82" category="paragraph">Analise os seguintes requisitos antes de instalar o ONTAP Mediator.</block>
+  <block id="0ba11c88a4acd0d00058421371484eb6" category="list-text">O ONTAP Mediator 1.8 e versões anteriores não são compatíveis com o modo FIPS do Red Hat Enterprise Linux (RHEL), o que impede a instalação bem-sucedida. Você pode verificar se o modo FIPS está ativado usando o<block ref="c0d465275cbc178239144c2e4ab915c9" prefix=" " category="inline-code"></block> comando. Você pode desativar o modo FIPS usando o<block ref="de14c46ab2c93014028a73584cbb1f24" prefix=" " category="inline-code"></block> comando. Reinicialize o sistema após desativar o modo FIPS para instalar com sucesso o ONTAP Mediator 1.8 ou anterior.</block>
+  <block id="7e8539e100dbed00c00d774b9578cd64" category="list-text">Se a instalação falhar, talvez seja necessário tentar uma versão mais recente do ONTAP Mediator.</block>
+  <block id="52d194593f2eee7e9a4dcebd561aee9c" category="list-text">A partir de 15 de junho de 2025, não será possível instalar ou atualizar as versões 1.9 e 1.8 do ONTAP Mediator, pois seus certificados de assinatura de código expiraram. Caso a instalação falhe, utilize a versão de patch 1.9.1 do ONTAP Mediator.</block>
+  <block id="a9cbabdcb2967fdb70170c1d75468ced" category="list-text">Se você instalar o<block ref="964ff658eeb150fa1ca6d823c1c0c1a7" prefix=" " category="inline-code"></block> pacote, poderá usar o<block ref="1af4b6d809a2f3d882d975f4b893400f" prefix=" " category="inline-code"></block> comando.</block>
+  <block id="0f047d1f30452312277a8c669c7ef932" category="list-text">A partir do ONTAP Mediator 1.11, o IPv6 é compatível com as configurações IP do MetroCluster.</block>
+  <block id="aee8b11880bbfda9a19f6b5c0201bb10" category="section-title">Opções de instalação HTTPS e iSCSI para ONTAP Mediator</block>
+  <block id="b54f912c79dc7569fd5ac2229f72b415" category="paragraph">Antes de instalar o ONTAP Mediator, revise as seguintes informações:</block>
+  <block id="7cb7f9ad17bf22108d9e1856489069d7" category="list-text">No ONTAP Mediator, o pacote SCST é usado para fornecer iSCSI para comunicação em configurações IP do MetroCluster. O pacote SCST é um módulo do kernel compilado durante a instalação. A partir do ONTAP 9.19.1 e do Mediator 1.12, você pode configurar um ONTAP Mediator que usa HTTPS em vez de iSCSI para monitorar uma configuração IP do MetroCluster.</block>
+  <block id="fc076765cbc4aef219c970ffdd93f443" category="section-title">Requisitos do host</block>
+  <block id="7b93a2cffc32ecafd278bfcfcff93888" category="paragraph">Siga estes requisitos ao instalar o RHEL ou o Rocky Linux e ao configurar os repositórios associados.</block>
+  <block id="c1fb3f4ec6731d321cc725c2ad2bc582" category="paragraph">Se você modificar o processo de instalação ou configuração, poderá ser necessário executar etapas adicionais.</block>
+  <block id="4197761a7c1beb184d68b153affb0111" category="list-title">Requisitos de distribuição Linux</block>
+  <block id="3f3ba3a77946edb48d0ee8ef109bc0af" category="list-text">Instale o RHEL ou o Rocky Linux seguindo as melhores práticas da Red Hat. Como o CentOS 8.x chegou ao fim de seu ciclo de vida, versões compatíveis com o CentOS 8.x não são recomendadas.</block>
+  <block id="9cd0509e40e104586f0aaaf8e2759ac2" category="list-text">Ao instalar o ONTAP Mediator, certifique-se de que o sistema tenha acesso ao repositório necessário para que o programa de instalação possa recuperar e instalar todas as dependências de software necessárias.</block>
+  <block id="2c7060a19ab32dde13d3a753179bde24" category="list-text">Para permitir que o instalador yum encontre o software dependente nos repositórios do RHEL, registre o sistema durante a instalação ou posteriormente, usando uma assinatura Red Hat válida.</block>
+  <block id="87c0f2242d23a5ce83f92cb7ca0dd3c5" category="paragraph">Consulte a documentação do Red Hat Subscription Manager para obter mais informações.</block>
+  <block id="69cecc7a15b3f657e822c87c8fad2241" category="section-title">Requisitos de firewall e rede</block>
+  <block id="671e00f956495c99ae5aae5896e8542a" category="paragraph">ONTAP Mediator utiliza diversas portas para se comunicar com serviços específicos.</block>
+  <block id="861ef6676813cbc81369ee701ae73269" category="list-text">Se você estiver usando um firewall de terceiro:</block>
+  <block id="041f3a27fe8b40cc213210949eb4f036" category="list-text">O acesso HTTPS deve estar ativado.</block>
+  <block id="8b8101ed71d5bd32d2f9d4de05e470c1" category="list-text">Deve ser configurado para permitir o acesso nas portas 31784 e 3260.</block>
+  <block id="cc1e6f116b4b45ffde821f0aef59e030" category="paragraph">Ao usar o firewall padrão do Red Hat ou CentOS, o firewall é configurado automaticamente durante a instalação do Mediator.</block>
+  <block id="dc6071f53aaa5ab966ff3f6f0a3d9d7f" category="list-text">Para hosts Linux sem acesso à internet, certifique-se de que os pacotes necessários estejam disponíveis em um repositório local.</block>
+  <block id="6c9beeeec2dc90ee994a4f168dc8e9da" category="paragraph">Se você estiver usando o Link Aggregation Control Protocol (LACP) em um ambiente Linux, configure o kernel e defina <block ref="864926420acef5f65ce14bc4f0d5c076" prefix=" " category="inline-code"></block> como <block ref="c81e728d9d4c2f636f067f89cc14862c" prefix=" " category="inline-code"></block>.</block>
+  <block id="fc4f6ae944c5fa7cfc47e0574373e3e8" category="paragraph">A tabela a seguir lista as portas que você deve liberar em seu firewall:</block>
+  <block id="43119522ff803c1f1fa88bdbaffe20b7" category="list-text">A porta iSCSI só é necessária em uma configuração IP MetroCluster.</block>
+  <block id="d247a27201590148c4ea6bf493729fd1" category="list-text">A porta 22/tcp não é necessária para o funcionamento normal, mas você pode habilitá-la temporariamente para manutenção e desabilitá-la quando a sessão de manutenção terminar.</block>
+  <block id="0656a530ae7a166be8f852431b35de15" category="cell">Portas/serviços</block>
+  <block id="f31bbdd1b3e85bccd652680e16935819" category="cell">Fonte</block>
+  <block id="02674a4ef33e11c879283629996c8ff8" category="cell">Direção</block>
+  <block id="12007e1d59f4d09c87dbe2c438256244" category="cell">Destino</block>
+  <block id="261addf78c7b2c961032b3dd08ba0b1f" category="cell">Propósito</block>
+  <block id="c5df47f9068f6d11f238ec77908abf18" category="paragraph">22/tcp</block>
+  <block id="b4825fee6cf9b39c67993b031d35ecf3" category="paragraph">Host de gerenciamento</block>
+  <block id="6c7e3200049198face0d2648e9d1a27d" category="paragraph">Entrada</block>
+  <block id="58dc7db50a2e11a9de9e6cc092c59d4d" category="paragraph">ONTAP Mediator</block>
+  <block id="f292b24c43eb81e671b7289a23216f5a" category="paragraph">(Opcional) Gerenciamento de SSH / ONTAP Mediator</block>
+  <block id="5946d090ccc9cc4eb9c55cf3e9e8d35a" category="paragraph">31784/tcp</block>
+  <block id="5f41d8cf5282355fa3aefb7176c3f60e" category="paragraph">LIFs de cluster-mgmt e node-mgmt</block>
+  <block id="47c5e6a166f9432ff96681fa2a62c791" category="paragraph">ONTAP Mediator servidor web</block>
+  <block id="8603b1d76bc78c66209db5fd2107566f" category="paragraph">(Obrigatório) API REST (HTTPS)</block>
+  <block id="5395ab3ceab5345ee4a1117e436bec89" category="paragraph">3260/tcp</block>
+  <block id="adcf0c2ac79e72965c57c716ea214337" category="paragraph">LIFs de node-mgmt</block>
+  <block id="1c44912242a1c1688be9805f25a62dbd" category="paragraph">Alvos iSCSI do ONTAP Mediator</block>
+  <block id="700695ecaadfcc4bf68ce2e0aa3b9258" category="paragraph">(Necessário para configurações IP do MetroCluster) conexão de dados iSCSI para caixas de correio</block>
+  <block id="82e6b9db099fc82f2c99cec991e25894" category="admonition">Para um SnapMirror active sync ou MetroCluster IP ONTAP Mediator que utiliza HTTPS para comunicação, o ONTAP não exige que a porta 3260 esteja habilitada ou conectada.</block>
+  <block id="6e968857b32243865ebf039c1facf6cf" category="section-title">Requisitos do OS</block>
+  <block id="b11acfb94c15912ed0e1b57e83cbd57d" category="paragraph">Seu sistema operacional deve atender aos seguintes requisitos:</block>
+  <block id="d55d8aaf12099eb46ec871f4ea80b39d" category="list-text">instalação física de 64 bits ou máquina virtual</block>
+  <block id="83626eda7582435cdf0eb139d5cc8972" category="list-text">8 GB de RAM</block>
+  <block id="53c00243fb0fab591fe217c9f3478ffa" category="list-text">1 GB de espaço de disco (usado para a instalação de aplicativos, logs do servidor e o banco de dados)</block>
+  <block id="2f889d7364543ea941a8c61cfb8175f4" category="list-text">Usuário: acesso root</block>
+  <block id="46c25558cd29394f473068319854e266" category="paragraph">Consulte <block ref="bb335ec2b44f2431dd9a22d89009dea6" category="inline-link-macro-rx"></block> para ver os sistemas operacionais compatíveis com cada versão do ONTAP Mediator.</block>
+  <block id="b97b4f6747cf1ff0db437565d0e2bfc1" category="paragraph-title">Pacotes necessários do sistema operacional</block>
+  <block id="be76e1094a50361f233e5ea6e4a01cbd" category="paragraph">Os seguintes pacotes são necessários para ONTAP Mediator:</block>
+  <block id="dc8d94afeae6badcd37f8113b35891ba" category="admonition">Os pacotes são pré-instalados ou instalados automaticamente pelo instalador do ONTAP Mediator.</block>
+  <block id="f813fcc7239eff34d867d55b252023dc" category="cell">Todas as versões do RHEL/CentOS</block>
+  <block id="6044eabc79b89a31f51e7a10e1128a8f" category="cell">Pacotes adicionais para o RHEL 10.x / o Rocky Linux 10</block>
+  <block id="567d54d98ea999683b3e623848da4282" category="cell">Pacotes adicionais para RHEL 9.x / Rocky Linux 9</block>
+  <block id="3e68612400fcf20c02f89d597452db1d" category="cell">Pacotes adicionais para RHEL 8.x / Rocky Linux 8</block>
+  <block id="50955d4b2031271f8fda1764c1a66ac3" category="list-text">openssl</block>
+  <block id="bfb048701bda18c214ce545e4c956329" category="list-text">openssl-devel</block>
+  <block id="432dcaee8a851fc53af2488d5d0f4b0b" category="list-text">kernel-devel-$ (uname -r)</block>
+  <block id="e0d511356bd44120af49cc96c9dcf3b3" category="list-text">gcc</block>
+  <block id="099dafc678df7d266c25f95ccf6cde22" category="list-text">fazer</block>
+  <block id="d40270eef8bab470027aedc1b59294ef" category="list-text">libselinux-utils</block>
+  <block id="e5c5e6dae38b284e8cf0bd1fb0efac03" category="list-text">correção</block>
+  <block id="03ce1ba314f367fdd09887fc8f60578b" category="list-text">bzip2</block>
+  <block id="017b459c471455ea6ffb7b32b1598286" category="list-text">perl-Data-Dumper</block>
+  <block id="6d290149925db69430ede61961477f82" category="list-text">perl-ExtUtils-MakeMaker</block>
+  <block id="b86f5cd6fe819c3343d4067073c76641" category="list-text">efibootmgr</block>
+  <block id="c9d0aaf4769a4f8a2886caf46cbce188" category="list-text">mokutil</block>
+  <block id="5ded47091038bcd836e256520c8792d0" category="list-text">python3.12</block>
+  <block id="208a718dcb634b845b4950cdbad35924" category="list-text">python3.12-devel</block>
+  <block id="6461c12b2a26dbd0adddb0db161c7020" category="list-text">elfutils-libelf-devel</block>
+  <block id="c8dff58175a7ddfedf00d77953ef42dd" category="list-text">policycoreutils-python-utils</block>
+  <block id="6e8efbe3a442748b716644025479aab5" category="list-text">python3</block>
+  <block id="6adf41d67f17b06828a3db0bbbb14b38" category="list-text">python3-devel</block>
+  <block id="d8ccd8a2339a5abdfd1aa26a18065592" category="list-text">redhat-lsb-core</block>
+  <block id="cb8bf1b2c10a632817af48cb36bd0bbe" category="list-text">python39</block>
+  <block id="5ad3764a01a8e8d4dfbed6e3f933b853" category="list-text">python39-devel</block>
+  <block id="970e1040f661445042b9cc4524e79084" category="paragraph">O pacote de instalação do Mediator é um arquivo tar compactado e autoextraível que inclui:</block>
+  <block id="40ee7f81efc7bee0246bfd8b4313ff05" category="list-text">Um arquivo RPM contendo todas as as dependências que não podem ser obtidas do repositório da versão compatível.</block>
+  <block id="8bbf3efceb42cd45e316987343509e73" category="list-text">Um script de instalação.</block>
+  <block id="1eb98924c27ab3a518e1bc733049fbba" category="paragraph">Recomenda-se um certificado SSL válido.</block>
+  <block id="7ca10fe4adcfe26c58b56f49be56e4d0" category="list-text">A versão do kernel deve corresponder à versão do sistema operacional.</block>
+  <block id="11574e872b788c4c0b90d661ea7ca7e4" category="list-text">Não atualize o kernel para uma versão do sistema operacional superior à suportada pela sua versão do ONTAP Mediator, pois o módulo SCST testado pode não funcionar.</block>
+  <block id="371f30b9be87449dd3511d3e35482aee" category="paragraph">O ONTAP Mediator pode ser instalado em um sistema com ou sem o UEFI Secure Boot ativado.</block>
+  <block id="5aef9fef307f5564edba042b763a9b59" category="list-text">Você pode optar por desativar a Inicialização Segura do UEFI antes de instalar o ONTAP Mediator, caso ela não seja necessária ou se você estiver solucionando problemas de instalação do ONTAP Mediator. Desative a opção Inicialização Segura do UEFI nas configurações do seu computador.</block>
+  <block id="9ddcf210d89fa62ee3277e8c855512dc" category="paragraph">Para obter instruções detalhadas sobre como desativar o UEFI Secure Boot, consulte a documentação do sistema operacional do seu host.</block>
+  <block id="1f854976b0b9c24d7989c479765b9365" category="paragraph">Para instalar o ONTAP Mediator com o UEFI Secure Boot ativado, você deve registrar uma chave de segurança antes que o serviço possa ser iniciado. A chave é gerada durante a etapa de compilação da instalação do SCST e salva como um par de chaves privada e pública na sua máquina. Use o utilitário <block ref="c9d0aaf4769a4f8a2886caf46cbce188" prefix=" " category="inline-code"></block> para adicionar a chave pública como uma Machine Owner Key (MOK) ao seu firmware UEFI, permitindo que o sistema confie e carregue o módulo assinado. Salve a senha <block ref="c9d0aaf4769a4f8a2886caf46cbce188" prefix=" " category="inline-code"></block> em um local seguro, pois ela será necessária ao reiniciar seu sistema para ativar a MOK.</block>
+  <block id="1a50ae749cf89735e80505c749b5af0d" category="list-text">[[step_1_uefi]]Verifique se o UEFI Secure Boot está ativado no seu sistema:</block>
+  <block id="59c0b01533b5d338dbaf59f9472d4b65" category="paragraph">Os resultados indicam se o UEFI Secure Boot está habilitado neste sistema.</block>
+  <block id="bfa9de45095a3a90ebc55708a5ee6dd2" category="cell">Se...</block>
+  <block id="ec434af0a2786fa23b468584c5622fe1" category="cell">Vá para...</block>
+  <block id="c910e9270eda71a22399f6123860c2a9" category="paragraph">A inicialização segura UEFI está ativada</block>
+  <block id="c420cea00ff916034c896d77f608abb3" category="inline-xref">A etapa em que você executa o&lt;block ref="c9d0aaf4769a4f8a2886caf46cbce188" prefix=" " category='inline-code'/&gt; utilitário</block>
+  <block id="a5dc0bfa8a98ab1f239671ec95e2f479" category="paragraph"><block ref="3c9772e59258f22d908b63cf3ec0c288" category="inline-xref-macro-rx"></block></block>
+  <block id="83003305d7683f47acfcffa47f90a666" category="paragraph">A inicialização segura UEFI está desativada</block>
+  <block id="0eb3c6c685457e8032693f53bd237935" category="paragraph"><block ref="0eb3c6c685457e8032693f53bd237935" category="inline-link-macro-rx"></block></block>
+  <block id="f722828638ac4b5f00969a786f497a9a" category="list-text">Você será solicitado a criar uma frase secreta que deverá ser armazenada em um local seguro. Você precisará dessa frase secreta para habilitar a chave no Gerenciador de Inicialização UEFI.</block>
+  <block id="849c5ead738146da1f092df848c2a718" category="list-text">O ONTAP Mediator 1.2.0 e versões anteriores não suportam este modo.</block>
+  <block id="43b25c2e0d56d4fc146f59ecc73f5495" category="list-text">[[step_2_uefi]]Se o<block ref="c9d0aaf4769a4f8a2886caf46cbce188" prefix=" " category="inline-code"></block> utilitário não estiver instalado, execute o seguinte comando:</block>
+  <block id="e4affa1757c0df8c1a5bf82c97781c6d" category="summary">Você deve verificar a assinatura de código do ONTAP Mediator antes de instalar o pacote de instalação do Mediator.</block>
+  <block id="560c233241deb90642d67353dd0aad6e" category="paragraph">A NetApp recomenda verificar a assinatura de código do ONTAP Mediator antes da instalação. Esta etapa é opcional.</block>
+  <block id="e13794ad439ee00ab157cea16159a70a" category="paragraph">Certifique-se de que seu sistema atenda a estes requisitos antes de verificar a assinatura de código do ONTAP Mediator.</block>
+  <block id="e39f589bfe0d589e13f53fb7f5bddebd" category="list-text">A partir de 15 de junho de 2025, não será possível instalar ou atualizar para ONTAP Mediator 1.9 e 1.8, pois os certificados de verificação de assinatura de código expiraram. Em vez disso, instale ou atualize para ONTAP Mediator 1.10 ou posterior.</block>
+  <block id="b1adbea18c0e0d4e261e15828b721e49" category="list-text">Se o sistema não atender aos requisitos abaixo, o processo de verificação não é necessário e você pode ir diretamente para <block ref="7bbc278d4f7076df8bbc2b54bf8e89a2" category="inline-link-macro-rx"></block>.</block>
+  <block id="9106c3452826490ddd9d07010f2173a5" category="list-text">versões do openssl de 1.0.2 a 3.0 para verificação básica</block>
+  <block id="c0fac2047cbe56c123704cb4b3da32b2" category="list-text">openssl versão 1.1.0 ou posterior para operações de Autoridade de Carimbo de Tempo (TSA)</block>
+  <block id="e98552aa21f6925f5574bfdba32ea161" category="list-text">Acesso público à internet para verificação do OCSP</block>
+  <block id="a94572a14362fed22e33e27f5993fcad" category="paragraph">O pacote de download inclui os seguintes arquivos:</block>
+  <block id="0b27918290ff5323bea1e3b78a9cf04e" category="cell">Arquivo</block>
+  <block id="b5a7adde1af5c87d7fd797b6245c2a39" category="cell">Descrição</block>
+  <block id="ac187656f3be4f6002bd8c832d2a1d52" category="paragraph"><block ref="fc1d3aa2d72a65f8bdd5073680cc2c40" prefix="" category="inline-code"></block></block>
+  <block id="0c5b27f73c23e39de503a3b96e1f76a5" category="paragraph">A chave pública usada para verificar a assinatura</block>
+  <block id="b0826d321ab9e0500888238f5df2b3f3" category="paragraph"><block ref="70f54161b450e448d033a626bcb4f02d" prefix="" category="inline-code"></block></block>
+  <block id="141978143677358a548da31a39c1be88" category="paragraph">A cadeia de confiança da CA de certificação pública</block>
+  <block id="d14d716769ebc25416523fef51abd9b8" category="paragraph"><block ref="363d3474e22d7db66173e78c91f91e7f" prefix="" category="inline-code"></block></block>
+  <block id="9cbdb840a113ea7b5dcb298deaa05b7e" category="paragraph">O certificado usado para gerar a chave</block>
+  <block id="59695863d263b33f206a381bcc6ce261" category="paragraph"><block ref="0c59cbf13b1608fef86b59cc0e6967de" prefix="" category="inline-code"></block></block>
+  <block id="c4512ba85ce34c6480617c484914f747" category="paragraph">O executável de instalação para a versão 1.12</block>
+  <block id="0c55f368e18cfaa6fe2b014acbea4986" category="paragraph"><block ref="4618732bcabe7114d848c5006bfb9ab6" prefix="" category="inline-code"></block></block>
+  <block id="2e8527e57b678d1e86dfcd907d502c93" category="paragraph">A assinatura do instalador, com hash SHA-256 e, em seguida, assinada com RSA usando a chave csc-prod</block>
+  <block id="b8fd0eeaf6e764870e4573b8912bf427" category="paragraph"><block ref="711633bfbf4618fe03e72b5449b8e205" prefix="" category="inline-code"></block></block>
+  <block id="1acf93481e84a4e4c609c4546137aee9" category="paragraph">O pedido de revogação para uso pelo OCSCP da assinatura do instalador</block>
+  <block id="868bb91b10f53c614e4fe4c994eb89b5" category="paragraph"><block ref="d5a2e42625d9ed2e19dc1ed5ae810d2e" prefix="" category="inline-code"></block></block>
+  <block id="5a46f8ae3f6e839360f746d5fa5e480b" category="paragraph">O arquivo de solicitação de assinatura de carimbo de data/hora</block>
+  <block id="ea43322ff7094ad7629e24cbe40c3e9c" category="paragraph"><block ref="4e9f36f85cfdfb83b20958a929957bbf" prefix="" category="inline-code"></block></block>
+  <block id="3ff1067ef040350863cd35305c0cd651" category="paragraph">O certificado público para o TSR</block>
+  <block id="f03046f86ea75e1e226102a08ecd5cbf" category="paragraph"><block ref="c3887b7a23291dac4d7a1b7efc818208" prefix="" category="inline-code"></block></block>
+  <block id="4e3deff3b9081f7fedc2007265693564" category="paragraph">A cadeia da CA do certificado público para o TSR</block>
+  <block id="341d08a2cb17f811a5caa71530ce388f" category="list-text">Realize a verificação de revogação em<block ref="363d3474e22d7db66173e78c91f91e7f" prefix=" " category="inline-code"></block> usando o Protocolo de Status de Certificado Online (OCSP).</block>
+  <block id="08274516b7632a2f17f664632e418b9f" category="list-text">Encontre a URL de OCSP do certificado. Os certificados de desenvolvedor podem não fornecer um URI:</block>
+  <block id="8bf1d39a34c4c8aba9e7682948d83d2d" category="list-text">Gere uma solicitação OCSP para o certificado.</block>
+  <block id="21755208d8a4421549597f7a6e97d778" category="list-text">Conecte-se ao OCSP Manager para enviar a solicitação OCSP:</block>
+  <block id="5c583e4141833d6e7db2838d568f5323" category="list-text">Verifique a cadeia de confiança do CSC e as datas de expiração no host local:</block>
+  <block id="c81eb6c983032e3d49e6b571c2794296" category="admonition">A<block ref="50955d4b2031271f8fda1764c1a66ac3" prefix=" " category="inline-code"></block> versão do PATH deve ter um certificado válido<block ref="691869bca85baab2f31b7f268617f791" prefix=" " category="inline-code"></block> (não autoassinado).</block>
+  <block id="620bc19067c74879a4e4f7bf199ea37e" category="paragraph">O comando falha se o certificado de verificação de assinatura de código ou o certificado de carimbo de data/hora estiver expirado ou inválido. Baixe uma versão mais recente do ONTAP Mediator.</block>
+  <block id="b4e9ec58d3ef956e8fc1a9fc7b82974b" category="list-text">Verifique os <block ref="711633bfbf4618fe03e72b5449b8e205" prefix=" " category="inline-code"></block> e <block ref="d5a2e42625d9ed2e19dc1ed5ae810d2e" prefix=" " category="inline-code"></block> arquivos usando os certificados associados:</block>
+  <block id="195bddf21d18e6684827f26df294c1eb" category="open-title">O OpenSSL 3.x</block>
+  <block id="414fe320287d05243bfc22a1d19c8b98" category="open-title">O OpenSSL 1.x</block>
+  <block id="2809839371385d16108fa0cee4cee699" category="admonition"><block ref="c40361447c48e9b3eaa3ba6ba4896af0" prefix="" category="inline-code"></block> os arquivos contêm a resposta de registro de data e hora associada ao instalador e à assinatura do código. O processamento confirma que o registro de data e hora tem uma assinatura válida da TSA e que seu arquivo de entrada não foi alterado. Sua máquina realiza a verificação localmente. Você não precisa acessar os servidores da TSA.</block>
+  <block id="98007cd8efbd426b4ad5bdcb7778ca03" category="list-text">Verifique as assinaturas em relação à chave:</block>
+  <block id="7bbc278d4f7076df8bbc2b54bf8e89a2" category="paragraph"><block ref="7bbc278d4f7076df8bbc2b54bf8e89a2" category="inline-link-macro-rx"></block></block>
+  <block id="e2d1f5937c4878355c3c739ffbb45800" category="summary">Após a instalação do ONTAP Mediator, você deve verificar se o ONTAP Mediator está em execução.</block>
+  <block id="25a6b1d95d3277b7c1bd3f7b97307081" category="paragraph">Após instalar o ONTAP Mediator, verifique se ele está funcionando corretamente.</block>
+  <block id="253a9d448fe2c1ea3fd6968f5e1a7805" category="list-text">Veja o status do SCST:</block>
+  <block id="3483ec1cb6a837bd4464bc4c69d6cc47" category="admonition">Se você instalou ONTAP Mediator 1.12 ou posterior com suporte apenas para HTTPS, o pacote SCST não está instalado e você pode ignorar esta etapa.</block>
+  <block id="58eaebf972358f1cf03d386a4ade1a0f" category="paragraph-title">Qual é o próximo passo?</block>
+  <block id="dcff6129bbd301d782b50aa40e1a0f79" category="paragraph">Após a instalação e verificação do ONTAP Mediator, você pode prosseguir com as seguintes tarefas de configuração pós-instalação:</block>
+  <block id="5a762e0a3caaba57aa6e78e424dd2661" category="inline-link-macro">Use o ONTAP Mediator para a sincronização ativa do SnapMirror e o MetroCluster IP</block>
+  <block id="54d23f74bb1c8fdc1bf5cfe1d26cb066" category="list-text"><block ref="54d23f74bb1c8fdc1bf5cfe1d26cb066" category="inline-link-macro-rx"></block></block>
+  <block id="ae001e3f1ffe7f045dd5732a8b8d8668" category="list-text"><block ref="dcb0081a923ee4c70e4e3f6dfbd9776f" category="inline-link-macro-rx"></block> (Opcional)</block>
+  <block id="10e1d24f7d73ad263d36af8b1ec3544c" category="summary">NetApp recomenda que você use o System Manager para configurar novos clusters. O System Manager oferece um fluxo de trabalho simples e fácil para a configuração do cluster, incluindo a atribuição de um endereço IP de gerenciamento de nó e a inicialização do cluster.</block>
+  <block id="a512b4ce296503b2b999a8e8376418ea" category="doc">Resumo do fluxo de trabalho de instalação do ONTAP Mediator</block>
+  <block id="9178449d1a9b329335d788862055c61c" category="paragraph">A instalação do ONTAP Mediator inclui a preparação para a instalação, o fornecimento de acesso aos repositórios, o download do pacote de instalação, a verificação da assinatura do código e a instalação do pacote do ONTAP Mediator.</block>
+  <block id="06c2cea18679d64399783748fa367bdd" category="inline-image-macro">Um</block>
+  <block id="7290a497df570b86538ae98972302505" category="paragraph-title"><block ref="58f667aaf05f87159670e12bd9bc076b" category="inline-image-macro-rx" type="image"></block><block ref="0bf216691155fc8de347221d4553ab8f" category="inline-link-macro-rx"></block></block>
+  <block id="5562e3b4a040a906c78e131000ad3c52" category="paragraph">Para instalar o ONTAP Mediator, você deve garantir que todos os pré-requisitos sejam atendidos.</block>
+  <block id="aada29daee1d64ed0fe907043855cb7e" category="inline-image-macro">Dois</block>
+  <block id="ae300de494eb6f048e943dc94db5193f" category="inline-link-macro">Forneça acesso ao repositório</block>
+  <block id="e0922d77b9bc10da1b1f1c3e7eedd476" category="paragraph-title"><block ref="54f425ce8d89f4ed6b8a546561af5d60" category="inline-image-macro-rx" type="image"></block><block ref="bbc4460d23041d413de577a8a9063521" category="inline-link-macro-rx"></block></block>
+  <block id="ca8a2087e5557e317599344687a57391" category="inline-image-macro">Três</block>
+  <block id="b14a15fa83a110077ee887343b803f7c" category="paragraph-title"><block ref="05b2444faffd66d76e88602ea7dd353f" category="inline-image-macro-rx" type="image"></block><block ref="c869120ace16eabfd77564c5b274c273" category="inline-link-macro-rx"></block></block>
+  <block id="981b8fcee42e1e726a67a2b9a98ea6e9" category="inline-image-macro">Quatro</block>
+  <block id="409e0449e7e7b293fc49c94106745ae9" category="paragraph-title"><block ref="beadfa85a2fdca06b91edc1131c603e6" category="inline-image-macro-rx" type="image"></block><block ref="ab4c972d0f4ada73cacc7722e34e0678" category="inline-link-macro-rx"></block></block>
+  <block id="681252b161cda69fc0a8ea855f0ce4ed" category="paragraph">NetApp recomenda verificar a assinatura de código do ONTAP Mediator antes de instalar o pacote de instalação do ONTAP Mediator.</block>
+  <block id="e5d9de39f7ca1ba2637e5640af3ae8aa" category="inline-image-macro">Cinco</block>
+  <block id="c01ddbfb33b9c8d797ae84faf59e4d15" category="paragraph-title"><block ref="99e8b2f00e172bfcff96afdce69907bc" category="inline-image-macro-rx" type="image"></block><block ref="7bbc278d4f7076df8bbc2b54bf8e89a2" category="inline-link-macro-rx"></block></block>
+  <block id="cd011d3f6c5fb4dcec84e1f7c421d22d" category="paragraph">Baixe o pacote de instalação e execute o instalador no host.</block>
+  <block id="e6fbc0b9673f8c86726688d7607fc8f5" category="inline-image-macro">Seis</block>
+  <block id="f2e79d36f60ee64b18f8ce31a73c86d8" category="inline-link-macro">Verifique a instalação do ONTAP Mediator</block>
+  <block id="b7ae5153b74815ef79cdbd22f4cc2cb0" category="paragraph-title"><block ref="ef78558f80439832e0f51cc22cee8b8c" category="inline-image-macro-rx" type="image"></block><block ref="007404c80f3bb40ff0837ce0c5463388" category="inline-link-macro-rx"></block></block>
+  <block id="b709d6253b567b7235606deb0c2395bf" category="summary">Saiba mais sobre o ONTAP Mediator.</block>
+  <block id="92d375ae13aef349145e8dc2877f3c76" category="doc">Saiba mais sobre ONTAP Mediator</block>
+  <block id="326a75b8c793efc45996057c8f51b5d4" category="paragraph">O ONTAP Mediator oferece suporte aos recursos do ONTAP, fornecendo um armazenamento persistente e isolado para metadados de alta disponibilidade (HA), funcionalidade de consulta síncrona da integridade do nó para auxiliar na determinação do quorum e atuando como um proxy de ping para a capacidade de resposta do controlador.</block>
+  <block id="76538e55d69b12bb4a71177e6f12d7af" category="inline-link-macro">SnapMirror documentação do active sync</block>
+  <block id="901813bbb11021af43dee4148c16d7d3" category="admonition">Esta documentação se refere à versão local do ONTAP Mediator. Para obter informações sobre o ONTAP Cloud Mediator, disponível a partir do ONTAP 9.17.1, consulte <block ref="4943a2316d8b919a678f5eb2aeeed318" category="inline-link-macro-rx"></block>.</block>
+  <block id="42e9ee2096bab8214f21c708db5062bd" category="section-title">Como o ONTAP Mediator funciona</block>
+  <block id="8b50bed86f101df37d16ed78d60ed284" category="paragraph">O ONTAP Mediator é executado em um host Linux em um terceiro domínio de falha, separado dos seus clusters do ONTAP, onde fornece um armazenamento persistente e isolado para metadados de HA. O ONTAP usa esse armazenamento, juntamente com as funções de consulta da integridade do nó e de ping-proxy do Mediator, para monitorar relacionamentos de sincronização ativa do SnapMirror e configurações IP do MetroCluster.</block>
+  <block id="7e8f3706222b098ad48cabe16894f827" category="list-text">O ONTAP Mediator usa a LIF de gerenciamento de nós e a LIF de gerenciamento de cluster para se comunicar com cada cluster por meio de múltiplos caminhos redundantes. Isso permite que o ONTAP distinga entre uma falha total do local e uma falha em um único InterSwitch Link (ISL).</block>
+  <block id="3b8c87fa9b9abce4ddce62d23eca868a" category="list-text">Na sincronização ativa do SnapMirror, se um cluster perder a conexão tanto com seu par quanto com o ONTAP Mediator, o ONTAP tratará o par como inacessível e poderá fazer failover automaticamente para a cópia sobrevivente.</block>
+  <block id="2a43a085e6d2089e75c2c18a4b8ea8af" category="list-text">Em configurações IP do MetroCluster, o ONTAP Mediator auxilia com um switchover automático não planejado assistido pelo Mediator (MAUSO), armazenando informações de estado sobre os nós do MetroCluster e ajudando a determinar o curso de ação apropriado durante uma falha.</block>
+  <block id="2a61fd8c8d20f7245177988f689e77e8" category="section-title">Serviços do ONTAP Mediator</block>
+  <block id="877c7d4cc585cbd94114496e0df7fecb" category="paragraph">O ONTAP Mediator fornece dois serviços systemctl adicionais:</block>
+  <block id="5a4ca2392a1b3d83aa38c7968e334573" category="list-text"><block ref="c990bfbba7825c9db39cef7f4a350cfc" prefix="*" category="inline-code"></block>*</block>
+  <block id="06e323d4373aabd0af3131b9474ab662" category="paragraph">Mantém o servidor da API REST para gerenciar os relacionamentos do ONTAP.</block>
+  <block id="7cfb89286bde7b3d84c90ce91303e01c" category="list-text"><block ref="1721bbd0d59d9a230ad8b4681faefffb" prefix="*" category="inline-code"></block>*</block>
+  <block id="507695508843fb2f9cb9084a154ecda3" category="paragraph">Controla a inicialização e o desligamento do módulo iSCSI (SCST).</block>
+  <block id="a1f7f9889c07ad11a711e8b9d0c93fd7" category="section-title">Ferramentas fornecidas para o administrador do sistema</block>
+  <block id="9597511ebb4a2575fad9eb1694641b3b" category="paragraph">Ferramentas fornecidas para o administrador do sistema:</block>
+  <block id="bcdb3e2c0b472defbdefd1325c20b15a" category="list-text"><block ref="ba521b806beb44396f87bbc58c6fcd4d" prefix="*" category="inline-code"></block>*</block>
+  <block id="f9a957978e46df680d8a1331bce02aab" category="paragraph">Define uma nova senha da API quando você fornece o nome de usuário e a senha atuais da API.</block>
+  <block id="061ab59fedb35e48d8d834e130bc4c17" category="list-text"><block ref="1a45494ade6dc6e1a9790be9200aa869" prefix="*" category="inline-code"></block>*</block>
+  <block id="38d794b25e411892f39343c210971007" category="paragraph">Define um novo nome de usuário da API quando você fornece o nome de usuário e a senha atuais da API.</block>
+  <block id="09507a13e5f8f03b22c9b72a6824779e" category="list-text"><block ref="5594a11c6e2dabb8e9beebf27dd7846b" prefix="*" category="inline-code"></block>*</block>
+  <block id="4e735f1f9d62e034c5ef9c0c7a496b19" category="paragraph">Gera um arquivo tgz local contendo todas as informações úteis de suporte necessárias para a comunicação com o suporte ao cliente da NetApp. Isso inclui a configuração do aplicativo, logs e algumas informações do sistema. Os pacotes são gerados no disco local e podem ser transferidos manualmente, conforme necessário. Local de armazenamento: /opt/netapp/data/support_bundles/</block>
+  <block id="bf751df278f4ef7a015642dfa4978407" category="list-text"><block ref="74ac5d826adfbc116b6ea064d73cb629" prefix="*" category="inline-code"></block>*</block>
+  <block id="b1c9afeac2615d7d419269c18341ff95" category="paragraph">Remove o pacote do ONTAP Mediator e o módulo do kernel SCST. Isso inclui toda a configuração, os logs e os dados da caixa de correio.</block>
+  <block id="c699ae1aabd5a8c0718f582a5085febc" category="list-text"><block ref="7174f35f333fadf99cb4247e429bcda4" prefix="*" category="inline-code"></block>*</block>
+  <block id="f274c99ca726ffb2b3a916f4e019bcfa" category="paragraph">Libera um bloqueio na conta de usuário da API se o limite de tentativas de autenticação tiver sido atingido. Esse recurso é usado para impedir ataques de força bruta contra senhas. Ele solicita ao usuário o nome de usuário e a senha corretos.</block>
+  <block id="c15bcd72ca8abaee355754c4815267f0" category="list-text"><block ref="4e1d61591890d0d4ccfdca8463a6106c" prefix="*" category="inline-code"></block>*</block>
+  <block id="1d52b3ad050da5ff4130abb7cd105b59" category="paragraph">(Apenas para suporte) Usado para adicionar o usuário da API durante a instalação.</block>
+  <block id="d6df8af7f544a2958e6757912c0dbd0f" category="section-title">Atualizações SCST e do kernel</block>
+  <block id="2fa10ff98f1c645a56f1fdef1413d6c9" category="inline-link-macro">SCST: Um Subsistema de Destino SCSI Genérico para Linux</block>
+  <block id="9e5f52fbf54a88f3546daad7843dad0a" category="paragraph">ONTAP Mediator usa SCST para fornecer iSCSI para comunicação em MetroCluster configurações IP. O pacote SCST é um módulo do kernel compilado durante a instalação. Pode ser necessário reinstalar SCST após atualizações do kernel. Como alternativa, desinstale ONTAP Mediator, depois reinstale e reconfigure o relacionamento ONTAP. Consulte <block ref="6c6c0b982087c71ca9a00a75bd9ab966" category="inline-link-macro-rx"></block> para saber mais sobre SCST.</block>
+  <block id="34e5e47f5c7b2affb68fc3b25008aa3a" category="admonition">Você deve coordenar quaisquer atualizações no kernel do sistema operacional do servidor com uma janela de manutenção no ONTAP.</block>
+  <block id="0d99e45d04eeac38e25baf7e6e2d48b9" category="section-title">Suporte para HTTPS e iSCSI</block>
+  <block id="f90b665758a0946c798b8211c5eea691" category="paragraph">A partir do ONTAP 9.19.1 e ONTAP Mediator 1.12, você pode configurar um ONTAP Mediator que utiliza HTTPS ou iSCSI para monitorar uma configuração IP do MetroCluster. Você pode optar por instalar o ONTAP Mediator com suporte para iSCSI e HTTPS ou somente HTTPS. Se o ONTAP Mediator for instalado com suporte apenas para HTTPS, o pacote SCST não será instalado. Consulte <block ref="9f4b39d31886e48b8c4dd6f78f5449d8" category="inline-link-macro-rx"></block> para obter mais informações.</block>
+  <block id="30d965eef5ba25c6b9998ae38270b43e" category="doc">Avisos legais</block>
+  <block id="e9c44bbfd795a5d63d74c6a77afee70d" category="paragraph">Avisos legais fornecem acesso a declarações de direitos autorais, marcas registradas, patentes e mais.</block>
+  <block id="6016a2b341113bf496b719905398ecd2" category="section-title">Direitos autorais</block>
+  <block id="52009bb7ee17227f566cd26a02caee56" category="inline-link-macro"><block ref="52009bb7ee17227f566cd26a02caee56" category="inline-link-rx"></block></block>
+  <block id="a1a9afcf552a769c282769271829889a" category="paragraph"><block ref="a1a9afcf552a769c282769271829889a" category="inline-link-macro-rx"></block></block>
+  <block id="126a02652da6de02962cf1b654fd6376" category="section-title">Marcas registradas</block>
+  <block id="c4ce4761e466527d26b3e3d5ed1006fd" category="paragraph">NETAPP, o logotipo da NETAPP e as marcas listadas na página de Marcas Registradas da NetApp são marcas registradas da NetApp, Inc. Outros nomes de empresas e produtos podem ser marcas registradas de seus respectivos proprietários.</block>
+  <block id="f99aa604031e5049799e73b5c3748a98" category="inline-link-macro"><block ref="f99aa604031e5049799e73b5c3748a98" category="inline-link-rx"></block></block>
+  <block id="5d545fe5152641e2ebe654e336e520e5" category="paragraph"><block ref="5d545fe5152641e2ebe654e336e520e5" category="inline-link-macro-rx"></block></block>
+  <block id="be89498d2f8a22ce47c02ba9795fe2af" category="section-title">Patentes</block>
+  <block id="d0b19d36be2c5f16e9aef46c8a452d3d" category="paragraph">A lista atual de patentes detidas pela NetApp pode ser encontrada em:</block>
+  <block id="88e5eabd3917048b6927c42496b98f86" category="inline-link-macro"><block ref="88e5eabd3917048b6927c42496b98f86" category="inline-link-rx"></block></block>
+  <block id="dd38f906b37d412de7d1c1dcf4cbf31c" category="paragraph"><block ref="dd38f906b37d412de7d1c1dcf4cbf31c" category="inline-link-macro-rx"></block></block>
+  <block id="56c34c6410dd45c5cec44149ad0ce037" category="section-title">Política de privacidade</block>
+  <block id="8acb58cbd50ef1b468a020ee0bd351d3" category="inline-link-macro"><block ref="8acb58cbd50ef1b468a020ee0bd351d3" category="inline-link-rx"></block></block>
+  <block id="2352c4e1f4d0024ade0869e00e6243f4" category="paragraph"><block ref="2352c4e1f4d0024ade0869e00e6243f4" category="inline-link-macro-rx"></block></block>
+  <block id="c0227cef6f07a8cd2ac72f2945b031aa" category="section-title">Código aberto</block>
+  <block id="9b73989307c1975dfa4d5e1581e4afe8" category="paragraph">Os arquivos de notificação fornecem informações sobre direitos autorais e licenças de terceiro usados no software NetApp.</block>
+  <block id="909f0fe6adf79c0d00245b4615d8e65d" category="section-title">O ONTAP Mediator para o MetroCluster IP e o SnapMirror active sync</block>
+  <block id="f4a03af8341b001c2d5921087e6acdae" category="inline-link-macro">Aviso para o ONTAP Mediator 1.12.1</block>
+  <block id="c932859452a4d21cd8b2409c4b266c64" category="list-text"><block ref="c932859452a4d21cd8b2409c4b266c64" category="inline-link-macro-rx"></block></block>
+  <block id="23e832f016b25042f077bf69d3f4c7f0" category="inline-link-macro">Aviso para o ONTAP Mediator 1.11</block>
+  <block id="677bfcb200a25242e458dd0b6429d82f" category="list-text"><block ref="677bfcb200a25242e458dd0b6429d82f" category="inline-link-macro-rx"></block></block>
+  <block id="b36e1b8d747340ff716228fd88522c06" category="inline-link-macro">Aviso para ONTAP Mediator 1.10</block>
+  <block id="5543c32a8ccc35d4c3933c375789476b" category="list-text"><block ref="5543c32a8ccc35d4c3933c375789476b" category="inline-link-macro-rx"></block></block>
+  <block id="139f1b20204848bfd0e3274f772bb733" category="inline-link-macro">Aviso para o ONTAP Mediator 1.9.1</block>
+  <block id="f1d7ffd223ec82e15d8172ed4c13f856" category="list-text"><block ref="f1d7ffd223ec82e15d8172ed4c13f856" category="inline-link-macro-rx"></block></block>
+  <block id="8d685ddfb9d20c953bad7b1bfbae053e" category="inline-link-macro">Aviso para ONTAP Mediator 1.8</block>
+  <block id="fb745e243220ba289a5790d22d8c23a0" category="list-text"><block ref="fb745e243220ba289a5790d22d8c23a0" category="inline-link-macro-rx"></block></block>
+  <block id="97eb5e225501b9db5f932ecf16b701ed" category="inline-link-macro">Aviso para o ONTAP Mediator 1.7</block>
+  <block id="e488c599aba4b5ac56806477809fa821" category="list-text"><block ref="e488c599aba4b5ac56806477809fa821" category="inline-link-macro-rx"></block></block>
+  <block id="1e0475ec995218e0382bd6976e903bb1" category="inline-link-macro">Aviso para o ONTAP Mediator 1.5</block>
+  <block id="dc3228f917510c58b4a72ba2e7a91210" category="list-text"><block ref="dc3228f917510c58b4a72ba2e7a91210" category="inline-link-macro-rx"></block></block>
+  <block id="b33e0edd711cf439d3a06b2c984e1755" category="doc">Guia rápido para o ONTAP Mediator</block>
+  <block id="ede7e8aabb49529e0f399e4890ce118f" category="paragraph">Para começar a usar o ONTAP Mediator, você instala o software e o configura para funcionar com seu ambiente ONTAP.</block>
+  <block id="b938000789ff25f73dc19bc3edcb4c8b" category="paragraph-title"><block ref="58f667aaf05f87159670e12bd9bc076b" category="inline-image-macro-rx" type="image"></block> Instalar o ONTAP Mediator</block>
+  <block id="305e7e49ade15c0cfc57375e188c0f62" category="inline-link-macro">Instalar ONTAP Mediator</block>
+  <block id="37ce828d354958a2db78397599a4a69f" category="paragraph"><block ref="44d4e7f0bedd4ffbf3db5ac1f6a4aa7f" category="inline-link-macro-rx"></block> em seu sistema e certifique-se de atender a todas as dependências necessárias.</block>
+  <block id="4662e5c2962f44a995bdfe8230f4f317" category="paragraph-title"><block ref="54f425ce8d89f4ed6b8a546561af5d60" category="inline-image-macro-rx" type="image"></block>Verifique a instalação do ONTAP Mediator</block>
+  <block id="98d33dc6b8be9abc6b3e7920199167df" category="inline-link-macro">Verifique se a instalação do ONTAP Mediator foi bem-sucedida</block>
+  <block id="dc2fd6b1c573ac483da94fda7660ccf4" category="paragraph"><block ref="38f6a5b99838e359694246e1dce469b8" category="inline-link-macro-rx"></block> verificando o status do serviço e revisando os registros em busca de erros ou avisos.</block>
+  <block id="1f901ac22f0969ee8cd8f1117b67ea3f" category="paragraph-title"><block ref="05b2444faffd66d76e88602ea7dd353f" category="inline-image-macro-rx" type="image"></block> Configure o ONTAP Mediator para o seu ambiente ONTAP</block>
+  <block id="e25128fcc48d6c157fb6bc6ff4d52707" category="inline-link-macro">Use o ONTAP Mediator para o MetroCluster IP, a SnapMirror active sync ou ambos</block>
+  <block id="74424ec35cb22218784c442e440b71de" category="paragraph">Dependendo se você deseja <block ref="a68fef87da2c2c6f2af6eb756c624d4b" category="inline-link-macro-rx"></block>, siga as etapas de configuração apropriadas para garantir a aplicação correta de todas as configurações necessárias.</block>
+  <block id="119be031ef4485d20c7683d291d0e9f6" category="inline-link-macro">Documentação do MetroCluster</block>
+  <block id="d20bb8889a94d82bf2e2779edad21bc1" category="paragraph">Agora você pode usar o ONTAP Mediator para monitorar configurações IP do MetroCluster, configurações de sincronização ativa do SnapMirror ou ambas. Para obter mais informações, consulte o <block ref="4943a2316d8b919a678f5eb2aeeed318" category="inline-link-macro-rx"></block> e o <block ref="e2d897561354b5f8fa12d007008008f5" category="inline-link-macro-rx"></block>.</block>
+  <block id="95d547e645780d5c6d1082c62c90b5d2" category="summary">Informações sobre o sistema operacional e o suporte ao SCST para o ONTAP Mediator.</block>
+  <block id="9aa82443628a5371ab66a68f70dd137e" category="doc">Matriz de suporte do ONTAP Mediator</block>
+  <block id="63b82b65fc5a63b22cb2bb0aeed9b9a7" category="paragraph">A matriz de suporte do ONTAP Mediator inclui informações de suporte para sistema operacional e versão do SCST.</block>
+  <block id="60a1a4aab2ae24644a3954b9d2615d6b" category="paragraph">A tabela a seguir lista os sistemas operacionais suportados para cada versão do ONTAP Mediator.</block>
+  <block id="6f73041b016f05fc7cdb400654b60fa6" category="cell">Sistema operacional para ONTAP Mediator</block>
+  <block id="5c6cf7677a346751407101ee18e6a4dd" category="cell">1.12.1</block>
+  <block id="b12cb2f95b2516af000240d2ebc65c26" category="cell">1,12</block>
+  <block id="cb9cc8981898224a2fe45ac6ff7d4244" category="cell">1,11</block>
+  <block id="bdca6efb043178ef172612dd1e173dde" category="cell">1,10</block>
+  <block id="966dc08e28d5fec45c3b38645b1a92ab" category="cell">1.9.1</block>
+  <block id="4885938bbcc8f927854e4d0307d4467c" category="cell">1,9</block>
+  <block id="f932bed2d12442d21507b51d22b88dd7" category="cell">1,8</block>
+  <block id="7fd3cdaaba74a0b0ef3d707a8545df7c" category="cell">1,7</block>
+  <block id="4341447b6ad78bf4d7eb59ebb5a53d63" category="cell">1,6</block>
+  <block id="6008647277c4454cecd97d33c069f0ca" category="cell">1,5</block>
+  <block id="9e605ce3bb6ad134bb55c54d861ceb6a" category="cell">1,4</block>
+  <block id="0b0ec9f1cc28b3c19dc6c36dcd5af7cc" category="cell">1,3</block>
+  <block id="56765472680401499c79732468ba4340" category="cell">1,2</block>
+  <block id="777d45bbbcdf50d49c42c70ad7acf5fe" category="cell">1,1</block>
+  <block id="e4c2e8edac362acab7123654b9e73432" category="cell">1,0</block>
+  <block id="6a45ab2d50d54128463e81fc0f03e79a" category="paragraph">RHEL 10.2</block>
+  <block id="93cba07454f06a4a960172bbd6e2a435" category="paragraph">Sim</block>
+  <block id="bafd7322c6e97d25b6299b5d6fe8920b" category="paragraph">Não</block>
+  <block id="45afd4c5b0dc7b30b48f8b9aae635710" category="paragraph">RHEL 10.1</block>
+  <block id="923b5fd7dc0ac6f70f77bcc7ec3f5546" category="paragraph">Compatível</block>
+  <block id="f50ad339a2fcf7aedfe431f3ae3ef107" category="paragraph">RHEL 10.0</block>
+  <block id="c61087ddd0786db46fcf8e5ee69955f4" category="paragraph">RHEL 9.8</block>
+  <block id="98a29f5bf0873759f56944b3340bbae0" category="paragraph">RHEL 9.7</block>
+  <block id="e56f72be69020404183f694aed8e176b" category="paragraph">RHEL 9.6</block>
+  <block id="92a9848c1fb5697892193dd4ff6e8f2d" category="paragraph">RHEL 9.5</block>
+  <block id="b225d9c59432e8a8fb3706648e471b89" category="paragraph">RHEL 9.4</block>
+  <block id="5a4423695d5636fb42d9142a09b58340" category="paragraph">RHEL 9.3</block>
+  <block id="c87e38c84927fcd003b4fdc775e74821" category="paragraph">RHEL 9.2</block>
+  <block id="7634c90e743798b216d4cc2f1dd7eaa0" category="paragraph">RHEL 9.1</block>
+  <block id="10589d446fc419a4e9df55b253195dd9" category="paragraph">RHEL 9.0</block>
+  <block id="c48cc40f38f8bc361e9a53b83a812d48" category="paragraph">RHEL 8.10</block>
+  <block id="9ca217a808fa091455fd04ec20df21d9" category="paragraph">RHEL 8.9</block>
+  <block id="bd5893e98d53053996565ec48fc2b6bb" category="paragraph">RHEL 8.8</block>
+  <block id="00eb07c3f424101a44a3e3143456bd52" category="paragraph">RHEL 8.7</block>
+  <block id="0f3fc83c719bd7b7276c755b6562b34c" category="paragraph">RHEL 8.6</block>
+  <block id="757de8b2f5629d9eb783b0c8f7e8b4ff" category="paragraph">RHEL 8.5</block>
+  <block id="dffb1e1e6a570b0fb14cea1bd56c79d8" category="paragraph">RHEL 8.4</block>
+  <block id="de5525e18a94a51e3609173c8c069b5e" category="paragraph">RHEL 8.3</block>
+  <block id="ec30c235d0eb792797af1aa1d11759a7" category="paragraph">Obsoleto</block>
+  <block id="9f99749c637e4a85a7e16a3041a8beeb" category="paragraph">RHEL 8.2</block>
+  <block id="2e3750c608ef9c088598a72e91ddb608" category="paragraph">RHEL 8.1</block>
+  <block id="d7618fc64ca0575c8bba9e58bdc253d3" category="paragraph">RHEL 8.0</block>
+  <block id="8cffde85f666d275e71d9b314565a686" category="paragraph">RHEL e CentOS 7.9</block>
+  <block id="71a730801af5263780cae77c91bb7982" category="paragraph">RHEL e CentOS 7.8</block>
+  <block id="c168e750d8241dcaed1ee9bc17e3f294" category="paragraph">RHEL e CentOS 7.7</block>
+  <block id="8339525fe79a8130f43fc81405e9812f" category="paragraph">RHEL e CentOS 7.6</block>
+  <block id="fb1dbcf8128090987e569bf651313243" category="paragraph">Sim (apenas RHEL)</block>
+  <block id="574ea4c991e6ef7f20d7f1c11ae22d02" category="paragraph">CentOS 8 e stream</block>
+  <block id="382b0f5185773fa0f67a8ed8056c7759" category="paragraph">N/A</block>
+  <block id="0929d852cfa2d35a82477186fd055160" category="paragraph">Sim (10.2)</block>
+  <block id="9df743054dfbdcad631028afabd38b41" category="paragraph">Sim (10.0 e 10.1)</block>
+  <block id="26d40bd113f37177261b00ebc25b0a8d" category="paragraph">Sim (9.8)</block>
+  <block id="e1b00cf1bcb2d955314fe2ef4af8274c" category="paragraph">Sim (9.7)</block>
+  <block id="566f46b059c4de391cee99ce8136e76b" category="paragraph">Sim (9.6 e 9.4)</block>
+  <block id="7fca9982db840b682ff1fa91de6f4d50" category="paragraph">Sim (9.5)</block>
+  <block id="fcd381c940dd826de21615b02a93e5ac" category="paragraph">Sim (9.4)</block>
+  <block id="972aed38f4a8421387e44e9f84512a50" category="paragraph">Sim (9.3)</block>
+  <block id="ff9810a447cf239493544dc7cacf0d8b" category="paragraph">Sim (9.2)</block>
+  <block id="c2ebd4f97347c9dbfc716a9616ea4032" category="paragraph">Sim (8.10)</block>
+  <block id="3ad2bf2515345e4c2c50be588ffe9d4b" category="paragraph">Sim (8.9)</block>
+  <block id="33e0d04ca44c83074297dff134d10cfb" category="paragraph">Sim (8.8)</block>
+  <block id="391c0ec02bf618798be411c9c8aa3445" category="paragraph">Oracle Linux 10</block>
+  <block id="5ca9c92221c0bb6df58f938c56b5e08c" category="paragraph">Sim (10.1)</block>
+  <block id="226b4ec4b046f4597e56f6820be16221" category="paragraph">Sim (10.0)</block>
+  <block id="4588ab094dff9b2456ca757278cf07ed" category="paragraph">Oracle Linux 9</block>
+  <block id="f12212efe7b442a1ec6f7d94dde4272e" category="paragraph">Sim (9.6)</block>
+  <block id="5c5f846c7bbce41735591248a7e03ae2" category="list-text">"Sim" significa que o sistema operacional é recomendado para a instalação do ONTAP Mediator e é totalmente compatível e suportado.</block>
+  <block id="42bf268ce6824f5c15433c63f78e0e15" category="list-text">"Não" significa que o sistema operacional e o ONTAP Mediator não são compatíveis.</block>
+  <block id="e047d5afa17bbc643bc56cef323f85b6" category="list-text">"Compatível" significa que a Red Hat não oferece mais suporte a essas versões do RHEL, mas o ONTAP Mediator ainda pode ser instalado nelas.</block>
+  <block id="3a750aeb7d41934423dea6e53773bd12" category="list-text">O ONTAP Mediator 1.6 adiciona suporte para Rocky Linux 9 e 8.</block>
+  <block id="a3026e4493cfd57bdc13ba786b0cae1f" category="list-text">O ONTAP Mediator 1.5 foi a última versão compatível com os sistemas operacionais do ramo RHEL 7.x.</block>
+  <block id="a3030782bfe07ab8ab13c96edb732a9b" category="list-text">O Centos 8 foi removido de todas as versões devido à sua nova ramificação. O Centos Stream foi considerado um sistema operacional de produção inadequado. Não há planos de suporte.</block>
+  <block id="833ee63cad8709c693aa56f3f6f2f931" category="paragraph">A tabela a seguir mostra a versão do SCST compatível com cada versão do ONTAP Mediator.</block>
+  <block id="c5c31e0edabd430de173af2cac963c86" category="cell">Versão do ONTAP Mediator</block>
+  <block id="4107429f6766d57b694d585cfdd160f8" category="cell">Versão do SCST</block>
+  <block id="1be471030891cbc39e234b1a80d41701" category="cell">ONTAP Mediator 1.2</block>
+  <block id="298ba785f6f7f916e8a8e98b883ac6e6" category="summary">Cada versão inclui novas funcionalidades do ONTAP Mediator.</block>
+  <block id="0f7c73e85014bc5dcd0067a1abb5a71c" category="doc">O que há de novo no ONTAP Mediator?</block>
+  <block id="706f100d1cbe7864b3149ff92cf62d49" category="paragraph">Novos aprimoramentos para o ONTAP Mediator são fornecidos a cada nova versão.</block>
+  <block id="097269d68dda9a5a6965173c16acef55" category="inline-link-macro">Matriz de suporte</block>
+  <block id="1f840207417dd3f3c58182bbb07f7d4d" category="admonition">Para obter informações sobre a versão do sistema operacional e do SCST, consulte o <block ref="c149c010c58bed396877e76753dfe3da" category="inline-link-macro-rx"></block>.</block>
+  <block id="c1748037d10cffabb8e95e4ccf77c613" category="cell">Melhorias</block>
+  <block id="63c1378a540c130ed6526f15004717aa" category="list-text">Suporte para RHEL:</block>
+  <block id="e8a8a0fc3a01794e8d25d6aed862ebc4" category="list-text">Compatível: 10.1 e 9.7.</block>
+  <block id="60d802407741b6aa93912645b95973d3" category="list-text">Recomendado: 10.2, 10.0, 9.8, 9.6, 9.4 e 8.10.</block>
+  <block id="1a1727a6918fd3fa55075b30a8c19c43" category="list-text">Suporte para Rocky Linux 10.2, 9.8 e 8.10.</block>
+  <block id="37816537c169d0bac0ac457e8611211a" category="list-text">Suporte para Oracle Linux 10.1 e 9.8 com kernels rhck e uek.</block>
+  <block id="9a4a53cef7b15442ebf61d83809a82f4" category="list-text">A partir do ONTAP Mediator 1.12.1 e ONTAP 9.19.1, uma única instância do ONTAP Mediator configurada com HTTPS pode monitorar as seguintes configurações simultaneamente:</block>
+  <block id="2ef6e8f0d5d66d492a2b23a3bb0ad174" category="list-text">Um máximo de dez configurações IP de quatro nós ou cinco de oito nós do MetroCluster, se instaladas em um host com CPU de 8 núcleos e pelo menos 16GB de RAM. Veja <block ref="23c736ffefe2c88d617ae89ae44b32de" category="inline-link-macro-rx"></block>.</block>
+  <block id="17d08083fc04aacdeb93bd44277678c6" category="inline-link-macro">Configure o ONTAP Mediator para a sincronização ativa do SnapMirror</block>
+  <block id="9c758998783d5deea1d83f8a17b3acea" category="list-text">Uma configuração IP de quatro nós MetroCluster e uma relação de sincronização ativa entre pares SnapMirror, se instalada em um host com CPU de 2 núcleos. Veja <block ref="1e99a23f0ff254289bb966022cc5ead3" category="inline-link-macro-rx"></block>.</block>
+  <block id="defcb96c4b9d8094e49d27abc0d7ba6c" category="list-text">Inclui uma nova ferramenta para reparar uma instalação SCST corrompida. Após instalar o ONTAP Mediator, você pode encontrar a ferramenta em <block ref="711a32ad400471be43668bfcda3244b2" prefix=" " category="inline-code"></block>. Você pode usar a ferramenta após uma atualização do sistema operacional, caso o sistema operacional atualizado exija um patch SCST que não esteja disponível no pacote SCST padrão.</block>
+  <block id="6082f1d9d6234f1a22ac348bcaf40bfc" category="list-text">Suporte para Oracle Linux 10.1 e 9.7 com kernels rhck e uek.</block>
+  <block id="f891556a6688c140ff5a993b15949efd" category="inline-link-macro">Saiba mais sobre as opções de instalação HTTPS e iSCSI para ONTAP Mediator</block>
+  <block id="2132cc27a065b478c6073807667d8821" category="list-text">A partir do ONTAP 9.19.1 e ONTAP Mediator 1.12, você pode configurar um ONTAP Mediator que utiliza HTTPS para comunicação em configurações IP do MetroCluster. O HTTPS proporciona maior segurança ao criptografar sessões inteiras usando SSL/TLS. Você pode optar por instalar o ONTAP Mediator com suporte apenas para HTTPS. O pacote SCST não é instalado se este método de instalação for utilizado. <block ref="c2201c8820baa97aa8e2ad6d6bbe796b" category="inline-link-macro-rx"></block>.</block>
+  <block id="098e6488f292a2a967f044215af1d052" category="list-text">Suporte para RHEL 10.1, 10.0, 9.7, 9.6, 9.4 e 8.10.</block>
+  <block id="cac276a9e96f3c0963f96b1a6f677ed4" category="list-text">Suporte para Rocky Linux 10.1, 9.7 e 8.10.</block>
+  <block id="684a4237791e6b7accb3359916149a47" category="list-text">Suporte para Oracle Linux 10.0 e 9.6 com kernels rhck e uek.</block>
+  <block id="b157fc40cc8a93b02f24b6090bc14033" category="list-text">Adiciona suporte a IPv6 para configurações IP do MetroCluster.</block>
+  <block id="46837ff5597d19a05270b6ca1fa2a504" category="list-text">Adiciona suporte para fapolicyd.</block>
+  <block id="91c808163778b1252a5964a6166084bb" category="list-text">Suporte para RHEL 10.0, 9.6, 9.4 e 8.10.</block>
+  <block id="bc04dd412f2394730e2fbce62160ee42" category="list-text">Suporte para Rocky Linux 10.0, 9.6 e 8.10.</block>
+  <block id="c8ac2fa8a1351efab1af118900283acf" category="list-text">Atualiza a versão base do Python de Python 3.9 para Python 3.12.</block>
+  <block id="dbe5333de3a60f1c199904055a1f72b5" category="list-text">Compatível com: 9.3, 9.1, 8.9, 8.7, 8.6, 8.5 e 8.4.</block>
+  <block id="118ed9268d9cd782d2d31ba313aad13c" category="list-text">Recomendado: 9.5, 9.4, 9.2, 9.0, 8.10 e 8.8.</block>
+  <block id="7e63e98b1c2bb4da8e19cd22fbcf38f8" category="list-text">Suporte para o Rocky Linux 9.5 e 8.10.</block>
+  <block id="77f43b2671d5490ff8fb4ca358c08f3c" category="list-text">Adiciona novos certificados para verificação de assinatura de código.</block>
+  <block id="427ed2152eb68669767965c6995623ff" category="list-text">Adicionado suporte para ignorar as verificações de assinatura de código usando a<block ref="88e57dba5ad35a846f8226c98dea04cb" prefix=" " category="inline-code"></block> flag.</block>
+  <block id="b54bfd24b58f39cbae9ccbfeb57b4a52" category="list-text">O instalador exibe avisos quando detecta certificados de assinatura de código expirados.</block>
+  <block id="b713efaac064c3477427790c7f25c28f" category="list-text">Suporte a FIPS para RHEL e Rocky Linux.</block>
+  <block id="71de89881e6ed27948bb06179d0a8540" category="list-text">Foram adicionadas melhorias de desempenho para maior escalabilidade.</block>
+  <block id="4b7aa15061a264c275e2d2a90175a52b" category="list-text">Nomes de arquivo aprimorados para simplificar a configuração de certificados assinados por PKI.</block>
+  <block id="bb6431d39782643eba51257f3e365953" category="list-text">Compatível: 8.7, 8.6, 8.5 e 8.4.</block>
+  <block id="39b35f44655044497df352f5ccf0444f" category="list-text">Recomendado: 9.4, 9.3, 9.2, 9.1, 9.0, 8.10, 8.9 e 8.8.</block>
+  <block id="82a2215d1b4abab41c76725fd019024e" category="list-text">Suporte para o Rocky Linux 9.4 e 8.10.</block>
+  <block id="1eb1ab2ad3f6725a903cabc153916101" category="list-text">Recomendado: 9.3, 9.2, 9.1, 9.0, 8.9 e 8.8.</block>
+  <block id="e403eca1fdb8b44db92d38b23a620580" category="list-text">Suporte para o Rocky Linux 9.3 e 8.9.</block>
+  <block id="eeae80d26915b9299cd26aff120dbb9c" category="list-text">Suporte para dados SAN (Nome Alternativo do Assunto) em certificados autoassinados e certificados assinados por terceiros.</block>
+  <block id="78b75efa2fd35c3ed7b2557b51a12892" category="list-text">Atualizações do Python 3.9.</block>
+  <block id="86c9bb8f93c86ceca3c2431fa7cafcd1" category="list-text">Recomendado: 9.2, 9.1, 9.0 e 8.8.</block>
+  <block id="11c36d7aff5a3ea3c001cba50b944d5b" category="list-text">Suporte para o Rocky Linux 9.2 e 8.8.</block>
+  <block id="8ae02e171030d0bbaf996dab38ed5a13" category="list-text">Suporte descontinuado para o RHEL 7.x / CentOS em todas as versões.</block>
+  <block id="e11ef0855a5adaac78857186ee735999" category="list-text">Suporte para o RHEL 8.5, 8.4, 8.3, 8.2, 8.1, 8.0, 7.9, 7.8, 7.7 e 7.6.</block>
+  <block id="6381bdc101357fdc0df337549a01ee62" category="list-text">Suporte para CentOS 7.9, 7.8, 7.7 e 7.6.</block>
+  <block id="5f72b640707a5d07a5578ceab0322661" category="list-text">Inclui avisos de obsolescência para RHEL 7.x / CentOS 7.x.</block>
+  <block id="5d682c8af595f2350e86ed1258048f89" category="list-text">Otimiza a velocidade para sistemas de sincronização ativa do SnapMirror em maior escala.</block>
+  <block id="914f23f08713afb7cbaacf3966247fe8" category="list-text">Uma assinatura criptográfica de código foi adicionada ao instalador.</block>
+  <block id="f2c672a7d3333fdd21e34b228a571fb2" category="list-text">Adicionado suporte à Inicialização Segura (SB) do firmware baseado em UFEI.</block>
+  <block id="5f1087bded124ec9ddcb70b9f3ecdd0d" category="list-text">Suporte para o RHEL 8.3, 8.2, 8.1, 8.0, 7.9, 7.8, 7.7 e 7.6.</block>
+  <block id="268005e8c9a38b341eec12fb83a56dd7" category="list-text">Suporte para RHEL 8.1, 8.0, 7.9, 7.8, 7.7 e 7.6.</block>
+  <block id="4fa13e5b3e6fce6c36412aca95cef0ed" category="list-text">Suporte a caixas de correio HTTPs.</block>
+  <block id="0cde76c281b193199202b79cd6b31c1e" category="list-text">Para uso com ONTAP 9.8+ MCC-IP AUSO e o SnapMirror active sync ZRTO.</block>
+  <block id="75b105e969b3595c96ecb38f5f6a4e3d" category="list-text">Suporte ao RHEL 8.0 e 7.6.</block>
+  <block id="8c382fb753012ccff6bc97505d4af52b" category="list-text">Suporte para CentOS 7.6.</block>
+  <block id="22be24e9429ce5f9b8cce8ad8f59bac5" category="list-text">Elimina as dependências do Perl.</block>
+  <block id="aaa8ca93d68b9efbf0f45ab1bad6a50d" category="list-text">Suporte para caixas de correio iSCSI.</block>
+  <block id="d2009039de5347ec838e5b352689b40e" category="list-text">Para uso com ONTAP 9.7+ MCC-IP AUSO.</block>
+  <block id="e699fc193cfa030f26300d0bab481dde" category="list-text">Suporte para RHEL/CentOS 7.6.</block>
+  <block id="fadaf2b5ff146e9a96c3843dbfac450e" category="summary">Saiba como o ONTAP Mediator monitora relacionamentos de sincronização ativa do SnapMirror e configurações IP do MetroCluster, e quantos de cada um uma única instância pode monitorar simultaneamente.</block>
+  <block id="af353eb26c9f4a289089dbb70f3e3267" category="paragraph">O ONTAP Mediator é executado em um host Linux em um terceiro domínio de falha, separado dos seus clusters do ONTAP, onde fornece um armazenamento persistente e isolado para metadados de alta disponibilidade (HA). O ONTAP usa esse armazenamento, juntamente com as funções de consulta de integridade do nó e de ping-proxy do Mediator, para monitorar os relacionamentos de sincronização ativa do SnapMirror e as configurações de IP do MetroCluster.</block>
+  <block id="1011e12128ad565cd37816222d73936b" category="admonition">Esta documentação refere-se à versão on-premises do ONTAP Mediator. Para obter informações sobre o ONTAP Cloud Mediator, disponível a partir do ONTAP 9.17.1, consulte a <block ref="4943a2316d8b919a678f5eb2aeeed318" category="inline-link-macro-rx"></block>.</block>
+  <block id="42992ec7640fbb21fca327b11346edc3" category="section-title">Monitore as relações de sincronização ativa do SnapMirror</block>
+  <block id="eabbf76b0849c0d8b0b7ff59d4e699e3" category="paragraph">SnapMirror active sync usa o ONTAP Mediator como testemunha passiva das cópias primária e espelho em um grupo de consistência. Se ocorrer uma partição de rede ou se uma das cópias ficar indisponível, SnapMirror active sync consulta o ONTAP Mediator para determinar qual cópia continua a atender à E/S e interrompe a E/S na outra cópia.</block>
+  <block id="ecd88dd354ce9fc8fc63524f4951e442" category="paragraph">A partir do ONTAP 9.8, você pode usar qualquer versão do ONTAP Mediator para monitorar uma relação de sincronização ativa do SnapMirror.</block>
+  <block id="ba348dde3947c2f06b825aa4327cf62d" category="inline-link-macro">Limites de objetos para a sincronização ativa do ONTAP SnapMirror</block>
+  <block id="9350a76a80ee8a2ea53f104cb8fcf184" category="admonition">Para obter informações sobre os limites do número de pares de cluster do SnapMirror active sync que uma única instância do ONTAP Mediator pode monitorar, consulte <block ref="8dfbc303a57231f71470fa602ad1ddc0" category="inline-link-macro-rx"></block>.</block>
+  <block id="effce48346873f15242a0410a058ada7" category="paragraph"><block ref="effce48346873f15242a0410a058ada7" category="inline-link-macro-rx"></block></block>
+  <block id="b3b5af089e0f5628ed01ae5560bd46b0" category="section-title">Monitore as configurações de IP do MetroCluster</block>
+  <block id="b2340e262d9bf143ce3553cc54d44336" category="paragraph">Em uma configuração IP do MetroCluster, o ONTAP Mediator armazena informações de estado sobre os nós do MetroCluster em LUNs de mailbox e auxilia os nós com um switchover automático não planejado assistido pelo Mediator (MAUSO) no caso de desastre ou de cenários específicos de falha.</block>
+  <block id="575844baf72ff6d7f61f0710aa0807ab" category="paragraph">A partir do ONTAP 9.19.1 e do ONTAP Mediator 1.12, você pode configurar o ONTAP Mediator para usar HTTPS na comunicação e monitorar sua configuração IP do MetroCluster. Ao configurar o ONTAP Mediator com o protocolo iSCSI, você pode usar qualquer versão do ONTAP Mediator para monitorar uma configuração IP do MetroCluster.</block>
+  <block id="5baae96b103c91b9f857c87285299132" category="admonition">Para obter informações sobre os limites do número de configurações IP do MetroCluster que uma única instância do ONTAP Mediator pode monitorar, consulte <block ref="23c736ffefe2c88d617ae89ae44b32de" category="inline-link-macro-rx"></block></block>
+  <block id="42f362146dbe8748970967efe562f3c8" category="inline-link-macro">Configure o ONTAP Mediator para uma configuração IP do MetroCluster</block>
+  <block id="a35bcdcd4abeb9e60e10ec1ddd40fb73" category="paragraph"><block ref="a35bcdcd4abeb9e60e10ec1ddd40fb73" category="inline-link-macro-rx"></block></block>
+  <block id="6b0096a280c04de21fb5d2ef96df1cb7" category="inline-link-macro">Arquitetura do ONTAP SnapMirror active sync</block>
+  <block id="2dfb829fe1e40af1cb9ddc839717eb0e" category="list-text"><block ref="2dfb829fe1e40af1cb9ddc839717eb0e" category="inline-link-macro-rx"></block></block>
+  <block id="48596b9855b161c0fdcfc7b5380b949d" category="inline-link-macro">Saiba mais sobre o suporte do ONTAP Mediator para switchover automático não planejado em uma configuração IP do MetroCluster</block>
+  <block id="06d2f43e26cf7c245bd2b9fdde4f760c" category="list-text"><block ref="06d2f43e26cf7c245bd2b9fdde4f760c" category="inline-link-macro-rx"></block></block>
+  <block id="d579e2d2fbd0efbbbd9c45317b15f8a7" category="sidebar">O ONTAP Mediator oferece suporte ao SnapMirror active sync e ao MetroCluster IP, fornecendo um armazenamento persistente e isolado para metadados de alta disponibilidade (HA), funcionalidade de consulta síncrona da integridade do nó para ajudar na determinação de quórum e atuando como um proxy de ping para a operacionalidade do controlador.</block>
+  <block id="bddcb25dc0af4e702a0790b39f1edab8" category="sidebar">Documentação do ONTAP Mediator</block>
+  <block id="be11c74c1dd7f307bb80183a90dc2067" category="sidebar">Comece agora</block>
+  <block id="06ad314b340900d226b1196e1fe289e9" category="sidebar">Início rápido</block>
+  <block id="7d0ee6fed10d3d4e5c9ee496729ab519" category="sidebar">Notas de lançamento</block>
+  <block id="109e97d9e7194e57379972a9c16df8c1" category="sidebar">Instalar, atualizar e configurar</block>
+  <block id="dfcc398099d6a64026e51ab282e16253" category="sidebar">Mais recursos</block>
+  <block id="c09b5be4c2da04f4040eef1878f258aa" category="sidebar">Documentação do ONTAP 9</block>
+  <block id="8162203e3ec38c896e5f6d688115d731" category="sidebar">Referência da API REST do ONTAP</block>
+  <block id="37888f4436a67135b7af33cedc29e2a9" category="sidebar">Referência da CLI do ONTAP</block>
+  <block id="74b199dea2b5c14988081c29006ba269" category="sidebar">Documentação do ONTAP Mediator</block>
+  <block id="7f29812fdda9b63b5432343e48888f3e" category="sidebar">O que há de novo no ONTAP Mediator</block>
+  <block id="7ff4995c299eff1168d2cf4a88aff450" category="sidebar">Instalar e configurar</block>
+  <block id="24f47cdbe9ddba774a7cc53e51d9032e" category="sidebar">Fluxo de trabalho</block>
+  <block id="f76aaf3aaa7b30238e7a3e2b1a04493b" category="sidebar">Prepare-se para instalar</block>
+  <block id="79953e35d982730fbecf7aa03d92a762" category="sidebar">Habilitar acesso aos repositórios</block>
+  <block id="5313f1fcf99dc353ee486b3dc232c221" category="sidebar">Baixe o pacote de instalação</block>
+  <block id="e0dc7a3d7049ad7cc30fc55836cba658" category="sidebar">Verifique a assinatura do código</block>
+  <block id="d6279d2e34516b777db3ee2a047ea050" category="sidebar">Instale o pacote ONTAP Mediator</block>
+  <block id="b15a013c4977a2a96afedafe316664b2" category="sidebar">Verificar instalação</block>
+  <block id="6584e4216667df6aaf19447e73148932" category="sidebar">Utilize o ONTAP Mediator</block>
+  <block id="08fee060c62a97cd00596d47ec113fe1" category="sidebar">Administrar o ONTAP Mediator</block>
+  <block id="fdb2ff0d7d656c49f4eae4e190dfcd66" category="sidebar">Inicie ou pare o ONTAP Mediator</block>
+  <block id="951d3fc54a28f9f46798897467d96a5b" category="sidebar">Gerenciar certificados</block>
+  <block id="00cc153f515f430662efd70403c7ba56" category="sidebar">Regenere um certificado temporário autoassinado</block>
+  <block id="d847c50d8e20b1cbb0c7d007c82bb436" category="sidebar">Substitua certificados autoassinados por certificados confiáveis</block>
+  <block id="aa4366187e22f05be41c6094e57cf220" category="sidebar">Solucionar problemas relacionados a certificados</block>
+  <block id="f5fc8b69026eddce9248be43141a3d30" category="sidebar">Manutenção do sistema operacional do host</block>
+</blocks>

@@ -1,0 +1,79 @@
+---
+settings:
+  name: ONTAP Mediator
+  internal:
+    pdf_enabled: true
+  prod:
+    pdf_enabled: true
+    harmony_enabled: false
+  langs: pt-br,us-en,de-de,es-es,fr-fr,it-it,ja-jp,ko-kr,zh-cn,zh-tw
+sidebar:
+  entries:
+  - title: Documentação do ONTAP Mediator
+    url: "/index.html"
+  - title: Notas de lançamento
+    entries:
+    - title: O que há de novo no ONTAP Mediator
+      url: "/release-notes/whats-new-in-ontap-mediator.html"
+    - title: Matriz de suporte
+      url: "/release-notes/support-matrix.html"
+  - title: Comece agora
+    entries:
+    - title: Saiba mais sobre ONTAP Mediator
+      url: "/learn-about.html"
+    - title: Início rápido
+      url: "/quick-start.html"
+  - title: Instalar e configurar
+    entries:
+    - title: Fluxo de trabalho
+      url: "/install/workflow-summary.html"
+    - title: Prepare-se para instalar
+      url: "/install/prepare-install.html"
+    - title: Habilitar acesso aos repositórios
+      url: "/install/enable-access-repos-task.html"
+    - title: Baixe o pacote de instalação
+      url: "/install/download-install-pkg-task.html"
+    - title: Verifique a assinatura do código
+      url: "/install/verify-code-signature-task.html"
+    - title: Instale o pacote ONTAP Mediator
+      url: "/install/install-mediator-pkg-task.html"
+    - title: Verificar instalação
+      url: "/install/verify-install-task.html"
+  - title: Utilize o ONTAP Mediator
+    entries:
+    - title: Use o ONTAP Mediator para a sincronização ativa do SnapMirror e o MetroCluster
+        IP
+      url: "/use-mediator-snapmirror-metrocluster-task.html"
+  - title: Administrar o ONTAP Mediator
+    entries:
+    - title: Atualize o ONTAP Mediator
+      entries:
+      - title: Atualize o ONTAP Mediator
+        url: "/administer/upgrade-ontap-mediator-task.html"
+      - title: Atualize o sistema operacional do host e ONTAP Mediator
+        url: "/administer/upgrade-host-os-mediator-task.html"
+    - title: Configurar os atributos do ONTAP Mediator
+      url: "/administer/configure-ontap-mediator-attributes.html"
+    - title: Alterar o nome de usuário e a senha do ONTAP Mediator
+      url: "/administer/change-username-password-task.html"
+    - title: Inicie ou pare o ONTAP Mediator
+      url: "/administer/start-stop-mediator-task.html"
+    - title: Verifique a integridade do ONTAP Mediator
+      url: "/administer/verify-mediator-health-task.html"
+    - title: Gerenciar certificados
+      entries:
+      - title: Regenere um certificado temporário autoassinado
+        url: "/administer/regenerate-self-signed-certificate-task.html"
+      - title: Substitua certificados autoassinados por certificados confiáveis
+        url: "/administer/replace-self-signed-certificates-task.html"
+      - title: Solucionar problemas relacionados a certificados
+        url: "/administer/troubleshoot-certificate-issues-task.html"
+    - title: Manutenção do sistema operacional do host
+      url: "/administer/host-maintenance-task.html"
+    - title: Desinstalar o ONTAP Mediator
+      url: "/administer/uninstall-mediator-task.html"
+  - title: Avisos legais
+    url: "/legal-notices.html"
+product-family:
+  name: ONTAP
+  repo: ontap-family

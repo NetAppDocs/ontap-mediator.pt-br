@@ -1,0 +1,50 @@
+---
+permalink: use-mediator-snapmirror-metrocluster-task.html 
+sidebar: sidebar 
+keywords: ONTAP, mediator, SnapMirror active sync, MetroCluster IP, quorum witness, MAUSO 
+summary: Saiba como o ONTAP Mediator monitora relacionamentos de sincronização ativa do SnapMirror e configurações IP do MetroCluster, e quantos de cada um uma única instância pode monitorar simultaneamente. 
+---
+= Use o ONTAP Mediator para a sincronização ativa do SnapMirror e o MetroCluster IP
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+O ONTAP Mediator é executado em um host Linux em um terceiro domínio de falha, separado dos seus clusters do ONTAP, onde fornece um armazenamento persistente e isolado para metadados de alta disponibilidade (HA). O ONTAP usa esse armazenamento, juntamente com as funções de consulta de integridade do nó e de ping-proxy do Mediator, para monitorar os relacionamentos de sincronização ativa do SnapMirror e as configurações de IP do MetroCluster.
+
+
+NOTE: Esta documentação refere-se à versão on-premises do ONTAP Mediator. Para obter informações sobre o ONTAP Cloud Mediator, disponível a partir do ONTAP 9.17.1, consulte a link:https://docs.netapp.com/us-en/ontap/snapmirror-active-sync/index.html["SnapMirror documentação do active sync"^].
+
+
+
+[[monitor-snapmirror-active-sync-relationships]]
+== Monitore as relações de sincronização ativa do SnapMirror
+
+SnapMirror active sync usa o ONTAP Mediator como testemunha passiva das cópias primária e espelho em um grupo de consistência. Se ocorrer uma partição de rede ou se uma das cópias ficar indisponível, SnapMirror active sync consulta o ONTAP Mediator para determinar qual cópia continua a atender à E/S e interrompe a E/S na outra cópia.
+
+A partir do ONTAP 9.8, você pode usar qualquer versão do ONTAP Mediator para monitorar uma relação de sincronização ativa do SnapMirror.
+
+
+NOTE: Para obter informações sobre os limites do número de pares de cluster do SnapMirror active sync que uma única instância do ONTAP Mediator pode monitorar, consulte link:https://docs.netapp.com/us-en/ontap/snapmirror-active-sync/limits-reference.html["Limites de objetos para a sincronização ativa do ONTAP SnapMirror"^].
+
+link:https://docs.netapp.com/us-en/ontap/snapmirror-active-sync/mediator-install-task.html["Configure o ONTAP Mediator para a sincronização ativa do SnapMirror"^]
+
+
+
+[[monitor-metrocluster-ip-configurations]]
+== Monitore as configurações de IP do MetroCluster
+
+Em uma configuração IP do MetroCluster, o ONTAP Mediator armazena informações de estado sobre os nós do MetroCluster em LUNs de mailbox e auxilia os nós com um switchover automático não planejado assistido pelo Mediator (MAUSO) no caso de desastre ou de cenários específicos de falha.
+
+A partir do ONTAP 9.19.1 e do ONTAP Mediator 1.12, você pode configurar o ONTAP Mediator para usar HTTPS na comunicação e monitorar sua configuração IP do MetroCluster. Ao configurar o ONTAP Mediator com o protocolo iSCSI, você pode usar qualquer versão do ONTAP Mediator para monitorar uma configuração IP do MetroCluster.
+
+
+NOTE: Para obter informações sobre os limites do número de configurações IP do MetroCluster que uma única instância do ONTAP Mediator pode monitorar, consulte link:https://docs.netapp.com/us-en/ontap-metrocluster/install-ip/concept_mediator_requirements.html#mediator-multiple-mccip["Utilize ONTAP Mediator para monitorar várias configurações de IP MetroCluster"^]
+
+link:https://docs.netapp.com/us-en/ontap-metrocluster/install-ip/concept_mediator_requirements.html["Configure o ONTAP Mediator para uma configuração IP do MetroCluster"^]
+
+.Informações relacionadas
+* link:https://docs.netapp.com/us-en/ontap/snapmirror-active-sync/architecture-concept.html["Arquitetura do ONTAP SnapMirror active sync"^]
+* link:https://docs.netapp.com/us-en/ontap-metrocluster/install-ip/concept-ontap-mediator-supports-automatic-unplanned-switchover.html["Saiba mais sobre o suporte do ONTAP Mediator para switchover automático não planejado em uma configuração IP do MetroCluster"^]
+

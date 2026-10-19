@@ -1,0 +1,42 @@
+---
+indexpage:
+  title: Documentação do ONTAP Mediator
+  summary: O ONTAP Mediator oferece suporte aos recursos do ONTAP, fornecendo um armazenamento
+    persistente e isolado para metadados de alta disponibilidade (HA), funcionalidade
+    de consulta síncrona da integridade do nó para auxiliar na determinação do quorum
+    e atuando como um proxy de ping para a capacidade de resposta do controlador.
+  keywords: mediator, ONTAP, high-availability, HA, metadata, quorum, controller,
+    liveliness, smbc, metrocluster, snapmirrror active sync
+  lead: O ONTAP Mediator oferece suporte ao SnapMirror active sync e ao MetroCluster
+    IP, fornecendo um armazenamento persistente e isolado para metadados de alta disponibilidade
+    (HA), funcionalidade de consulta síncrona da integridade do nó para ajudar na
+    determinação de quórum e atuando como um proxy de ping para a operacionalidade
+    do controlador.
+  tiles:
+  - title: Comece agora
+    links:
+    - title: Saiba mais sobre ONTAP Mediator
+      url: "/learn-about.html"
+    - title: Início rápido
+      url: "/quick-start.html"
+    - title: Notas de lançamento
+      url: "/release-notes/whats-new-in-ontap-mediator.html"
+  - title: Instalar, atualizar e configurar
+    links:
+    - title: Instalar ONTAP Mediator
+      url: "/install/workflow-summary.html"
+    - title: Atualize o ONTAP Mediator
+      url: "/administer/upgrade-ontap-mediator-task.html"
+    - title: Use o ONTAP Mediator para a sincronização ativa do SnapMirror e o MetroCluster
+        IP
+      url: "/use-mediator-snapmirror-metrocluster-task.html"
+  - title: Mais recursos
+    links:
+    - title: Documentação do ONTAP 9
+      url: https://docs.netapp.com/us-en/ontap/
+    - title: Documentação do MetroCluster
+      url: https://docs.netapp.com/us-en/ontap-metrocluster/
+    - title: Referência da API REST do ONTAP
+      url: https://docs.netapp.com/us-en/ontap-restapi/
+    - title: Referência da CLI do ONTAP
+      url: https://docs.netapp.com/us-en/ontap-cli/

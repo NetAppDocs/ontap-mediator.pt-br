@@ -1,0 +1,96 @@
+---
+permalink: learn-about.html 
+sidebar: sidebar 
+keywords: ONTAP, mediator, install, download, package 
+summary: Saiba mais sobre o ONTAP Mediator. 
+---
+= Saiba mais sobre ONTAP Mediator
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+O ONTAP Mediator oferece suporte aos recursos do ONTAP, fornecendo um armazenamento persistente e isolado para metadados de alta disponibilidade (HA), funcionalidade de consulta síncrona da integridade do nó para auxiliar na determinação do quorum e atuando como um proxy de ping para a capacidade de resposta do controlador.
+
+
+NOTE: Esta documentação se refere à versão local do ONTAP Mediator. Para obter informações sobre o ONTAP Cloud Mediator, disponível a partir do ONTAP 9.17.1, consulte link:https://docs.netapp.com/us-en/ontap/snapmirror-active-sync/index.html["SnapMirror documentação do active sync"^].
+
+
+
+[[how-ontap-mediator-works]]
+== Como o ONTAP Mediator funciona
+
+O ONTAP Mediator é executado em um host Linux em um terceiro domínio de falha, separado dos seus clusters do ONTAP, onde fornece um armazenamento persistente e isolado para metadados de HA. O ONTAP usa esse armazenamento, juntamente com as funções de consulta da integridade do nó e de ping-proxy do Mediator, para monitorar relacionamentos de sincronização ativa do SnapMirror e configurações IP do MetroCluster.
+
+* O ONTAP Mediator usa a LIF de gerenciamento de nós e a LIF de gerenciamento de cluster para se comunicar com cada cluster por meio de múltiplos caminhos redundantes. Isso permite que o ONTAP distinga entre uma falha total do local e uma falha em um único InterSwitch Link (ISL).
+* Na sincronização ativa do SnapMirror, se um cluster perder a conexão tanto com seu par quanto com o ONTAP Mediator, o ONTAP tratará o par como inacessível e poderá fazer failover automaticamente para a cópia sobrevivente.
+* Em configurações IP do MetroCluster, o ONTAP Mediator auxilia com um switchover automático não planejado assistido pelo Mediator (MAUSO), armazenando informações de estado sobre os nós do MetroCluster e ajudando a determinar o curso de ação apropriado durante uma falha.
+
+
+
+
+[[ontap-mediator-services]]
+== Serviços do ONTAP Mediator
+
+O ONTAP Mediator fornece dois serviços systemctl adicionais:
+
+* *`ontap_mediator.service`*
++
+Mantém o servidor da API REST para gerenciar os relacionamentos do ONTAP.
+
+* *`mediator-scst.service`*
++
+Controla a inicialização e o desligamento do módulo iSCSI (SCST).
+
+
+
+
+
+[[tools-provided-for-the-system-administrator]]
+== Ferramentas fornecidas para o administrador do sistema
+
+Ferramentas fornecidas para o administrador do sistema:
+
+* *`/usr/local/bin/mediator_change_password`*
++
+Define uma nova senha da API quando você fornece o nome de usuário e a senha atuais da API.
+
+* *`/usr/local/bin/mediator_change_user`*
++
+Define um novo nome de usuário da API quando você fornece o nome de usuário e a senha atuais da API.
+
+* *`/usr/local/bin/mediator_generate_support_bundle`*
++
+Gera um arquivo tgz local contendo todas as informações úteis de suporte necessárias para a comunicação com o suporte ao cliente da NetApp. Isso inclui a configuração do aplicativo, logs e algumas informações do sistema. Os pacotes são gerados no disco local e podem ser transferidos manualmente, conforme necessário. Local de armazenamento: /opt/netapp/data/support_bundles/
+
+* *`/usr/local/bin/uninstall_ontap_mediator`*
++
+Remove o pacote do ONTAP Mediator e o módulo do kernel SCST. Isso inclui toda a configuração, os logs e os dados da caixa de correio.
+
+* *`/usr/local/bin/mediator_unlock_user`*
++
+Libera um bloqueio na conta de usuário da API se o limite de tentativas de autenticação tiver sido atingido. Esse recurso é usado para impedir ataques de força bruta contra senhas. Ele solicita ao usuário o nome de usuário e a senha corretos.
+
+* *`/usr/local/bin/mediator_add_user`*
++
+(Apenas para suporte) Usado para adicionar o usuário da API durante a instalação.
+
+
+
+
+
+[[scst-and-kernel-updates]]
+== Atualizações SCST e do kernel
+
+ONTAP Mediator usa SCST para fornecer iSCSI para comunicação em MetroCluster configurações IP. O pacote SCST é um módulo do kernel compilado durante a instalação. Pode ser necessário reinstalar SCST após atualizações do kernel. Como alternativa, desinstale ONTAP Mediator, depois reinstale e reconfigure o relacionamento ONTAP. Consulte link:https://scst.sourceforge.net/["SCST: Um Subsistema de Destino SCSI Genérico para Linux"^] para saber mais sobre SCST.
+
+
+NOTE: Você deve coordenar quaisquer atualizações no kernel do sistema operacional do servidor com uma janela de manutenção no ONTAP.
+
+
+
+[[support-for-https-and-iscsi]]
+== Suporte para HTTPS e iSCSI
+
+A partir do ONTAP 9.19.1 e ONTAP Mediator 1.12, você pode configurar um ONTAP Mediator que utiliza HTTPS ou iSCSI para monitorar uma configuração IP do MetroCluster. Você pode optar por instalar o ONTAP Mediator com suporte para iSCSI e HTTPS ou somente HTTPS. Se o ONTAP Mediator for instalado com suporte apenas para HTTPS, o pacote SCST não será instalado. Consulte link:install/prepare-install.html#https-iscsi-installation["Opções de instalação HTTPS e iSCSI para ONTAP Mediator"] para obter mais informações.

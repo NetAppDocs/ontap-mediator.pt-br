@@ -1,0 +1,61 @@
+---
+permalink: install/download-install-pkg-task.html 
+sidebar: sidebar 
+keywords: mediator, new, release, update, install, download, package 
+summary: Faça o download do pacote de instalação do Mediator como parte do processo de instalação. 
+---
+= Baixe o pacote de instalação do ONTAP Mediator
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Baixe o pacote de instalação do ONTAP Mediator e instale-o.
+
+.Passos
+. Faça o download do pacote de instalação do ONTAP Mediator na página de download do ONTAP Mediator.
++
+https://mysupport.netapp.com/site/products/all/details/ontap-mediator/downloads-tab["Página de download do ONTAP Mediator"^]
+
+. Coloque o pacote de instalação do Mediator no diretório de trabalho atual:
++
+[source, cli]
+----
+ls ontap-mediator-1.12.1.tgz
+----
++
+....
+ontap-mediator-1.12.1.tgz
+....
++
+
+NOTE: Para as versões 1.4 e anteriores do ONTAP Mediator, o instalador se chama `ontap-mediator`.
+
++
+Se o seu sistema não tiver acesso à internet, certifique-se de que o instalador consiga acessar os pacotes necessários.
+
+. Se necessário, mova o pacote de instalação do Mediator para o diretório de instalação.
+. Descompacte o pacote de instalação:
++
+[source, cli]
+----
+tar xvfz ontap-mediator-1.12.1.tgz
+----
++
+....
+ontap-mediator-1.12.1/
+ontap-mediator-1.12.1/csc-prod-ONTAP-Mediator.pem
+ontap-mediator-1.12.1/csc-prod-chain-ONTAP-Mediator.pem
+ontap-mediator-1.12.1/tsa-prod-ONTAP-Mediator.pem
+ontap-mediator-1.12.1/tsa-prod-chain-ONTAP-Mediator.pem
+ontap-mediator-1.12.1/ONTAP-Mediator-production.pub
+ontap-mediator-1.12.1/ontap-mediator-1.12.1
+ontap-mediator-1.12.1/ontap-mediator-1.12.1.sig.tsr
+ontap-mediator-1.12.1/ontap-mediator-1.12.1.tsr
+ontap-mediator-1.12.1/ontap-mediator-1.12.1.sig
+....
+
+
+.Qual o próximo passo?
+link:verify-code-signature-task.html["Verifique a assinatura do código do ONTAP Mediator"]
