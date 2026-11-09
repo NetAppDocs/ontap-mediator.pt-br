@@ -59,28 +59,28 @@ O certificado usado para gerar a chave
 
 
  a| 
-`ontap-mediator-1.12.1`
+`ontap-mediator-1.13.0`
  a| 
-O executável de instalação para a versão 1.12
+O executável de instalação para a versão 1.13
 
 
 
  a| 
-`ontap-mediator-1.12.1.sig`
+`ontap-mediator-1.13.0.sig`
  a| 
 A assinatura do instalador, com hash SHA-256 e, em seguida, assinada com RSA usando a chave csc-prod
 
 
 
  a| 
-`ontap-mediator-1.12.1.sig.tsr`
+`ontap-mediator-1.13.0.sig.tsr`
  a| 
 O pedido de revogação para uso pelo OCSCP da assinatura do instalador
 
 
 
  a| 
-`ontap-mediator-1.12.1.tsr`
+`ontap-mediator-1.13.0.tsr`
  a| 
 O arquivo de solicitação de assinatura de carimbo de data/hora
 
@@ -141,7 +141,7 @@ openssl verify -untrusted tsa-prod-chain-ONTAP-Mediator.pem -CApath ${OPENSSLDIR
 +
 O comando falha se o certificado de verificação de assinatura de código ou o certificado de carimbo de data/hora estiver expirado ou inválido. Baixe uma versão mais recente do ONTAP Mediator.
 
-. Verifique os  `ontap-mediator-1.12.1.sig.tsr` e  `ontap-mediator-1.12.1.tsr` arquivos usando os certificados associados:
+. Verifique os  `ontap-mediator-1.13.0.sig.tsr` e  `ontap-mediator-1.13.0.tsr` arquivos usando os certificados associados:
 +
 [role="tabbed-block"]
 ====
@@ -149,14 +149,14 @@ O comando falha se o certificado de verificação de assinatura de código ou o 
 --
 [source, cli]
 ----
-openssl ts -verify -data ontap-mediator-1.12.1.sig -in ontap-mediator-1.12.1.sig.tsr -CAfile tsa-prod-chain-ONTAP-Mediator.pem -untrusted tsa-prod-ONTAP-Mediator.pem
+openssl ts -verify -data ontap-mediator-1.13.0.sig -in ontap-mediator-1.13.0.sig.tsr -CAfile tsa-prod-chain-ONTAP-Mediator.pem -untrusted tsa-prod-ONTAP-Mediator.pem
 ----
 --
 .O OpenSSL 1.x
 --
 [source, cli]
 ----
-openssl ts -verify -data ontap-mediator-1.12.1 -in ontap-mediator-1.12.1.tsr -CAfile tsa-prod-chain-ONTAP-Mediator.pem -partial_chain
+openssl ts -verify -data ontap-mediator-1.13.0 -in ontap-mediator-1.13.0.tsr -CAfile tsa-prod-chain-ONTAP-Mediator.pem -partial_chain
 ----
 --
 ====
@@ -173,7 +173,7 @@ openssl -dgst -verify
 +
 [source, cli]
 ----
-openssl dgst -sha256 -verify ONTAP-Mediator-production.pub -signature ontap-mediator-1.12.1.sig ontap-mediator-1.12.1
+openssl dgst -sha256 -verify ONTAP-Mediator-production.pub -signature ontap-mediator-1.13.0.sig ontap-mediator-1.13.0
 ----
 
 

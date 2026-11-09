@@ -23,11 +23,50 @@ A tabela a seguir lista os sistemas operacionais suportados para cada versão do
 |===
 
 
-| Sistema operacional para ONTAP Mediator | 1.12.1 | 1,12 | 1,11 | 1,10 | 1.9.1 | 1,9 | 1,8 | 1,7 | 1,6 | 1,5 | 1,4 | 1,3 | 1,2 | 1,1 | 1,0 
+| Sistema operacional para ONTAP Mediator | 1,13 | 1.12.1 | 1,12 | 1,11 | 1,10 | 1.9.1 | 1,9 | 1,8 | 1,7 | 1,6 | 1,5 | 1,4 | 1,3 | 1,2 | 1,1 | 1,0 
+
+
+ a| 
+RHEL 10.3
+ a| 
+Sim
+ a| 
+Não
+ a| 
+Não
+ a| 
+Não
+ a| 
+Não
+ a| 
+Não
+ a| 
+Não
+ a| 
+Não
+ a| 
+Não
+ a| 
+Não
+ a| 
+Não
+ a| 
+Não
+ a| 
+Não
+ a| 
+Não
+ a| 
+Não
+ a| 
+Não
+
 
 
  a| 
 RHEL 10.2
+ a| 
+Sim
  a| 
 Sim
  a| 
@@ -63,6 +102,8 @@ Não
 
  a| 
 RHEL 10.1
+ a| 
+Compatível
  a| 
 Compatível
  a| 
@@ -107,6 +148,45 @@ Sim
  a| 
 Sim
  a| 
+Sim
+ a| 
+Não
+ a| 
+Não
+ a| 
+Não
+ a| 
+Não
+ a| 
+Não
+ a| 
+Não
+ a| 
+Não
+ a| 
+Não
+ a| 
+Não
+ a| 
+Não
+ a| 
+Não
+
+
+
+ a| 
+RHEL 9.9
+ a| 
+Sim
+ a| 
+Não
+ a| 
+Não
+ a| 
+Não
+ a| 
+Não
+ a| 
 Não
  a| 
 Não
@@ -133,6 +213,8 @@ Não
 
  a| 
 RHEL 9.8
+ a| 
+Sim
  a| 
 Sim
  a| 
@@ -168,6 +250,8 @@ Não
 
  a| 
 RHEL 9.7
+ a| 
+Compatível
  a| 
 Compatível
  a| 
@@ -212,6 +296,8 @@ Sim
  a| 
 Sim
  a| 
+Sim
+ a| 
 Não
  a| 
 Não
@@ -239,13 +325,15 @@ Não
  a| 
 RHEL 9.5
  a| 
-Não
+Compatível
  a| 
-Não
+Compatível
  a| 
-Não
+Compatível
  a| 
-Não
+Compatível
+ a| 
+Compatível
  a| 
 Sim
  a| 
@@ -273,6 +361,8 @@ Não
 
  a| 
 RHEL 9.4
+ a| 
+Sim
  a| 
 Sim
  a| 
@@ -321,6 +411,8 @@ Não
  a| 
 Não
  a| 
+Não
+ a| 
 Sim
  a| 
 Sim
@@ -343,6 +435,8 @@ Não
 
  a| 
 RHEL 9.2
+ a| 
+Não
  a| 
 Não
  a| 
@@ -391,6 +485,8 @@ Não
  a| 
 Não
  a| 
+Não
+ a| 
 Sim
  a| 
 Sim
@@ -413,6 +509,8 @@ Não
 
  a| 
 RHEL 9.0
+ a| 
+Não
  a| 
 Não
  a| 
@@ -463,6 +561,8 @@ Sim
  a| 
 Sim
  a| 
+Sim
+ a| 
 Não
  a| 
 Não
@@ -483,6 +583,8 @@ Não
 
  a| 
 RHEL 8.9
+ a| 
+Não
  a| 
 Não
  a| 
@@ -527,6 +629,8 @@ Não
  a| 
 Não
  a| 
+Não
+ a| 
 Sim
  a| 
 Sim
@@ -562,15 +666,17 @@ Não
  a| 
 Não
  a| 
+Não
+ a| 
+Compatível
+ a| 
 Compatível
  a| 
 Compatível
  a| 
-Sim
+Compatível
  a| 
-Sim
- a| 
-Sim
+Compatível
  a| 
 Não
  a| 
@@ -597,15 +703,17 @@ Não
  a| 
 Não
  a| 
+Não
+ a| 
+Compatível
+ a| 
 Compatível
  a| 
 Compatível
  a| 
-Sim
+Compatível
  a| 
-Sim
- a| 
-Sim
+Compatível
  a| 
 Não
  a| 
@@ -632,15 +740,17 @@ Não
  a| 
 Não
  a| 
+Não
+ a| 
+Compatível
+ a| 
 Compatível
  a| 
 Compatível
  a| 
-Sim
+Compatível
  a| 
-Sim
- a| 
-Sim
+Compatível
  a| 
 Sim
  a| 
@@ -667,15 +777,17 @@ Não
  a| 
 Não
  a| 
+Não
+ a| 
+Compatível
+ a| 
 Compatível
  a| 
 Compatível
  a| 
-Sim
+Compatível
  a| 
-Sim
- a| 
-Sim
+Compatível
  a| 
 Sim
  a| 
@@ -693,6 +805,8 @@ Não
 
  a| 
 RHEL 8.3
+ a| 
+Obsoleto
  a| 
 Obsoleto
  a| 
@@ -747,6 +861,8 @@ Obsoleto
  a| 
 Obsoleto
  a| 
+Obsoleto
+ a| 
 Sim
  a| 
 Sim
@@ -763,6 +879,8 @@ Não
 
  a| 
 RHEL 8.1
+ a| 
+Obsoleto
  a| 
 Obsoleto
  a| 
@@ -817,6 +935,8 @@ Obsoleto
  a| 
 Obsoleto
  a| 
+Obsoleto
+ a| 
 Sim
  a| 
 Sim
@@ -833,6 +953,8 @@ Não
 
  a| 
 RHEL e CentOS 7.9
+ a| 
+Obsoleto
  a| 
 Obsoleto
  a| 
@@ -887,6 +1009,8 @@ Obsoleto
  a| 
 Obsoleto
  a| 
+Obsoleto
+ a| 
 Sim
  a| 
 Sim
@@ -922,6 +1046,8 @@ Obsoleto
  a| 
 Obsoleto
  a| 
+Obsoleto
+ a| 
 Sim
  a| 
 Sim
@@ -938,6 +1064,8 @@ Não
 
  a| 
 RHEL e CentOS 7.6
+ a| 
+Obsoleto
  a| 
 Obsoleto
  a| 
@@ -998,6 +1126,8 @@ Não
  a| 
 Não
  a| 
+Não
+ a| 
 N/A
  a| 
 N/A
@@ -1009,13 +1139,15 @@ N/A
  a| 
 Rocky Linux 10
  a| 
-Sim (10.2)
+Sim (10.0, 10.1 e 10.2)
  a| 
-Sim (10.2)
+Sim (10.0, 10.1 e 10.2)
  a| 
 Sim (10.0 e 10.1)
  a| 
-Sim
+Sim (10.0 e 10.1)
+ a| 
+Sim (10.0)
  a| 
 Não
  a| 
@@ -1043,6 +1175,8 @@ Não
 
  a| 
 Rocky Linux 9
+ a| 
+Sim (9.4, 9.6, 9.7 e 9.8)
  a| 
 Sim (9.8)
  a| 
@@ -1093,6 +1227,8 @@ Sim (8.10)
  a| 
 Sim (8.10)
  a| 
+Sim (8.10)
+ a| 
 Sim (8.9)
  a| 
 Sim (8.8)
@@ -1113,6 +1249,8 @@ N/A
 
  a| 
 Oracle Linux 10
+ a| 
+Sim (10.0, 10.1 e 10.2)
  a| 
 Sim (10.1)
  a| 
@@ -1148,6 +1286,8 @@ Não
 
  a| 
 Oracle Linux 9
+ a| 
+Sim (9.6, 9.7 e 9.8)
  a| 
 Sim (9.8)
  a| 
@@ -1198,6 +1338,9 @@ A tabela a seguir mostra a versão do SCST compatível com cada versão do ONTAP
 [cols="2*"]
 |===
 | Versão do ONTAP Mediator | Versão do SCST 
+
+
+| ONTAP Mediator 1.13 | scst-3.10.tar.gz 
 
 
 | ONTAP Mediator 1.12.1 | scst-3.10.tar.gz 
